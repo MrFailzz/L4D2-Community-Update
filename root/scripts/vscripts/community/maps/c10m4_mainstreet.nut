@@ -19,6 +19,7 @@ PrecacheModel( "models/props_vehicles/cara_95sedan_glass.mdl" );
 
 function DoRoundFixes()
 {
+	make_clip(	"_church_wall_lmpclip1",	"Survivors",	1,	"-118.5 -6.5 -57",	"118.5 6.5 57",		"-2871 -754 1" );
 	make_clip(	"_commonhop_bankwindow",	"Survivors",	1,	"-120 -5 0",		"120 17 1612",		"-672 -4351 176" );
 	make_clip(	"_cliprework_church",		"Survivors",	1,	"-256 -16 -164",	"256 16 1040",		"-3010 30 720.9" );
 	make_clip(	"_cliprework_buses",		"Survivors",	1,	"-160 -6 -164",		"160 6 620",		"-1437 -461 1124" );
@@ -41,6 +42,13 @@ function DoRoundFixes()
 		devchap( "BASE VERSUS" );
 
 		// FIXES
+
+		make_clip( "_church_wall_lmpclip2", "Survivors", 1, "-112 -11.5 -835", "112 11.5 835", "-2872 -759 893" );
+		make_clip( "_church_pillara", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3000 -761 836" );
+		make_clip( "_church_pillarb", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3144 -761 836" );
+		make_clip( "_church_pillarc", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3448 -761 836" );
+
+		make_clip( "_boxtruck_eventskip", "Survivors", 1, "-57 -112.5 -820.5", "57 112.5 820.5", "114 -3025 908", "0 332 0" );
 
 		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-180 -60 -2", "115 60 1624", "693 -1867 105", "0 43 0" );
 
