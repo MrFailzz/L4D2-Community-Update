@@ -44,12 +44,12 @@ function DoRoundFixes()
 
 	Convars.SetValue( "director_convert_pills", 0 );
 
-	make_prop( "dynamic", "_oneway_little_crate", "models/props_crates/static_crate_40.mdl", "-1544 -4760 -291.53", "2.10389 352.602 88.4171", "shadow_no" );
-	make_prop( "dynamic", "_oneway_big_crate", "models/props/de_nuke/crate_small.mdl", "-1604 -4764 -308.04", "1.21232 343.98 2.21686", "shadow_no" );
-	make_clip(	"_crate_headbump", "Everyone", 1, "-124 -8 -68.5", "124 8 68.5", "-1524 -4824 -245" );
+	//make_prop( "dynamic", "_oneway_little_crate", "models/props_crates/static_crate_40.mdl", "-1544 -4760 -291.53", "2.10389 352.602 88.4171", "shadow_no" );
+	//make_prop( "dynamic", "_oneway_big_crate", "models/props/de_nuke/crate_small.mdl", "-1604 -4764 -308.04", "1.21232 343.98 2.21686", "shadow_no" );
+	//make_clip(	"_crate_headbump", "Everyone", 1, "-124 -8 -68.5", "124 8 68.5", "-1524 -4824 -245" );
 	//patch_ladder( "-1647 -4772 -256.98", "0 112 15" );
 
-	EntFire( "worldspawn", "RunScriptFile", "c14m1_junkyard" );
+	//EntFire( "worldspawn", "RunScriptFile", "c14m1_junkyard" );
 
 	// Francis' spawn X coordinate now changes from -4070 to -4058 when the intro finishes
 	// to fix his spawn inside the plywood that he leans on. On solo Mutations with no
