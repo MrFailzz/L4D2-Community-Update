@@ -36,6 +36,16 @@ function DoRoundFixes()
 		make_clip( "_cooponly_idle_warp", "Survivors", 1, "-81 -37 0", "55 35 1102", "8849 3493 760" );
 		make_clip( "_nav_and_stuckwarp", "Everyone", 1, "-45 -2 -62", "163 6 58", "6485 1090 308" );
 	}
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain = NavMesh.GetNearestNavArea(Vector(7150.000000, 3250.000000, 196.687500), 16, true, true);
+		local navConnection = NavMesh.GetNearestNavArea(Vector(7187.500000, 3262.500000, 196.687500), 16, true, true);
+		navConnection.Disconnect(navMain);
+	}
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 3833.37 );		// Delete clip blocking access to vast start perimeter and one-way drop

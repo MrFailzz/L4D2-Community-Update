@@ -78,12 +78,16 @@ function DoRoundFixes()
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain = NavMesh.GetNearestNavArea(Vector(1612.500000, -3662.500000, 26.890617), 16, true, true)
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(1750.000000, -3655.000000, -101.112030), 16, true, true)
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(1625.000000, -3527.500000, -62.369400), 16, true, true)
-		local navConnection3 = NavMesh.GetNearestNavArea(Vector(1537.500000, -3650.000000, -93.773209), 16, true, true)
-		local navConnection4 = NavMesh.GetNearestNavArea(Vector(1600.000000, -3735.000000, -123.070557), 16, true, true)
+		// CheckLOS and CheckGround set to false as it did not work otherwise here
+		local navMain = NavMesh.GetNearestNavArea(Vector(1612.500000, -3662.500000, 26.890617), 16, false, false);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(1750.000000, -3655.000000, -101.112030), 16, false, false);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(1625.000000, -3527.500000, -62.369400), 16, false, false);
+		local navConnection3 = NavMesh.GetNearestNavArea(Vector(1537.500000, -3650.000000, -93.773209), 16, false, false);
+		local navConnection4 = NavMesh.GetNearestNavArea(Vector(1600.000000, -3735.000000, -123.070557), 16, false, false);
 		navConnection1.Disconnect(navMain);
 		navConnection2.Disconnect(navMain);
 		navConnection3.Disconnect(navMain);

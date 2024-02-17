@@ -28,6 +28,9 @@ function DoRoundFixes()
 	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain = NavMesh.GetNearestNavArea(Vector(2377.853516, 161.838699, 194.000000), 16, true, true);
 		local navConnection1 = NavMesh.GetNearestNavArea(Vector(2300.000000, 162.500000, 131.307587), 16, true, true);

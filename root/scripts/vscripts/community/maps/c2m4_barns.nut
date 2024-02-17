@@ -15,7 +15,6 @@ PrecacheModel( "models/props_fairgrounds/bumpercar.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_outhouse_saferoof",		"Survivors",	1,	"-94 -32 0",		"94 32 1111",		"2608 3920 -88" );
 	make_clip( "_cliprework_finalfence", "Survivors", 1, "-96 -6 0", "120 11 704", "-120 2446 320" );
 	make_clip( "_booster_lightpole1", "Survivors", 1, "-59 -20 0", "64 18 637", "280 2077 387" );
 	make_clip( "_booster_lightpole2", "Survivors", 1, "-20 -59 0", "18 64 637", "1 1508 387" );
@@ -38,6 +37,7 @@ function DoRoundFixes()
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
+		make_clip(	"_outhouse_saferoof",		"Survivors",	1,	"-94 -32 0",		"94 32 1111",		"2608 3920 -88" );
 		make_clip( "_booster_barnbeam1", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -129 32" );
 		make_clip( "_booster_barnbeam2", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -321 32" );
 		make_clip( "_booster_barnbeam3", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 63 32" );

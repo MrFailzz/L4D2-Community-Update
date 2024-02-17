@@ -49,8 +49,6 @@ function DoRoundFixes()
 	//make_clip(	"_crate_headbump", "Everyone", 1, "-124 -8 -68.5", "124 8 68.5", "-1524 -4824 -245" );
 	//patch_ladder( "-1647 -4772 -256.98", "0 112 15" );
 
-	//EntFire( "worldspawn", "RunScriptFile", "c14m1_junkyard" );
-
 	// Francis' spawn X coordinate now changes from -4070 to -4058 when the intro finishes
 	// to fix his spawn inside the plywood that he leans on. On solo Mutations with no
 	// teammates to warp to, the player can get stuck and die here before getting control.

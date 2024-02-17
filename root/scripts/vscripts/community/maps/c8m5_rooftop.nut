@@ -54,6 +54,7 @@ function DoRoundFixes()
 
 		make_ladder( "_ladder_saferoomlulz_cloned_rooftopmain", "5924 8561.1 6018", "13896 2362 -447", "0 90 0", "0 1 0", 0 );
 
+		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
 		local navMain1 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8499.918945, 6097.730957), 16, true, true);
 		local navMain2 = NavMesh.GetNearestNavArea(Vector(5575.740234, 8450.000000, 6097.730957), 16, true, true);

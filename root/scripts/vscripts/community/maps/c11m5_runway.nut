@@ -15,6 +15,30 @@ function DoRoundFixes()
 	make_prop( "dynamic", "_terry", "models/deadbodies/dead_male_civilian_body.mdl", "-4154 9350 -140", "0 -111 0", "shadow_no", "solid_no" );
 	EntFire( "relay_outro_start", "AddOutput", "OnTrigger " + g_UpdateName + "_terry:Kill::2:-1" );
 
+	// Kill plane blocker that causes godspot in all modes and is seemingly redundant
+	EntFire( "plane_nav_blocker", "Kill", null, 0 );
+
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain = NavMesh.GetNearestNavArea(Vector(-4200.000000, 9475.000000, -191.968750), 16, true, true);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9462.500000, -191.968750), 16, true, true);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9487.500000, -191.633362), 16, true, true);
+		local navConnection3 = NavMesh.GetNearestNavArea(Vector(-4225.000000, 9525.000000, -191.650177), 16, true, true);
+		local navConnection4 = NavMesh.GetNearestNavArea(Vector(-4187.500000, 9512.500000, -191.968750), 16, true, true);
+		navConnection1.Disconnect(navMain);
+		navConnection2.Disconnect(navMain);
+		navConnection3.Disconnect(navMain);
+		navConnection4.Disconnect(navMain);
+		// Disconnect both ways to keep behavior that can be used to stop respawns from closet
+		navMain.Disconnect(navConnection1);
+		navMain.Disconnect(navConnection2);
+		navMain.Disconnect(navConnection3);
+		navMain.Disconnect(navConnection4);
+	}
 	if ( g_BaseMode == "survival" )
 	{
 		make_clip( "_nav_skybridge", "Survivors", 1, "-643 -102 0", "878 106 1427", "-6035 8761 32", "0 45 0" );
