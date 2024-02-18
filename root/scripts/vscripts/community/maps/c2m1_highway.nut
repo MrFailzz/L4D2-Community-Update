@@ -22,10 +22,10 @@ function DoRoundFixes()
 	make_clip( "_cargocontainer_oob_03", "SI Players", 1, "-64 -96 -200", "64 96 200", "3136 2595 -1243", "0 0 -42" );
 	make_clip( "_cargocontainer_dispcrouch", "SI Players", 1, "-388 -16 0", "388 32 484", "3203 1572 -1822", "0 -5 -12" );
 	make_clip( "_dispcrouch_rocka", "Everyone", 1, "-8 -161 -320", "8 110 240", "1280 2115 -1615", "0 135 0" );
-	make_clip( "_dispcrouch_rockb", "Everyone", 1, "-140 -8 -320", "160 8 380", "1046 2025 -1615", "0 10 0" );
-	make_clip( "_dispcrouch_rockc", "Everyone", 1, "-80 -8 -320", "80 8 230", "820 2010 -1611", "0 -14 0" );
-	make_clip( "_dispcrouch_rockd", "Everyone", 1, "-80 -8 -320", "90 8 216", "686 2100 -1585", "0 -51 0" );
-	make_clip( "_dispcrouch_rocke", "Everyone", 1, "-99 -8 -320", "84 8 106", "618 2260 -1464", "0 90 0" );
+	make_clip( "_dispcrouch_rockb", "Everyone", 1, "-104 -8 -304", "104 8 304", "1093 2011 -1520", "0 12.5 0" );
+	make_clip( "_dispcrouch_rockc", "Everyone", 1, "-110 -8 -304", "110 8 304", "882 1996 -1520", "0 -4 0" );
+	make_clip( "_dispcrouch_rockd", "Everyone", 1, "-8 -104 -304", "8 104 304", "700 2084 -1520", "0 42 0" );
+	make_clip( "_dispcrouch_rocke", "Everyone", 1, "-8 -166 -304", "8 166 304", "628 2334 -1520", "0 0 0" );
 	make_clip( "_dispcrouch_swampa", "Everyone", 1, "-132 -8 0", "150 8 101", "2523 1855 -1805", "0 90 0" );
 	make_clip( "_dispcrouch_swampb", "Everyone", 1, "-100 -8 0", "80 8 101", "2595 1654 -1807", "0 142 0" );
 	make_clip( "_cliprework_fence", "Survivors", 1, "-70 -480 0", "8 480 640", "-193 -1932 -900" );

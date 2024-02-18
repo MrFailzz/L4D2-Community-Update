@@ -30,6 +30,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_dispcrouch12", "SI Players", 1, "-8 -171 -42", "8 188 102", "415 -921 77", "0 -5 0" );
 	make_clip( "_dispcrouch_waterfall", "Everyone", 1, "-64 -188 -64", "18 263 272", "-2184 -1700 -288", "0 -10 0" );
 	make_clip( "_permstuck_umheymatt", "Everyone", 1, "-16 -128 0", "16 128 142", "13 5280 -117" );
+	make_clip( "_permstuck_barriers", "Everyone", 1, "-8 -128 -87", "8 128 87", "-1500 4336 -25" );
 
 	if ( g_BaseMode == "versus" )
 	{
