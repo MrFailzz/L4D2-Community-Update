@@ -48,7 +48,7 @@ function DoRoundFixes()
 		make_clip( "_church_pillarb", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3144 -761 836" );
 		make_clip( "_church_pillarc", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3448 -761 836" );
 
-		make_clip( "_boxtruck_eventskip", "Survivors", 1, "-57 -112.5 -820.5", "57 112.5 820.5", "114 -3025 908", "0 332 0" );
+		make_clip( "_boxtruck_eventskip", "Survivors", 1, "-103 -125.5 -820.5", "103 125.5 820.5", "114 -3025 908" );
 
 		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-180 -60 -2", "115 60 1624", "693 -1867 105", "0 43 0" );
 
