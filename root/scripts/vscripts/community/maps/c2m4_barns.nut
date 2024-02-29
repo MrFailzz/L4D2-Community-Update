@@ -32,8 +32,8 @@ function DoRoundFixes()
 	make_clip( "_commentary_boostertree_a", "Survivors", 1, "-117 -122 -80", "184 200 930", "-704 864 88.25" );
 	make_clip( "_commentary_boostertree_b", "Survivors", 1, "-117 -122 -80", "230 122 930", "128 832 88.25" );
 	make_clip( "_commentary_boostertree_c", "Survivors", 1, "-119 -122 -80", "50 186 910", "-1648 784 104.25" );
-	patch_spawninfront( "-596 2312 -256", "-76 -8 0", "76 8 160" );
-	patch_spawninfront( "-508 2503 -256", "-8 -51 0", "8 51 160" );
+	patch_spawninfront( "-482 2195 -256", "-51 -8 0", "51 8 160" );
+	patch_spawninfront( "-386 2416 -256", "-8 -51 0", "8 51 160" );
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
@@ -47,17 +47,8 @@ function DoRoundFixes()
 		make_clip( "_booster_barnbeam7", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -129 32" );
 		make_clip( "_booster_barnbeam8", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -321 32" );
 		make_clip( "_booster_awning", "Survivors", 1, "-17 -16 -34", "274 13 134", "-3119 528 5" );
-		make_clip( "_nav_eventfenceback", "Survivors", 1, "-8 -159 0", "25 164 1036", "-2266 807 -12", "0 72 0" );
-	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		con_comment( "KILL:\tSafe roof exploit unpatched for Coop (popular request)." );
-
-		EntFire( g_UpdateName + "_outhouse_saferoof", "Kill" );
+		make_clip( "_nav_eventfenceback1", "Survivors", 1, "-54 -30 -538", "54 30 538", "-2370 850 486" );
+		make_clip( "_nav_eventfenceback2", "Survivors", 1, "-104 -34 -538", "104 34 538", "-2212 794 486" );
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -65,7 +56,6 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_commonhop_generator1", "Survivors", 1, "-35 -16 0", "35 16 50", "-1716 273 -81", "0 0 20" );
 		make_clip( "_commonhop_generator2", "Everyone", 1, "8 0 0", "58 8 164", "-1660 275 -192", "0 -19 0" );
 
 		make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
@@ -115,6 +105,8 @@ function DoRoundFixes()
 		EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "solid 2" );
 
 		EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_barnsroof_commonhop:Kill::0:-1" );
+		EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_nav_eventfenceback1:Kill::0:-1" );
+		EntFire( g_UpdateName + "_barnsroof_trigonce", "AddOutput", "OnStartTouch " + g_UpdateName + "_nav_eventfenceback2:Kill::0:-1" );
 	}
 
 	if ( HasPlayerControlledZombies() )

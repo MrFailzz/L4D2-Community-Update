@@ -20,7 +20,7 @@ function DoRoundFixes()
 	make_clip(	"_skybox_shieldb",		"SI Players",	1,	"-145 -212 -77",	"145 212 77",		"-2971 -1264 125" );
 	make_clip(	"_skybox_shielda",		"SI Players",	1,	"-240 -60 -20",		"240 60 77",		"-4014 -1296 68.8" );
 	make_clip( "_booster_busdepot_extend", "Survivors", 1, "-425 -57 0", "381 85 1504", "-8078 -6407 160" );
-	make_clip( "_booster_escapegap", "Survivors", 1, "-73 -66 1420", "8 129 32", "-9436 -5212 184", "0 -59 0" );
+	make_clip( "_booster_escapegap", "Survivors", 1, "-84 -48 -726", "84 48 726", "-9404 -5200 942" );
 	make_clip( "_booster_watchtower_extend", "Survivors", 1, "-65 -76 0", "62 65 1142", "-8161 -5821 529" );
 	make_clip( "_cliprework_parkarchway", "Survivors", 1, "-37 -404 -164", "35 402 1484", "-8125 -2207 180" );
 	make_clip( "_cliprework_anomalous", "Survivors", 1, "-76 -90 -71", "20 92 86", "-9237 -3866 58" );
@@ -74,7 +74,6 @@ function DoRoundFixes()
 		make_clip( "_ladderqol_endgutterm1mirr_clip", "Everyone", 1, "-4.09 -13 0", "0 23 338", "-3196 -1079 -376" );
 		make_clip( "_commentary_fencegates_a", "Survivors", 1, "0 -8 -8", "6 120 1808", "-8580 -3320 -144" );
 		make_clip( "_commentary_fencegates_b", "Survivors", 1, "0 -8 -8", "6 120 1808", "-9217 -3320 -144" );
-		make_clip( "_commentary_eventtent", "Survivors", 1, "-64 -64 -899", "64 64 899", "-6853 -5598.37 765" );
 		make_ladder( "_ladder_archright_cloned_archleft", "-8110 -2848 -200", "-11 1310 0" );
 		make_ladder( "_ladder_billboardleft_cloned_watchtower", "-8000 -5874 -128", "-1178 -1760 -2595", "0 0 -28", "0 -0.88 0.46" );
 		make_ladder( "_ladder_billboardright_cloned_watchtower", "-8000 -5874 -128", "-1144 -1760 -2595", "0 0 -28", "0 -0.88 0.46" );

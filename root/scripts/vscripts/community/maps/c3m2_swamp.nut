@@ -21,7 +21,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_brokenhouse_hedgegap", "Survivors", 1, "-68 -468 0", "98 257 502", "3915 2029 145", "0 -11 0" );
+		make_clip( "_brokenhouse_hedgegap", "Survivors", 1, "-42 -330 -315.5", "42 330 315.5", "3962 1906 324" );
 
 		con_comment( "LOGIC:\tAnti-skip plane clips will be deleted when door is blown." );
 

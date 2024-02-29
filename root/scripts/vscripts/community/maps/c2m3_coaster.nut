@@ -32,6 +32,8 @@ function DoRoundFixes()
 	make_clip( "_commentary_electricalbox_a", "Survivors", 1, "-4 -56 -8", "8 8 196", "-2056 2624 8" );
 	make_clip( "_commentary_electricalbox_b", "Survivors", 1, "-4 -56 -16", "8 8 196", "-776 1724 16" );
 	make_clip( "_commentary_electricalbox_c", "Survivors", 1, "-56 -8 -34", "8 4 196", "-1124 1032 36" );
+	make_clip( "_commentary_coasterskip_a", "Survivors", 1, "0 0 0", "200 4 128", "-2887 2609.01 121.607" );
+	make_clip( "_commentary_coasterskip_b", "Survivors", 1, "0 0 0", "8 292 256", "-2854.76 2456.73 444" );
 	make_brush( "_permstuck_swanroom_dead", "-54 -20 0", "58 29 108", "510 4084 -7" );
 	make_trigduck( "_duckqol_swanhole", "-5 -32 -32", "5 32 32", "1348 4096 32" );
 
@@ -81,10 +83,6 @@ function DoRoundFixes()
 		make_clip(	"_shortcut_longjump",		"Survivors",	1,	"-17 -216 0",		"17 216 1580",		"-4240 2616 171" );
 
 		make_clip(	"_shortcut_supports",		"Survivors",	1,	"-86 -10 -137",		"86 10 32",		"-3904 2062 96" );
-		make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
-		make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
-		make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
-		make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -305 -48",		"-61 0 1545",		"-2788 2760 177" );
 		make_clip(	"_cliprework_roofa",		"Survivors",	1,	"-108 -224 -320",	"108 224 1100",		"-3596 1560 640" );
 		make_clip(	"_cliprework_roofb",		"Survivors",	1,	"-295 -444 -280",	"295 444 1100",		"-3970 1558 640" );
 		make_clip(	"_cliprework_sign",		"Survivors",	1,	"-307 -70 0",		"307 70 1320",		"-3902 2321 431" );

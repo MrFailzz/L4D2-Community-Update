@@ -48,6 +48,18 @@ function DoRoundFixes()
 		local navConnection = NavMesh.GetNearestNavArea(Vector(4803.833984, 7260.107422, 128.313324), 16, true, true);
 		navConnection.Disconnect(navMain);
 	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
+
+		// FIXES
+
+		make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
+
+		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
+
+		EntFire( g_UpdateName + "_point_of_no_return", "Enable" );
+	}
 	if ( HasPlayerControlledZombies() )
 	{
 		make_brush( "_losfix_gen1a",		"-1 -24 -8",	"1 24 8",	"6853 5881 50" );

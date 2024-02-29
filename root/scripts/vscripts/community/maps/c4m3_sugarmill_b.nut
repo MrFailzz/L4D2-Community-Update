@@ -6,7 +6,7 @@ PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_quad_silosa",	"Survivors",	1,	"-8 -96 -379",	"8 96 379",		"2552 -2976 758" );
+	make_clip(	"_quad_silosa",	"Survivors",	1,	"-8 -96 -406",	"8 96 406",		"2552 -2976 758" );
 	make_clip(	"_quad_silosb",	"Survivors",	1,	"-128 -128 -454",	"128 128 454",		"2688 -3200 710" );
 	make_clip(	"_quad_silosc",	"Survivors",	1,	"-386 -128 -534",	"386 128 534",		"2754 -3456 630" );
 	make_clip(	"_quad_silosd",	"Survivors",	1,	"-8 -122 -534",	"8 122 534",		"2360 -3706 630" );
