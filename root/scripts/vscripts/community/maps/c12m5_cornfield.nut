@@ -42,8 +42,9 @@ function DoRoundFixes()
 		
 		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain = NavMesh.GetNearestNavArea(Vector(7150.000000, 3250.000000, 196.687500), 16, true, true);
-		local navConnection = NavMesh.GetNearestNavArea(Vector(7187.500000, 3262.500000, 196.687500), 16, true, true);
+		// CheckLOS and CheckGround set to false as it did not work otherwise here
+		local navMain = NavMesh.GetNearestNavArea(Vector(7150.000000, 3250.000000, 196.687500), 16, false, false);
+		local navConnection = NavMesh.GetNearestNavArea(Vector(7187.500000, 3262.500000, 196.687500), 16, false, false);
 		navConnection.Disconnect(navMain);
 	}
 	if ( g_BaseMode == "survival" )
@@ -52,11 +53,9 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_point_of_no_return", "Survivors", 0, "-148 -16 0", "148 26 1660", "9017 3511 202" );
+		make_clip( "_point_of_no_return", "Survivors", 1, "-148 -16 0", "148 26 1660", "9017 3511 202" );
 
 		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
-
-		EntFire( g_UpdateName + "_point_of_no_return", "Enable" );
 	}
 	if ( HasPlayerControlledZombies() )
 	{

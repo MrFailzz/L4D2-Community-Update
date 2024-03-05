@@ -14,6 +14,10 @@ function DoRoundFixes()
 	make_clip(	"_fallrevive_nopejumpb",	"Survivors",	1,	"-8 -512 0",		"8 512 1400",		"8648 2672 16" );
 	make_clip(	"_permstuck_officechairs",	"Everyone",	1,	"-11 -11 -11",		"11 11 11",		"8865 4003 252" );
 	make_trighurt( "_instakill_semitrailer", "Survivor", "-269 -117 0", "273 121 8", "6854 2779 173" );
+	make_trighurt( "_instakill_deathcharger_alleys1", "Survivor", "-1162 -696 -8", "1162 696 8", "6994 3924 132" );
+	make_trighurt( "_instakill_deathcharger_alleys2", "Survivor", "-1162 -696 -8", "1162 696 8", "6994 3924 132" );
+	make_trighurt( "_instakill_deathcharger_streets1", "Survivor", "-1440 -454 -8", "1440 454 8", "7200 2774 132" );
+	make_trighurt( "_instakill_deathcharger_streets2", "Survivor", "-1440 -454 -8", "1440 454 8", "7200 2774 132" ); // These are  intentional duplicates to stop the charger infinite recharge bug
 
 	make_prop( "dynamic", "_omg_valve_wrongwayc", "models/props_vehicles/van.mdl", "8815 2888 10", "0 45 3", "shadow_no" );
 	make_prop( "dynamic", "_omg_valve_wrongwayg", "models/props_vehicles/van_glass.mdl", "8815 2888 10", "0 45 3", "shadow_no" );

@@ -9,6 +9,7 @@ function DoRoundFixes()
 	make_clip( "_tankpunch_deflector", "Survivors", 1, "-434 -46 0", "288 -19 1481", "-11503 -10981 375" );
 	make_clip( "_factory_rooftop1", "Survivors", 1, "-426 -504 -684", "426 504 684", "-8486 -7768 1172" );
 	make_clip( "_factory_rooftop2", "Survivors", 1, "-272 -232 -528", "272 232 528", "-7808 -8408 1340" );
+	make_clip( "_factory_rooftop3", "Survivors", 1, "-200 -12 -512", "200 12 512", "-6392 -7268 1340" );
 	make_clip( "_dispcrouch_smoker", "Everyone", 1, "4 -200 -64", "61 70 58", "-10650 -15068 -46", "0 -19 0" );
 
 	make_trighurt( "_instakill_longperimeter1", "Survivor", "-1158 -2015 0", "1158 2015 170", "-11827 -13824 -84" );

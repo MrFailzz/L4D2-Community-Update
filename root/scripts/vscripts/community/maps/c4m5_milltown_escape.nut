@@ -59,11 +59,9 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
+		make_clip( "_point_of_no_return", "Survivors", 1, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
 
 		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
-
-		EntFire( g_UpdateName + "_point_of_no_return", "Enable" );
 	}
 	if ( HasPlayerControlledZombies() )
 	{

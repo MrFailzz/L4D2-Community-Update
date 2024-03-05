@@ -45,17 +45,9 @@ function DoRoundFixes()
 		make_clip( "_booster_trafficlightb", "Survivors", 1, "-100 -60 -140", "140 40 561", "-1364 -6902 367" );
 		make_clip( "_booster_trafficlightc", "Survivors", 1, "-42 -140 -80", "10 148 619", "-1094 -6917 309" );
 		make_clip( "_booster_trafficlightd", "Survivors", 1, "-120 -34 -80", "148 10 619", "-1242 -6515 309" );
-	}
-	if ( g_BaseMode == "versus" )
-	{
-		devchap( "BASE VERSUS" );
-
-		// FIXES
-
 		make_clip(	"_allmodes_griefrooma",		"Survivors",	1,	"0 0 0",		"530 126 950",		"156 -6648 -22" );
 		make_clip(	"_allmodes_griefroomb",		"Survivors",	1,	"0 -770 0",		"130 0 950",		"28 -6652 -22" );
 	}
-
 	if ( HasPlayerControlledZombies() )
 	{
 		make_atomizer( "_atomizer_bsp_forklift", "-6392 -10719 64", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
@@ -67,6 +59,7 @@ function DoRoundFixes()
 		make_clip( "_ladder_aftertanker_clipleft", "Everyone", 1, "-14 -4 0", "15 4 608", "-2248 -5372 -224", "0 -55 0" );
 		make_clip( "_ladder_aftertanker_clipright", "Everyone", 1, "-15 -4 0", "14 4 608", "-2292 -5372 -224", "0 55 0" );
 		make_clip( "_ladder_dualwindowshared_clip", "SI Players and AI", 1, "-8 -186 0", "32 186 16", "-7960 -10924 191", "42 0 0" );
+		make_clip( "_booster_garagebuilding", "Survivors", 1, "-146 -834 -336", "146 834 336", "-4434 -9026 592" );
 		make_ladder( "_ladder_aftertankerB_cloned_flatnosetruck", "-6318 -10227 191.524", "4048 4867 -384" );
 		make_ladder( "_ladder_aftertankerT_cloned_flatnosetruck", "-6318 -10227 191.524", "4048 4867 0" );
 		make_ladder( "_ladder_armybarricadeleftfront_cloned_armybarricadeleftback", "-1601 -4847 126", "-3226 -9766 0", "0 -180 0", "0 -1 0" );

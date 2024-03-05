@@ -34,7 +34,8 @@ function DoRoundFixes()
 	make_clip( "_cliprework_windows", "Survivors", 1, "-16 -304 -20", "0 288 68", "2688 -2136 372" );
 	make_clip( "_cliprework_balcony", "Survivors", 1, "-86 -50 0", "84 46 1392", "2822 -1694 336" );
 	make_clip( "_cliprework_awning", "Survivors", 1, "-68 -103 -68", "43 107 1431", "2885 -1580 297" );
-	make_trighurt( "_instakill_deathcharger", "Survivor", "-256 -453 -17", "256 453 0", "-2449 122 -43" );
+	make_trighurt( "_instakill_deathcharger1", "Survivor", "-270 -354 -8", "270 354 8", "-2462 -34 56" );
+	make_trighurt( "_instakill_deathcharger2", "Survivor", "-270 -354 -8", "270 354 8", "-2462 -34 56" ); // This is an intentional duplicate to stop the charger infinite recharge bug
 	patch_spawninfront( "288 -5284 93", "0 -96 0", "544 96 17" );
 
 	if ( g_BaseMode == "versus" )

@@ -7,22 +7,22 @@ PrecacheModel( "models/props_downtown/gutter_downspout_straight02.mdl" );
 function DoRoundFixes()
 {
 	make_clip(	"_solidify_girder",		"Survivors",	1,	"-17 -80 -170",		"2 240 240",		"200 -1280 145" );
-	make_clip(	"_booster_bridgea",		"Survivors",	1,	"-234 -550 -17",	"255 0 0",		"0 -638 216" );
-	make_clip(	"_booster_bridgeb",		"Survivors",	1,	"-234 -17 -17",		"210 0 1017",		"0 -1200 216" );
+	make_clip( "_bridge_stairgap1", "Survivors", 1, "-8 -64 -410", "8 64 410", "328 -1152 614" );
+	make_clip( "_bridge_stairgap2", "Survivors", 1, "-24 -50 -102", "24 50 102", "296 -1166 306" );
 	make_clip( "_booster_tent", "Survivors", 1, "-61 -66 -30", "69 64 730", "1196 -847 294" );
 	make_clip( "_booster_streetlamp", "Survivors", 1, "-9 -11 0", "9 9 715", "1493 -368 308" );
-	make_clip( "_booster_generator_side", "Survivors", 1, "-10 -28 0", "6 29 930", "1848 928 98", "0 75 0" );
+	make_clip( "_booster_generator_side", "Survivors", 1, "-30 -16 -462", "30 16 462 ", "1846 924 562" );
 	make_clip( "_booster_generator_main", "Survivors", 1, "-45 -32 -80", "29 45 702", "-484 -580 326" );
 	make_clip( "_booster_signalboxes", "Survivors", 1, "-118 -21 0", "98 19 920", "-570 -859 104" );
 	make_clip( "_booster_trimandbox", "Survivors", 1, "-518 -31 0", "11 80 551", "-859 1591 473" );
 	make_clip( "_booster_fencefinish", "Survivors", 1, "-13 -249 0", "11 247 887", "-243 -631 137" );
 	make_clip( "_booster_telepole1", "Survivors", 1, "-17 -66 -79", "25 66 387", "-232 1481 640" );
-	make_clip( "_booster_telepole2", "Survivors", 1, "-8 -67 -79", "11 66 387", "252 1092 640", "0 -44 0" );
+	make_clip( "_booster_telepole2", "Survivors", 1, "-40 -58 -231", "40 58 231", "240 1086 793" );
 	make_clip( "_booster_telepole3", "Survivors", 1, "-17 -66 -79", "25 66 387", "-1423 1481 640" );
 	make_clip( "_booster_telepole4", "Survivors", 1, "-11 -67 -79", "10 65 387", "-2461 1234 640" );
-	make_clip( "_booster_telepole5", "Survivors", 1, "-17 -66 -79", "25 66 540", "258 153 480", "0 -45 0" );
+	make_clip( "_booster_telepole5", "Survivors", 1, "-104 -45.5 -311", "104 45.5 311", "254 166 713" );
 	make_clip( "_booster_telepole6", "Survivors", 1, "-17 -66 -79", "25 66 540", "-625 87 480" );
-	make_clip( "_booster_telepole7", "Survivors", 1, "-13 -68 -79", "11 63 680", "1562 170 345", "0 5 0" );
+	make_clip( "_booster_telepole7", "Survivors", 1, "-18 -76 -378", "18 76 378", "1562 160 646" );
 	make_clip( "_booster_badcorner", "Survivors", 1, "-219 -142 -35", "133 50 695", "-2342 -258 329" );
 	make_clip( "_booster_acunit", "Survivors", 1, "-30 -93 0", "31 28 600", "-1568 -639 424" );
 	make_clip( "_booster_electricalbox", "Survivors", 1, "-5 -29 0", "6 20 923", "-251 -932 101" );
@@ -54,6 +54,11 @@ function DoRoundFixes()
 
 	unsolidify_model( "models/props_fortifications/orange_cone001_reference.mdl" );
 
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip(	"_booster_bridgea", "Survivors", 1,	"-234 -550 -17", "255 0 0", "0 -638 216" );
+		make_clip(	"_booster_bridgeb", "Survivors", 1,	"-234 -17 -17", "210 0 1017", "0 -1200 216" );
+	}
 	if ( HasPlayerControlledZombies() )
 	{
 		make_brush( "_losfix_gen1",		"-20 -1 -8",	"20 1 8",	"-476 -577 11" );

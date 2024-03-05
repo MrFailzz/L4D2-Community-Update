@@ -68,7 +68,14 @@ function DoRoundFixes()
 		make_clip( "_recompilepls_pillar5", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2360 0" );
 		make_clip( "_recompilepls_pillar6", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2280 0" );
 	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" || g_BaseMode == "versus" )
+	if ( g_BaseMode == "survival" )
+	{
+		make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
+		make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
+		make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
+		make_clip(	"_cliprework_scaffnuke_skipd",	"Survivors",	1,	"-90 -305 -48",		"-61 0 1545",		"-2788 2760 177" );
+	}
+	if ( g_BaseMode != "survival" )
 	{
 		make_clip( "_commentary_fencewalk_a", "Survivors", 1, "-4 0 0", "8 256 512", "-2868 1844 122.859" );
 		make_clip( "_commentary_fencewalk_b", "Survivors", 1, "-4 0 0", "8 256 512", "-2700 1964 122.859" );

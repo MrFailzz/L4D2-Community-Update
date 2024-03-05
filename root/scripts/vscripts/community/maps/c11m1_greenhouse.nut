@@ -19,7 +19,8 @@ function DoRoundFixes()
 	make_clip(	"_cliprework_unattackable",	"Survivors",	1,	"-160 -600 0",		"160 600 1818",		"7188.6 -601.2 16" );
 	make_clip( "_stunfall_lamp", "Survivors", 1, "-888 0 0", "979 17 1724", "5549 1313 8" );
 	make_clip( "_outtabounds_ledge", "Survivors", 1, "-148 -145 0", "100 141 1100", "2700 649 640" );
-	make_trighurt( "_instakill_thankyoufailzz", "Survivor", "-2828 -46 -149", "1881 225 0", "5148 -1121 165" );
+	make_trighurt( "_instakill_deathcharger1", "Survivor", "-1728 -1420 -8", "1728 1420 8", "4032 244 116" );
+	make_trighurt( "_instakill_deathcharger2", "Survivor", "-1728 -1420 -8", "1728 1420 8", "4032 244 116" ); // This is an intentional duplicate to stop the charger infinite recharge bug
 
 	if ( g_BaseMode == "versus" )
 	{
