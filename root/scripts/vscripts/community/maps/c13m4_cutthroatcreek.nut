@@ -10,9 +10,6 @@ function DoRoundFixes()
 {
 	make_clip(	"_permstuck_treetunnel",	"Everyone",	1,	"-16 -17 -10",		"17 16 45",		"-492.1 -186.3 -385" );
 	make_clip(	"_dispcrouch_toomany",		"Everyone",	1,	"0 0 -80",		"128 128 9001",		"-3028 -6154 413" );
-	make_clip( "_eventskip_rooftop", "Survivors", 1, "-317 -401 0", "323 367 689", "-3891 -8135 723" );
-	make_clip( "_eventskip_fence1", "Survivors", 1, "-59 -16 0", "60 16 910", "-4268 -8520 504" );
-	make_clip( "_eventskip_fence2", "Survivors", 1, "-151 -20 0", "849 20 914", "-3409 -7764 500" );
 	make_clip( "_cliprework_startbooster", "Survivors", 1, "-86 -520 -863", "203 361 226", "-4930 -5987 1188" );
 	make_clip( "_dispcrouch_onewaydrop", "Everyone", 1, "-402 -64 -64", "465 18 422", "-3893 -5852 -128" );
 	make_clip( "_cliprework_dispcrouch00", "SI Players and AI", 1, "-64 -149 -164", "18 87 146", "-4030 -5257 132", "0 -5 0" );
@@ -30,7 +27,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_dispcrouch12", "SI Players", 1, "-8 -171 -42", "8 188 102", "415 -921 77", "0 -5 0" );
 	make_clip( "_dispcrouch_waterfall", "Everyone", 1, "-64 -188 -64", "18 263 272", "-2184 -1700 -288", "0 -10 0" );
 	make_clip( "_permstuck_umheymatt", "Everyone", 1, "-16 -128 0", "16 128 142", "13 5280 -117" );
-	make_clip( "_permstuck_barriers", "Everyone", 1, "-8 -128 -87", "8 128 87", "-1500 4336 -25" );
+	make_clip( "_permstuck_barriers", "Everyone", 1, "-8 -128 -87", "8 128 87", "-1500 4336 -30" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -38,6 +35,9 @@ function DoRoundFixes()
 
 		// FIXES
 
+		make_clip( "_eventskip_rooftop", "Survivors", 1, "-317 -401 0", "323 367 689", "-3891 -8135 723" );
+		make_clip( "_eventskip_fence1", "Survivors", 1, "-59 -16 0", "60 16 910", "-4268 -8520 504" );
+		make_clip( "_eventskip_fence2", "Survivors", 1, "-151 -20 0", "849 20 914", "-3409 -7764 500" );
 		make_clip( "_commonhop_endshortcut", "Survivors", 1, "-94 -35 -153", "93 -29 1437", "-693 4555 35", "0 5 0" );
 	}
 

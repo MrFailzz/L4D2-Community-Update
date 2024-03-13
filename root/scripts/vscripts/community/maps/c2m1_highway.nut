@@ -45,16 +45,15 @@ function DoRoundFixes()
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		make_clip( "_shortcut_start_trucka", "Survivors", 1, "-5 -174 0", "96 188 514", "4493 7285 -756", "0 16 0" );
-		make_clip( "_shortcut_start_truckb", "Survivors", 1, "36 -157 0", "96 76 514", "4388 7285 -756", "0 16 0" );
-		make_clip( "_shortcut_start_busblu", "Survivors", 1, "-236 -47 0", "251 66 500", "4379 7676 -756", "0 -45 0" );
+		make_clip( "_shortcut_start_trucka", "Survivors", 1, "-5 -174 0", "96 188 112", "4493 7285 -756", "0 16 0" );
+		//make_clip( "_shortcut_start_truckb", "Survivors", 1, "36 -157 0", "96 76 514", "4388 7285 -756", "0 16 0" );
+		make_clip( "_shortcut_start_busblu", "Survivors", 1, "-236 -47 0", "251 66 172", "4379 7676 -756", "4.3 -45 4.3" );
 		make_clip( "_clipextend_poolwalla", "Survivors", 1, "-517 -10 0", "517 10 360", "2561 3843 -640" );
 		make_clip( "_clipextend_poolwallb", "Survivors", 1, "-6 -350 0", "6 350 360", "3067 4200 -640" );
 		make_clip( "_clipextend_umbrella1", "Survivors", 1, "-48 -50 0", "50 48 522", "2683 4055 -773" );
 		make_clip( "_clipextend_umbrella2", "Survivors", 1, "-48 -50 0", "50 48 522", "2483 3989 -773" );
 		make_clip( "_clipextend_umbrella3", "Survivors", 1, "-48 -52 0", "50 50 522", "2243 4047 -773" );
 		make_clip( "_booster_motelsign", "Survivors", 1, "-105 -13 -71", "132 17 252", "2932 4894 -507" );
-		make_clip( "_commentary_slopetruck", "Survivors", 1, "-8 -84 -8", "90 8 800", "-1251 -734 -1081" );
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -62,10 +61,11 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_overpass_trucknuke", "Survivors", 1, "-126 -45 0", "-33 45 156", "3467 7102 -704", "0 -14 0" );
+		make_clip( "_overpass_trucknuke", "Survivors", 1, "-44 -48 -50", "44 48 50", "3388 7120 -654", "0 -14 0" );
 		make_clip( "_tank_busleft", "Survivors", 1, "-258 -56 0", "271 52 430", "1731 6723 -574", "0 -28 0" );
 		make_clip( "_tank_busright", "Survivors", 1, "-284 -48 -200", "284 48 200", "1688 7008 -344", "0 22 0" );
 		make_clip( "_tank_fence", "Survivors", 1, "-780 -14 -130", "780 14 156", "2588 7168 -412" );
+		make_clip( "_commentary_slopetruck", "Survivors", 1, "-44 -48 -50", "44 48 50", "-1212 -772 -1038" );
 	}
 	if ( g_BaseMode == "survival" )
 	{

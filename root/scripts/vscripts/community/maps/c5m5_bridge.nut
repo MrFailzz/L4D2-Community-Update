@@ -7,7 +7,9 @@ PrecacheModel( "models/props_rooftop/acvent03.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_antiboost_finaleskip",	"Survivors",	1,	"-216 -295 -96",	"216 330 9001",		"-12017 6306 779" );
+	make_clip(	"_antiboost_oob1", "Survivors",	1, "-214 -24 -648", "214 24 648", "-11990 6612 1400" );
+	make_clip(	"_antiboost_oob2", "Survivors",	1, "-24 -292 -648", "24 292 648", "-12228 6296 1400" );
+	make_clip(	"_antiboost_oob3", "Survivors", 1, "-192 -100 -500", "192 100 500", "-12032 5916 1548" );
 	make_clip(	"_permstuck_semiwheels",	"Everyone",	1,	"-45 -30 -75",		"45 30 75",		"5929 6072 475" );
 	make_clip(	"_endfence_curvejump",		"Survivors",	1,	"-112 -80 -180",	"112 80 2400",		"9552 6640 556" );
 	make_clip(	"_endfence_commonhop",		"Survivors",	1,	"-24 -240 -55",		"24 240 17",		"9480 6320 705" );
@@ -52,7 +54,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_bunnyhop_girder",		"Survivors",	1,	"-610 -17 -101",	"40 24 256",		"-5528 6568 860" );
+		make_clip(	"_antiboost_finaleskip", "Survivors", 1, "-172 -18 -18", "172 18 18", "-12036 6030 770" );
 		make_clip(	"_solidify_girderleft",		"Survivors",	1,	"-500 0 0",		"0 40 50",		"4544 6600 750" );
 		make_clip(	"_solidify_girderright",	"Survivors",	1,	"-500 -40 0",		"0 0 50",		"4544 6050 750" );
 		make_clip( "_solidify_stuckwarp1", "Survivors", 1, "-26 -10 -37", "61 11 32", "4152 6617 729" );

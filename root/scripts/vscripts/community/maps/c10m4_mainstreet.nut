@@ -48,15 +48,8 @@ function DoRoundFixes()
 		make_clip( "_church_pillara", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3000 -761 836" );
 		make_clip( "_church_pillarb", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3144 -761 836" );
 		make_clip( "_church_pillarc", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3448 -761 836" );
-
 		make_clip( "_boxtruck_eventskip", "Survivors", 1, "-103 -125.5 -820.5", "103 125.5 820.5", "114 -3025 908" );
-
-		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-180 -60 -2", "115 60 1624", "693 -1867 105", "0 43 0" );
-
-		make_clip( "_cliprework_eventskip1", "Survivors", 1, "-55 -1 0", "58 1 1588", "852 -2433 140" );
-		make_clip( "_cliprework_eventskip2", "Survivors", 1, "-209 -2 0", "192 2 1588", "661 -2569 140", "0 45 0" );
-		make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
-		make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
+		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-44 -48 -50", "44 48 70", "580 -1972 2", "0 43 0" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -100,7 +93,6 @@ function DoRoundFixes()
 		make_clip( "_permstuck_hellcade", "SI Players", 1, "-8 -216 0", "8 216 17", "-5115 -1028 -49" );
 		make_clip( "_ladder_eventskybridge_clip", "SI Players", 1, "-11 -23 0", "2 46 8", "-1314 -4766 296" );
 		make_clip( "_ladder_starthilltop_clip", "SI Players", 1, "-16 -8 0", "16 8 2", "-4620 -1900 520", "0 -17.7 0" );
-		make_clip( "_losblocker_deliveryclip", "Survivors", 1, "-57 -113 0", "56 171 1781", "583 -2463 -52", "0 -20 0" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-908 -17 -440", "114 17 1342", "-3906 -3153 384" );
 		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-17 -595 -731", "17 737 1051", "-4935 -2560 675", "0 13 0" );
 		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-679 -581 -81", "635 120 1169", "2038 -3044 560" );

@@ -33,16 +33,6 @@ function DoRoundFixes()
 	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
 	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
-	{
-		make_clip(	"_stuckwarp_wrongwaya",		"SI Players",	1,	"-82.5 -201 -111",	"82.5 201 111",		"6275 9035 242" );
-		make_clip(	"_stuckwarp_wrongwayb",		"SI Players",	1,	"-21.5 -276 -111",	"21.5 276 111",		"6336 8960 242" );
-		make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
-		make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 12",		"3504 2668 182" );
-		make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
-		make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
-		make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -57,6 +47,16 @@ function DoRoundFixes()
 		make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
 		make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
 		make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
+	{
+		make_clip(	"_stuckwarp_wrongwaya",		"SI Players",	1,	"-82.5 -201 -111",	"82.5 201 111",		"6275 9035 242" );
+		make_clip(	"_stuckwarp_wrongwayb",		"SI Players",	1,	"-21.5 -276 -111",	"21.5 276 111",		"6336 8960 242" );
+		make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
+		make_clip(	"_stuckwarp_staircase",		"Everyone",	1,	"-32 -4 -64",		"64 4 12",		"3504 2668 182" );
+		make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
+		make_clip(	"_commonhop_rooftop",		"Survivors",	1,	"-48 -7 -208",		"48 7 208",		"3055.5 1410 432" );
+		make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
 	}
 
 	if ( HasPlayerControlledZombies() )

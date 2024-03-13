@@ -4,6 +4,12 @@ devchap( "ALL MODES" );
 
 function DoRoundFixes()
 {
+	EntFire( "worldspawn", "RunScriptFile", "community/c1m4_elevatorfix" );
+	
+	// Fix for starting finale via info board, which does not highlight gascans as going down the elevator would. 
+	// Consistent with failsafe for passing finale.
+	EntFire( "trigger_finale", "AddOutput", "FinaleStart relay_explain_finale:Trigger:0:-1" );
+
 	make_clip(	"_booster_storefrontleft",	"Survivors",	1,	"-900 -16 0",		"900 82 36",		"-4256 -4464 196" );
 	make_clip(	"_booster_storefrontright",	"Survivors",	1,	"-169 -32 0",		"785 16 36",		"-3344 -3280 196" );
 	make_clip( "_booster_pillarclip", "Survivors", 1, "-18 -32 0", "38 8 362", "-3434 -3533 472", "0 45 0" );
@@ -38,6 +44,7 @@ function DoRoundFixes()
 	{
 		make_clip( "_booster_bridgeroof", "Survivors", 1, "-345 -110 0", "345 18 512", "-3339 -3857 864", "0 -70.5 0" );
 	}
+	
 	if ( HasPlayerControlledZombies() )
 	{
 		make_ladder( "_ladder_plywoodback_cloned_plywoodfront", "-3311 -4299 588", "-6627 -8597 0", "0 180 0", "-1 0 0" );

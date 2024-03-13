@@ -38,9 +38,9 @@ function DoRoundFixes()
 	make_clip( "_permstuck_triplerockb", "Everyone", 1, "-14 -6 -187", "14 6 187", "-10147 -2993 -27" );
 	make_clip( "_cliprework_churchwindows", "Survivors", 1, "-4 -120 0", "4 120 100", "-2372 192 194" );
 	make_clip( "_clipextend_padlockgate", "Survivors", 1, "-14 -311 0", "14 405 1102", "-8594 -5033 344" );
-	make_clip( "_permstuck_openedrockcliff", "SI Players", 1, "-17 -17 0", "17 17 32", "-9247 -3950 412" );
-	make_clip( "_permstuck_fatcliffladder1", "SI Players", 1, "-17 -34 0", "17 17 32", "-8302 -3322 383" );
-	make_clip( "_permstuck_fatcliffladder2", "SI Players", 1, "-17 -34 0", "17 17 32", "-8224 -3527 378" );
+	make_clip( "_permstuck_openedrockcliff", "Everyone", 1, "-17 -17 0", "17 17 32", "-9247 -3950 412" );
+	make_clip( "_permstuck_fatcliffladder1", "Everyone", 1, "-17 -34 0", "17 17 32", "-8302 -3322 383" );
+	make_clip( "_permstuck_fatcliffladder2", "Everyone", 1, "-17 -34 0", "17 17 32", "-8224 -3527 378" );
 	make_clip( "_permstuck_housesiderock", "Everyone", 1, "-13 -34 -37", "13 13 37", "-6869 -2445 15" );
 	make_clip( "_chargerassist_brokenwall", "Survivors", 1, "-128 0 0", "128 64 275", "-2480 1104 221" );
 

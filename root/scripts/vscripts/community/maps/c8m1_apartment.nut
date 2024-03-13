@@ -85,8 +85,6 @@ function DoRoundFixes()
 		make_clip( "_cliprework_rooftop02",	"Survivors", 1, "-474 -216 0", "474 216 4040", "2004 1996 640" );
 		make_clip( "_cliprework_rooftop03",	"Survivors", 1, "-513 -409 0", "513 409 4040", "2047 2792.5 495.5" );
 		make_clip( "_cliprework_rooftop05", "Survivors", 1, "-257 -183 0", "259 192 4042", "1793 1595 640" );
-		make_clip( "_truckjump_window", "Survivors", 1, "-32 -8 -44", "32 8 44", "1728 3976 268" );
-		make_clip( "_booster_windows", "Survivors",	1, "-8 -96 -44", "8 96 44", "2040 4672 268" );
 		make_ladder( "_ladder_alleywindow_cloned_tankerwindow", "1720 3959.5 120", "820 -1590 0" );
 		make_ladder( "_ladder_commvignette_cloned_trashorange", "2428 3204.5 255.9905", "-1800 97 -144" );
 		make_ladder( "_ladder_crushedescape_cloned_tankerwindow", "1720 3959.5 120", "4198 4729 -51", "0 180 0", "0 1 0" );

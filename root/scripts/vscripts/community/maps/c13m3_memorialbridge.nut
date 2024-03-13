@@ -41,7 +41,6 @@ function DoRoundFixes()
 	make_clip( "_clipextend_bridgeright1", "Survivors", 1, "0 -30 0", "462 29 317", "-2128 -4480 1538" );
 	make_clip( "_clipextend_bridgeright2", "Survivors", 1, "0 -30 0", "476 29 317", "-1334 -4480 1538" );
 	make_clip( "_clipextend_bridgeright3", "Survivors", 1, "0 -30 0", "1376 29 317", "-600 -4480 1538" );
-	make_clip( "_cliprework_enddumpsters", "Survivors", 1, "-77 -130 0", "77 130 768", "5964 -3954 494" );
 	make_clip( "_bridge_collision", "All and Physics", 1, "-45 -473 0", "46 463 4", "1004 -4091 586" );
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
@@ -62,6 +61,14 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_tanker", "Survivors", 1, "-58 -577 0", "58 271 527", "1092 -3999 1328", "0 27 0" );
 		EntFire( "tanker_destruction_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_shortcut_tanker:Kill::0:-1" );
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
+
+		// FIXES
+
+		make_clip( "_cliprework_enddumpsters", "Survivors", 1, "-77 -130 0", "77 130 768", "5964 -3954 494" );
 	}
 
 	// FIX: Prevent using water (or ladder) as a cushion to shortcut jump off bridge.

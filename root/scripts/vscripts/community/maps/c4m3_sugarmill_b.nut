@@ -36,23 +36,39 @@ function DoRoundFixes()
 	make_clip( "_nav_rubblewalla", "Survivors", 1, "-6 0 -13", "6 96 114", "-1152 -8556 712" );
 	make_clip( "_nav_rubblewallb", "Survivors", 1, "-6 0 -13", "6 96 114", "-1152 -9457 712" );
 	make_clip( "_cliprework_thimbleroof", "Survivors", 1, "0 -480 0", "401 464 2242", "288 -7936 281" );
-	make_clip( "_clipextend_thimblestack", "Survivors", 1, "-67 -52 0", "63 70 2084", "394 -7429 440" );
+	make_clip( "_clipextend_thimblestack", "Survivors", 1, "-66 -62 -1133.5", "66 62 1133.5", "394 -7426 1394" );
 	make_clip( "_clipextend_generator", "Survivors", 1, "-24 -35 0", "26 31 1821", "-769 -7654 687" );
 	make_clip( "_rubble_smoother1", "Everyone", 1, "-1 -93 0", "1 106 4", "2239 -5093 121", "0 -15 0" );
 	make_clip( "_rubble_smoother2", "Everyone", 1, "-66 -6 0", "58 0 6", "2176 -4926 98", "0 -15 0" );
 	make_clip( "_rubble_smoother3", "Everyone", 1, "-58 -90 0", "61 45 13", "2055 -4931 97", "0 21 0" );
 	make_clip( "_rubble_smoother4", "Everyone", 1, "-138 -26 0", "79 16 11", "1966 -5174 99", "0 15 30" );
 	make_clip( "_commentary_elevatorpipe", "Survivors", 1, "0 0 0", "50 50 500", "-1535 -9144.59 614.604" );
-	make_prop( "dynamic", "_spool_oneway1", "models/props_industrial/wire_spool_01.mdl", "228 -5204 96", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway2", "models/props_industrial/wire_spool_02.mdl", "232 -5276 97", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway3", "models/props_industrial/wire_spool_01.mdl", "228 -5280 150", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway4", "models/props_industrial/wire_spool_02.mdl", "136 -5272 125", "9 45 90", "shadow_no");
 
 	// All-mode QoL clip for a Valve ladder and move it 2 units so players don't get caught on critpath anymore.
 
 	make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 	patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+
+		// FIXES
+
+		make_prop( "dynamic", "_spool_oneway1", "models/props_industrial/wire_spool_01.mdl", "228 -5204 96", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway2", "models/props_industrial/wire_spool_02.mdl", "232 -5276 97", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway3", "models/props_industrial/wire_spool_01.mdl", "228 -5280 150", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway4", "models/props_industrial/wire_spool_02.mdl", "136 -5272 125", "9 45 90", "shadow_no");
+	}
+	if ( g_BaseMode == "versus" )
+	{
+		devchap( "BASE VERSUS" );
+
+		// FIXES
+
+		make_clip( "_truck_fence1", "Survivors", 1, "-3 -128 -1546", "3 128 1546", "4292 -2990 1641.5" );
+		make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
+	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip(	"_vent_roofa",          "Survivors",	1,	"-118 -4 -84",		"118 4 0",		"3699 -3727 476" );
@@ -77,15 +93,6 @@ function DoRoundFixes()
 		make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
 		make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
 		make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
-	}
-	if ( g_BaseMode == "versus" )
-	{
-		devchap( "BASE VERSUS" );
-
-		// FIXES
-
-		make_clip( "_truck_fence1", "Survivors", 1, "-3 -128 -1546", "3 128 1546", "4292 -2990 1641.5" );
-		make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
 	}
 
 	if ( HasPlayerControlledZombies() )

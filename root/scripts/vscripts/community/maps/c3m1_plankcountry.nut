@@ -31,7 +31,6 @@ function DoRoundFixes()
 	make_clip( "_cliprework_house", "Survivors", 1, "-259 -526 0", "257 530 704", "-11343 7758 320" );
 	make_clip( "_fallenlog_shrub_survivor", "Survivors", 1, "-182 -383 -99", "27 142 941", "560 9614 83", "0 19 0" );
 	make_clip( "_fallenlog_shrub_infected", "SI Players and AI", 1, "-182 -383 -99", "27 142 61", "560 9614 83", "0 19 0" );
-	make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6718 444" );
 	make_clip( "_commentary_booster_crumpstore_a", "Survivors", 1, "-148 -336 -352", "148 336 352", "-6332 6536 672" );
 	make_clip( "_commentary_booster_crumpstore_b", "Survivors", 1, "-43 -147 -352", "43 147 352", "-6523 6352 672" );
 	make_clip( "_commentary_dockprops_poleclip", "Survivors", 1, "-16 -16 -8", "20 20 324", "-5379 6768 -26" );
@@ -63,14 +62,6 @@ function DoRoundFixes()
 	make_trighurt( "_fred_pain_cuddles", "Ghost", "-4 -4 -4", "4 4 4", "-5280 7375 -12" );
 	EntFire( g_UpdateName + "_fred_pain_cuddles", "SetDamage", 120 );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
-		make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
-		make_clip( "_chargerassist_fenceladdy", "Survivors", 1, "-94 0 -41", "88 11 952", "-6248 5650 72" );
-		make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
-		make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -91,8 +82,17 @@ function DoRoundFixes()
 		make_clip( "_survival_brushextendc", "Survivors", 1, "-289 -16 0", "439 20 717", "-9471 7496 384" );
 		make_clip( "_nav_pubsign", "Survivors", 1, "-4 -34 0", "4 31 822", "-7264 7167 202" );
 		make_clip( "_nav_trailertree", "Survivors", 1, "-48 -26 0", "78 36 742", "-7742 7721 287" );
+		make_clip( "_booster_powerpole", "Survivors", 1, "-9 -8 0", "9 10 582", "-7630 6718 444" );
 	}
-
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_commonhop_coolingtank", "Survivors", 1, "-74 -236 0", "70 156 880", "-6806 7572 144" );
+		make_clip( "_chargerassist_trainwheel", "Survivors", 1, "-133 -444 -130", "28 131 765", "-12379 8416 259", "0 -19 0" );
+		make_clip( "_chargerassist_fenceladdy", "Survivors", 1, "-94 0 -41", "88 11 952", "-6248 5650 72" );
+		make_clip( "_chargerassist_commonhop1", "Survivors", 1, "-155 -16 0", "117 5 864", "-7093 6280 160" );
+		make_clip( "_chargerassist_commonhop2", "Survivors", 1, "-49 -170 0", "63 134 864", "-7093 6452 160", "0 -3 0" );
+	}
+	
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 1167.82 );		// UNDESIRABLY delete (matching value) unrelated clip but re-make exactly

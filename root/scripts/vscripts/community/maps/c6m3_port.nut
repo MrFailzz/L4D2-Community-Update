@@ -9,6 +9,7 @@ function DoRoundFixes()
 	make_clip(	"_solidify_girder",		"Survivors",	1,	"-17 -80 -170",		"2 240 240",		"200 -1280 145" );
 	make_clip( "_bridge_stairgap1", "Survivors", 1, "-8 -64 -410", "8 64 410", "328 -1152 614" );
 	make_clip( "_bridge_stairgap2", "Survivors", 1, "-24 -50 -102", "24 50 102", "296 -1166 306" );
+	make_clip( "_bridge_stairgap3", "Survivors", 1, "-6 -36 -76", "6 36 76", "198 -1316 484" );
 	make_clip( "_booster_tent", "Survivors", 1, "-61 -66 -30", "69 64 730", "1196 -847 294" );
 	make_clip( "_booster_streetlamp", "Survivors", 1, "-9 -11 0", "9 9 715", "1493 -368 308" );
 	make_clip( "_booster_generator_side", "Survivors", 1, "-30 -16 -462", "30 16 462 ", "1846 924 562" );

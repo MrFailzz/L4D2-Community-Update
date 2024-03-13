@@ -46,30 +46,12 @@ function DoRoundFixes()
 	// EntFire( "relay_start_onslaught", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 	// EntFire( "relay_panicevent", "AddOutput", "OnTrigger " + g_UpdateName + "_dynamic_coaster_rubble:SetAnimation:debris:6.33:-1" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip(	"_stuckwarp_gatearm",		"Everyone",	1,	"-31 -36 -54",		"31 36 54",		"-3799 1100 82" );
-		make_clip( "_cliprework_culdesaca", "Survivors", 1, "-95 -4 0", "98 4 206", "-3917 2979 152", "0 25 0" );
-		make_clip( "_cliprework_culdesacb", "Survivors", 1, "-176 -4 0", "142 4 1603", "-3659 3066 152", "0 15 0" );
-		make_clip( "_cliprework_culdesacc", "Survivors", 1, "-175 -4 0", "178 4 206", "-3351 3058 152", "0 -15 0" );
-		make_clip( "_cliprework_culdesacd", "Survivors", 1, "-4 -280 0", "4 106 1387", "-3493 3256 368" );
-		make_clip( "_cliprework_shrubgap", "Survivors", 1, "-112 -80 0", "112 80 286", "-3072 128 152" );
-		make_clip( "_commonhop_curvedrail", "Survivors", 1, "-5 -120 0", "17 260 25", "-3498 2060 250" );
-		make_clip(	"_shortcut_commonhopa",		"Survivors",	1,	"-10 -10 -64",		"10 10 216",		"-3720 1144 96" );
-		make_clip(	"_shortcut_commonhopb",		"Survivors",	1,	"-10 -10 -56",		"10 10 232",		"-3720 1352 72" );
-		make_clip(	"_shortcut_commonhopc",		"Survivors",	1,	"-10 -10 -52",		"10 10 227",		"-3720 1768 77" );
-		make_clip( "_shortcut_commonhopd", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1352 77" );
-		make_clip( "_shortcut_commonhope", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1768 77" );
-		make_clip( "_shortcut_commonhopf", "Survivors", 1, "-10 -10 -56", "10 10 263", "-3720 1976 57" );
-		make_clip( "_recompilepls_pillar1", "Survivors", 1, "-10 -10 0", "10 10 272", "-3760 2360 0" );
-		make_clip( "_recompilepls_pillar2", "Survivors", 1, "-10 -10 0", "10 10 272", "-3760 2280 0" );
-		make_clip( "_recompilepls_pillar3", "Survivors", 1, "-10 -10 0", "10 10 272", "-4032 2280 0" );
-		make_clip( "_recompilepls_pillar4", "Survivors", 1, "-10 -10 0", "10 10 272", "-4032 2360 0" );
-		make_clip( "_recompilepls_pillar5", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2360 0" );
-		make_clip( "_recompilepls_pillar6", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2280 0" );
-	}
 	if ( g_BaseMode == "survival" )
 	{
+		devchap( "BASE SURVIVAL" );
+
+		// FIXES
+		
 		make_clip(	"_cliprework_scaffnuke_skipa",	"Survivors",	1,	"-120 -111 -48",	"150 88 310",		"-3044 3000 177" );
 		make_clip(	"_cliprework_scaffnuke_skipb",	"Survivors",	1,	"-90 -211 -48",		"82 0 310",		"-2788 2760 177" );
 		make_clip(	"_cliprework_scaffnuke_skipc",	"Survivors",	1,	"-120 -111 -48",	"20 -73 1545",		"-3044 3000 177" );
@@ -104,6 +86,28 @@ function DoRoundFixes()
 		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
 		make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
 		make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip(	"_stuckwarp_gatearm",		"Everyone",	1,	"-31 -36 -54",		"31 36 54",		"-3799 1100 82" );
+		make_clip( "_cliprework_culdesaca", "Survivors", 1, "-95 -4 0", "98 4 206", "-3917 2979 152", "0 25 0" );
+		make_clip( "_cliprework_culdesacb", "Survivors", 1, "-176 -4 0", "142 4 1603", "-3659 3066 152", "0 15 0" );
+		make_clip( "_cliprework_culdesacc", "Survivors", 1, "-175 -4 0", "178 4 206", "-3351 3058 152", "0 -15 0" );
+		make_clip( "_cliprework_culdesacd", "Survivors", 1, "-4 -280 0", "4 106 1387", "-3493 3256 368" );
+		make_clip( "_cliprework_shrubgap", "Survivors", 1, "-112 -80 0", "112 80 286", "-3072 128 152" );
+		make_clip( "_commonhop_curvedrail", "Survivors", 1, "-5 -120 0", "17 260 25", "-3498 2060 250" );
+		make_clip(	"_shortcut_commonhopa",		"Survivors",	1,	"-10 -10 -64",		"10 10 216",		"-3720 1144 96" );
+		make_clip(	"_shortcut_commonhopb",		"Survivors",	1,	"-10 -10 -56",		"10 10 232",		"-3720 1352 72" );
+		make_clip(	"_shortcut_commonhopc",		"Survivors",	1,	"-10 -10 -52",		"10 10 227",		"-3720 1768 77" );
+		make_clip( "_shortcut_commonhopd", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1352 77" );
+		make_clip( "_shortcut_commonhope", "Survivors", 1, "-10 -10 -56", "10 10 227", "-3512 1768 77" );
+		make_clip( "_shortcut_commonhopf", "Survivors", 1, "-10 -10 -56", "10 10 263", "-3720 1976 57" );
+		make_clip( "_recompilepls_pillar1", "Survivors", 1, "-10 -10 0", "10 10 272", "-3760 2360 0" );
+		make_clip( "_recompilepls_pillar2", "Survivors", 1, "-10 -10 0", "10 10 272", "-3760 2280 0" );
+		make_clip( "_recompilepls_pillar3", "Survivors", 1, "-10 -10 0", "10 10 272", "-4032 2280 0" );
+		make_clip( "_recompilepls_pillar4", "Survivors", 1, "-10 -10 0", "10 10 272", "-4032 2360 0" );
+		make_clip( "_recompilepls_pillar5", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2360 0" );
+		make_clip( "_recompilepls_pillar6", "Survivors", 1, "-10 -10 0", "10 10 272", "-4176 2280 0" );
 	}
 
 	if ( HasPlayerControlledZombies() )

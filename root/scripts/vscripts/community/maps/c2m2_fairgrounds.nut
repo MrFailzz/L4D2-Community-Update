@@ -36,7 +36,6 @@ function DoRoundFixes()
 	make_clip( "_cliprework_blockergap", "Survivors", 1, "-121 -8 0", "123 8 384", "-4235 -3968 384" );
 	make_clip( "_unattackable_traintunnel", "Survivors", 1, "-324 -1040 -171", "220 1040 342", "-604 -1536 428" );
 	make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2", "1400 1700 0", "-1903 -142 -128" );
-	make_clip( "_commentary_generatorlights", "Survivors", 1, "-8 -56 -8", "44 8 524", "2876 -1700 244" );
 	make_clip( "_commentary_carouselgate_stuck", "All and Physics", 1, "-4 -24 -80", "4 24 80", "-2764 -5452 -48" );
 	make_clip( "_commentary_blockergap", "Survivors", 1, "-4 -324 -192", "4 324 192", "-4352 -4284 576" );
 

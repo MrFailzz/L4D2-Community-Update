@@ -36,11 +36,6 @@ function DoRoundFixes()
 	
 	make_clip( "_commentary_shortcut_tent", "Survivors", 1, "-65 -65 -20", "65 65 1790", "-6853 -5598 -135.75" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
-		patch_ladder( "-9260 -5130 -152", "1 14 0" );
-	}
 	if ( g_BaseMode == "survival" )
 	{
 		devchap( "BASE SURVIVAL" );
@@ -56,6 +51,11 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_safedoor_antighost", "SI Players", 1, "-2 -32 0", "2 32 107", "-3775 -1368 -344" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_commentary_shortcut_station", "Survivors", 1, "-1 -1 -1", "64 4 120", "-6752 -6736 -120" );
+		patch_ladder( "-9260 -5130 -152", "1 14 0" );
 	}
 
 	if ( HasPlayerControlledZombies() )

@@ -26,9 +26,6 @@ function DoRoundFixes()
 	make_clip( "_backstairs_left", "Survivors", 1, "-8 -160 0", "8 160 760", "-4086 2688 264" );
 	make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
 	make_clip( "_commentary_infectedwindows", "Survivors", 1, "-8 -10 -8", "258 10 1064", "-3325 3720 -40" );
-	make_prop( "dynamic", "_vending_oneway", "models/props_equipment/snack_machine2.mdl", "-1132 2336 -256", "0 45 0", "shadow_no" );
-	make_prop( "dynamic", "_case_oneway1", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-1092 2384 -256", "0 171 0", "shadow_no" );
-	make_prop( "dynamic", "_case_oneway2", "models/props_fairgrounds/anvil_case_64.mdl", "-1096 2384 -220", "0 344.5 0", "shadow_no" );
 
 	// FIX: Prevent interior stadium trigger from deleting players by re-creating it.
 
@@ -71,16 +68,6 @@ function DoRoundFixes()
 
 	kill_entity( hndBadTrigger );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip( "_permstuck_fence", "Survivors", 1, "-1 -102 0", "4 102 128", "-1110 2274 -112", "0 44 0" );
-		make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
-		make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
-		make_clip( "_cliprework_concertlights", "Survivors", 1, "-324 -74 0", "318 73 162", "-2305 3277 140" );
-		make_clip( "_cliprework_concertposter", "Survivors", 1, "-338 -16 -200", "338 17 98", "-2304 3687 204" );
-		make_clip( "_cliprework_concertroofio", "Survivors", 1, "-656 -32 -98", "616 515 652", "-2302 3197 352" );
-		make_clip( "_nav_duediligence", "Survivors", 1, "-3 -49 0", "5 48 1152", "-997 3049 -128" );
-	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -89,6 +76,9 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
+		make_prop( "dynamic", "_vending_oneway", "models/props_equipment/snack_machine2.mdl", "-1132 2336 -256", "0 45 0", "shadow_no" );
+		make_prop( "dynamic", "_case_oneway1", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-1092 2384 -256", "0 171 0", "shadow_no" );
+		make_prop( "dynamic", "_case_oneway2", "models/props_fairgrounds/anvil_case_64.mdl", "-1096 2384 -220", "0 344.5 0", "shadow_no" );
 		
 		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
@@ -104,6 +94,16 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_permstuck_fence", "Survivors", 1, "-1 -102 0", "4 102 128", "-1110 2274 -112", "0 44 0" );
+		make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
+		make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
+		make_clip( "_cliprework_concertlights", "Survivors", 1, "-324 -74 0", "318 73 162", "-2305 3277 140" );
+		make_clip( "_cliprework_concertposter", "Survivors", 1, "-338 -16 -200", "338 17 98", "-2304 3687 204" );
+		make_clip( "_cliprework_concertroofio", "Survivors", 1, "-656 -32 -98", "616 515 652", "-2302 3197 352" );
+		make_clip( "_nav_duediligence", "Survivors", 1, "-3 -49 0", "5 48 1152", "-997 3049 -128" );
 	}
 
 	if ( HasPlayerControlledZombies() )

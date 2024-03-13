@@ -35,21 +35,6 @@ function DoRoundFixes()
 	patch_spawninfront( "-482 2195 -256", "-51 -8 0", "51 8 160" );
 	patch_spawninfront( "-386 2416 -256", "-8 -51 0", "8 51 160" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip(	"_outhouse_saferoof",		"Survivors",	1,	"-94 -32 0",		"94 32 1111",		"2608 3920 -88" );
-		make_clip( "_booster_barnbeam1", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -129 32" );
-		make_clip( "_booster_barnbeam2", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -321 32" );
-		make_clip( "_booster_barnbeam3", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 63 32" );
-		make_clip( "_booster_barnbeam4", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 -129 32" );
-		make_clip( "_booster_barnbeam5", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 -321 32" );
-		make_clip( "_booster_barnbeam6", "Survivors", 1, "-125 -11 0", "138 5 82", "-614 63 32" );
-		make_clip( "_booster_barnbeam7", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -129 32" );
-		make_clip( "_booster_barnbeam8", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -321 32" );
-		make_clip( "_booster_awning", "Survivors", 1, "-17 -16 -34", "274 13 134", "-3119 528 5" );
-		make_clip( "_nav_eventfenceback1", "Survivors", 1, "-54 -30 -538", "54 30 538", "-2370 850 486" );
-		make_clip( "_nav_eventfenceback2", "Survivors", 1, "-104 -34 -538", "104 34 538", "-2212 794 486" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -77,6 +62,21 @@ function DoRoundFixes()
 		make_ladder( "_ladder_askewhedgebotr2_cloned_askewhedgebotl", "610 1209.88 -123.984", "0 52 0" );
 		make_ladder( "_ladder_askewhedgetopl1_cloned_askewhedgetopr", "594 1262 -24", "0 -26 0" );
 		make_ladder( "_ladder_askewhedgetopl2_cloned_askewhedgetopr", "594 1262 -24", "0 -52 0" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip(	"_outhouse_saferoof",		"Survivors",	1,	"-94 -32 0",		"94 32 1111",		"2608 3920 -88" );
+		make_clip( "_booster_barnbeam1", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -129 32" );
+		make_clip( "_booster_barnbeam2", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -321 32" );
+		make_clip( "_booster_barnbeam3", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 63 32" );
+		make_clip( "_booster_barnbeam4", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 -129 32" );
+		make_clip( "_booster_barnbeam5", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 -321 32" );
+		make_clip( "_booster_barnbeam6", "Survivors", 1, "-125 -11 0", "138 5 82", "-614 63 32" );
+		make_clip( "_booster_barnbeam7", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -129 32" );
+		make_clip( "_booster_barnbeam8", "Survivors", 1, "-145 -3 0", "158 5 65", "-614 -321 32" );
+		make_clip( "_booster_awning", "Survivors", 1, "-17 -16 -34", "274 13 134", "-3119 528 5" );
+		make_clip( "_nav_eventfenceback1", "Survivors", 1, "-54 -30 -538", "54 30 538", "-2370 850 486" );
+		make_clip( "_nav_eventfenceback2", "Survivors", 1, "-104 -34 -538", "104 34 538", "-2212 794 486" );
 	}
 
 	// FIX: Prevent various common hops straight to barns roof with a large clip.
