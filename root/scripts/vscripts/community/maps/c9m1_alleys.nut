@@ -9,17 +9,17 @@ PrecacheModel( "models/props_highway/plywood_01.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_cliprework_rooftop01",	"Survivors",	1,	"-8 -300 -464",		"8 300 464",		"-5448 -8748 464" );
-	make_clip(	"_cliprework_rooftop02",	"Survivors",	1,	"-296 -8 -464",	"296 8 464",		"-5160 -8440 464" );
-	make_clip(	"_cliprework_rooftop03",	"Survivors",	1,	"-8 -120 -464",	"8 120 464",		"-4872 -8312 464" );
-	make_clip(	"_commonhop_window",		"Survivors",	1,	"-32 -8 0",		"32 8 88",		"-4480 -10632 144" );
-	make_clip(	"_curvejump_van",		"Survivors",	1,	"-42 -128 -32",		"42 128 1337",		"-3311 -4407 -345" );
-	make_clip(	"_cliprework_mirrorwarehouse",	"Everyone",	1,	"-77 -238 0",		"76 248 296",		"-5412 -10506 64" );
-	make_clip(	"_permstuck_treea",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"-3520 -4949 -242" );
-	make_clip(	"_permstuck_treeb",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"-2656 -4782 -300" );
-	make_clip(	"_permstuck_treec",		"Everyone",	1,	"-17 -17 0",		"17 17 96",		"-865 -6583 -17" );
-	make_clip(	"_permstuck_treed",		"Everyone",	1,	"-17 -17 0",		"17 17 96",		"-577 -7055 -23" );
-	make_clip(	"_curvejump_railing",		"Survivors",	1,	"-100 -17 -64",		"42 17 888",		"-1714 -1650 64" );
+	make_clip( "_cliprework_rooftop01", "Survivors", 1, "-8 -300 -464", "8 300 464", "-5448 -8748 464" );
+	make_clip( "_cliprework_rooftop02", "Survivors", 1, "-296 -8 -464", "296 8 464", "-5160 -8440 464" );
+	make_clip( "_cliprework_rooftop03", "Survivors", 1, "-8 -120 -464", "8 120 464", "-4872 -8312 464" );
+	make_clip( "_commonhop_window", "Survivors", 1, "-32 -8 0", "32 8 88", "-4480 -10632 144" );
+	make_clip( "_curvejump_van", "Survivors", 1, "-42 -128 -32", "42 128 1337", "-3311 -4407 -345" );
+	make_clip( "_cliprework_mirrorwarehouse", "Everyone", 1, "-77 -238 0", "76 248 296", "-5412 -10506 64" );
+	make_clip( "_permstuck_treea", "Everyone", 1, "-17 -17 0", "17 17 128", "-3520 -4949 -242" );
+	make_clip( "_permstuck_treeb", "Everyone", 1, "-17 -17 0", "17 17 128", "-2656 -4782 -300" );
+	make_clip( "_permstuck_treec", "Everyone", 1, "-17 -17 0", "17 17 96", "-865 -6583 -17" );
+	make_clip( "_permstuck_treed", "Everyone", 1, "-17 -17 0", "17 17 96", "-577 -7055 -23" );
+	make_clip( "_curvejump_railing", "Survivors", 1, "-100 -17 -64", "42 17 888", "-1714 -1650 64" );
 	make_clip( "_cliprework_noladders", "Survivors", 1, "-8 -176 0", "8 176 72", "-7976 -10924 208" );
 	make_clip( "_solidify_acunit", "Everyone", 1, "-4 -59 -7", "4 59 136", "-708 -1224 23" );
 	make_clip( "_commonhop_van", "Survivors", 1, "-114 -54 0", "149 60 773", "-2312 -9675 155", "0 38 0" );
@@ -45,17 +45,17 @@ function DoRoundFixes()
 		make_clip( "_booster_trafficlightb", "Survivors", 1, "-100 -60 -140", "140 40 561", "-1364 -6902 367" );
 		make_clip( "_booster_trafficlightc", "Survivors", 1, "-42 -140 -80", "10 148 619", "-1094 -6917 309" );
 		make_clip( "_booster_trafficlightd", "Survivors", 1, "-120 -34 -80", "148 10 619", "-1242 -6515 309" );
-		make_clip(	"_allmodes_griefrooma",		"Survivors",	1,	"0 0 0",		"530 126 950",		"156 -6648 -22" );
-		make_clip(	"_allmodes_griefroomb",		"Survivors",	1,	"0 -770 0",		"130 0 950",		"28 -6652 -22" );
+		make_clip( "_allmodes_griefrooma", "Survivors", 1, "0 0 0", "530 126 950", "156 -6648 -22" );
+		make_clip( "_allmodes_griefroomb", "Survivors", 1, "0 -770 0", "130 0 950", "28 -6652 -22" );
 	}
 	if ( HasPlayerControlledZombies() )
 	{
 		make_atomizer( "_atomizer_bsp_forklift", "-6392 -10719 64", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
 		make_atomizer( "_atomizer_l4d1_dumpster", "-10312 -9907 0", "models/props_junk/dumpster.mdl", 30 );
-		make_brush( "_losfix_ambulance",	"-1 -80 -11",	"1 60 11",	"-1431 -4449 71" );
-		make_brush( "_losfix_boxcar",		"-1 -32 -10",	"1 32 10",	"-7360 -10074 2" );
-		make_brush( "_losfix_shelf1",		"-1 -28 -5",	"1 28 5",	"-5331 -10944 69" );
-		make_brush( "_losfix_shelf2",		"-1 -30 -5",	"1 30 5",	"561 -2002 -171" );
+		make_brush( "_losfix_ambulance", "-1 -80 -11", "1 60 11", "-1431 -4449 71" );
+		make_brush( "_losfix_boxcar", "-1 -32 -10", "1 32 10", "-7360 -10074 2" );
+		make_brush( "_losfix_shelf1", "-1 -28 -5", "1 28 5", "-5331 -10944 69" );
+		make_brush( "_losfix_shelf2", "-1 -30 -5", "1 30 5", "561 -2002 -171" );
 		make_clip( "_ladder_aftertanker_clipleft", "Everyone", 1, "-14 -4 0", "15 4 608", "-2248 -5372 -224", "0 -55 0" );
 		make_clip( "_ladder_aftertanker_clipright", "Everyone", 1, "-15 -4 0", "14 4 608", "-2292 -5372 -224", "0 55 0" );
 		make_clip( "_ladder_dualwindowshared_clip", "SI Players and AI", 1, "-8 -186 0", "32 186 16", "-7960 -10924 191", "42 0 0" );

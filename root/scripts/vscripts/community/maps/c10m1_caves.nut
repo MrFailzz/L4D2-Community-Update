@@ -9,11 +9,11 @@ PrecacheModel( "models/props_wasteland/rock_cliff01.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_dispcrouch_hardone",		"Everyone",	1,	"-30 -216 -17",		"32 145 180",		"-11790 -12821 -65" );
-	make_clip(	"_booster_funnel",		"Survivors",	1,	"-32 -32 -64",		"32 32 365",		"-12976 -12262 100" );
-	make_clip(	"_curvejump_rocky",		"Survivors",	1,	"-32 -128 -80",		"32 128 1001",		"-13152 -11044 60.6" );
-	make_clip(	"_cliprework_hillside01",	"Survivors",	1,	"-121 -690 -136",	"1456 667 777",		"-11849.1 -10286.1 504.3" );
-	make_clip(	"_cliprework_hillside02",	"Survivors",	1,	"-264.5 -483 -519.5",	"264.5 483 519.5",	"-10597.5 -10811 848.5" );
+	make_clip( "_dispcrouch_hardone", "Everyone", 1, "-30 -216 -17", "32 145 180", "-11790 -12821 -65" );
+	make_clip( "_booster_funnel", "Survivors", 1, "-32 -32 -64", "32 32 365", "-12976 -12262 100" );
+	make_clip( "_curvejump_rocky", "Survivors", 1, "-32 -128 -80", "32 128 1001", "-13152 -11044 60.6" );
+	make_clip( "_cliprework_hillside01", "Survivors", 1, "-121 -690 -136", "1456 667 777", "-11849.1 -10286.1 504.3" );
+	make_clip( "_cliprework_hillside02", "Survivors", 1, "-264.5 -483 -519.5", "264.5 483 519.5", "-10597.5 -10811 848.5" );
 	make_clip( "_unattackable_tunnelsolidify", "Survivors", 1, "-625 -77 -144", "415 67 784", "-12367 -9747 496" );
 	make_clip( "_dispcrouch_popular", "Everyone", 1, "-9 -136 0", "8 112 106", "-10569 -11466 -510", "0 28 0" );
 	make_clip( "_dispcrouch_unknown", "Everyone", 1, "-77 -17 0", "77 11 122", "-10812 -11821 -507", "0 -8 0" );
@@ -37,13 +37,13 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		kill_funcinfclip( 698.195 );		// Delete clip directly above bridge tunnel entrance, then patch in exploits created
-		kill_funcinfclip( 1086.93 );		// Delete clip on tunnel entrance side of the hill
-		kill_funcinfclip( 1105.65 );		// Delete clip on overpass side of the hill
-		make_brush( "_losfix_semi",		"-50 -1 -15",	"50 1 15",	"-12260 -11102 -49" );
-		make_brush( "_losfix_earlyvan",		"-48 -1 -8",	"48 1 8",	"-12318 -8360 -56" );
-		make_brush( "_losfix_latevan1",		"-1 -45 -8",	"0 45 18",	"-12951 -6686 -56" );
-		make_brush( "_losfix_latevan2",		"-45 -1 -8",	"45 0 18",	"-12997 -6640 -56" );
+		kill_funcinfclip( 698.195 ); 		// Delete clip directly above bridge tunnel entrance, then patch in exploits created
+		kill_funcinfclip( 1086.93 ); 		// Delete clip on tunnel entrance side of the hill
+		kill_funcinfclip( 1105.65 ); 		// Delete clip on overpass side of the hill
+		make_brush( "_losfix_semi", "-50 -1 -15", "50 1 15", "-12260 -11102 -49" );
+		make_brush( "_losfix_earlyvan", "-48 -1 -8", "48 1 8", "-12318 -8360 -56" );
+		make_brush( "_losfix_latevan1", "-1 -45 -8", "0 45 18", "-12951 -6686 -56" );
+		make_brush( "_losfix_latevan2", "-45 -1 -8", "45 0 18", "-12997 -6640 -56" );
 		make_clip( "_ladder_bridgetunnel_backboard", "Everyone", 1, "-248 -10 -84", "308 6 48", "-12348 -9814 272" );
 		make_clip( "_ladder_bridgetunnel_clip", "Everyone", 1, "-8 -8 0", "22 3 74", "-12617 -9856 -50", "0 21 0" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-415 -16 0", "401 45 782", "-12353 -9664 496" );
@@ -77,7 +77,7 @@ function DoRoundFixes()
 		kill_funcinfclip( 1059.74 );	// Spawn left 4th
 		kill_funcinfclip( 1054.83 );	// Spawn left 5th
 		kill_funcinfclip( 1216.59 );	// Tunnelside
-		kill_funcinfclip( 1000.2 );	// Cliffside
+		kill_funcinfclip( 1000.2 );		// Cliffside
 		kill_funcinfclip( 597.979 );	// End cave connection to map 2 (easter egg spot)
 
 		// Prevent falling into a permstuck spot, opened up from above deletions.

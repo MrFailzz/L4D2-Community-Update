@@ -19,8 +19,8 @@ PrecacheModel( "models/props_foliage/swamp_fallentree01_bare.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_endhaybails_collision",	"SI Players and AI",	1,	"-42 -66 -24",		"42 66 24",		"5126 -3967 378" );
-	make_clip(	"_permstuck_fridge",		"Everyone",	1,	"-12 -10 -73",		"12 50 0",		"-3791 -2972 136" );
+	make_clip( "_endhaybails_collision", "SI Players and AI", 1, "-42 -66 -24", "42 66 24", "5126 -3967 378" );
+	make_clip( "_permstuck_fridge", "Everyone", 1, "-12 -10 -73", "12 50 0", "-3791 -2972 136" );
 	make_clip( "_trailerhouse_smoother1", "Everyone", 1, "-8 -213 0", "25 219 14", "-3294 -324 -8", "45 15 0" );
 	make_clip( "_trailerhouse_smoother2", "Everyone", 1, "-8 -33 0", "25 59 14", "-3298 -549 -8", "45 -75 0" );
 	make_clip( "_permstuck_cypressknees_a", "Everyone", 1, "-1 -3 -29", "1 3 29", "-702 -2870 14" );
@@ -44,7 +44,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_shortcut_window",		"Survivors",	1,	"-6 -66 -64",		"6 66 110",		"-4120 -2232 38" );
+		make_clip( "_shortcut_window", "Survivors", 1, "-6 -66 -64", "6 66 110", "-4120 -2232 38" );
 		make_clip( "_shortcut_barricadetarp", "Survivors", 1, "-107 -114 -1", "103 82 742", "-4786 1014 298" );
 		make_clip( "_commentary_shortcut_firebarrel_a", "Survivors", 1, "0 0 0", "64 64 256", "-3880 -1674 110.628" );
 		make_clip( "_commentary_shortcut_firebarrel_b", "Survivors", 1, "0 0 0", "96 12 16", "-3968.53 -1692.92 92.6282" );
@@ -53,16 +53,16 @@ function DoRoundFixes()
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 1392.94 );		// Delete clip behind saferoom stretching the orange fences introducing no exploits
-		make_brush( "_losfix_endhaybailsa",	"-8 -64 0",	"8 70 50",	"5125 -3966.5 350" );
-		make_brush( "_losfix_endhaybailsb",	"-8 -26 0",	"8 22 30",	"5125 -3966.5 402" );
-		make_brush( "_losfix_opening_gen",	"-20 -1 -10",	"20 1 10",	"-4385 -2721 131" );
-		make_brush( "_losfix_opening_trailer",	"-100 -1 -15",	"100 1 15",	"-3332 417 -1" );
-		make_brush( "_losfix_start_truck1",	"-45 -1 -12",	"45 1 12",	"-5171 1649 139" );
-		make_brush( "_losfix_start_truck2",	"-1 -45 -12",	"1 46 12",	"-5214 1602 139" );
-		make_clip(	"_permstuck_bridgehouse_bush",	"SI Players",	1,	"-27 -74 -62",		"27 74 62",		"-1771 -162 60" );
-		make_clip(	"_permstuck_lanternbush",	"SI Players",	1,	"-28 -14 -24",		"28 14 24",		"-832 -2840 13" );
-		make_clip(	"_endhaybails_collisiona",	"SI Players",	1,	"-42 -66 -24",		"42 66 24",		"5126 -3967 378" );
-		make_clip(	"_endhaybails_collisionb",	"SI Players",	1,	"-42 -25 -24",		"42 25 24",		"5126 -3967 426" );
+		make_brush( "_losfix_endhaybailsa", "-8 -64 0", "8 70 50", "5125 -3966.5 350" );
+		make_brush( "_losfix_endhaybailsb", "-8 -26 0", "8 22 30", "5125 -3966.5 402" );
+		make_brush( "_losfix_opening_gen", "-20 -1 -10", "20 1 10", "-4385 -2721 131" );
+		make_brush( "_losfix_opening_trailer", "-100 -1 -15", "100 1 15", "-3332 417 -1" );
+		make_brush( "_losfix_start_truck1", "-45 -1 -12", "45 1 12", "-5171 1649 139" );
+		make_brush( "_losfix_start_truck2", "-1 -45 -12", "1 46 12", "-5214 1602 139" );
+		make_clip( "_permstuck_bridgehouse_bush", "SI Players", 1, "-27 -74 -62", "27 74 62", "-1771 -162 60" );
+		make_clip( "_permstuck_lanternbush", "SI Players", 1, "-28 -14 -24", "28 14 24", "-832 -2840 13" );
+		make_clip( "_endhaybails_collisiona", "SI Players", 1, "-42 -66 -24", "42 66 24", "5126 -3967 378" );
+		make_clip( "_endhaybails_collisionb", "SI Players", 1, "-42 -25 -24", "42 25 24", "5126 -3967 426" );
 		make_clip( "_ladder_afterplankfront_clip", "SI Players", 1, "7 -154 16", "15 43 32", "381 -4026 79" );
 		make_clip( "_ladder_endsafehousetall_clip", "Everyone", 1, "-8 -16 0", "13 16 264", "4754 -3718 209" );
 		make_clip( "_ladder_longtiltedlog_clipbot", "SI Players", 1, "-19 -16 0", "19 10 17", "-4037 -867 -21", "0 64 -77" );
@@ -100,7 +100,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 		make_prop( "dynamic", "_yesdraw_nodrawfence", "models/props_update/c3m3_nodrawfence.mdl", "-5212 1765 213.5", "0 -90 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic_ovr", "_ladder_mehsurvival_boat", "models/props_canal/boat001a.mdl", "-3438 -612 42", "95 15 90", "shadow_no" );
-		make_prop( "physics",		"_hittable_fallentree",		"models/props_foliage/swamp_fallentree01_bare.mdl",	"-3935 -1120 -11",		"0 34 0" );
+		make_prop( "physics", "_hittable_fallentree", "models/props_foliage/swamp_fallentree01_bare.mdl", "-3935 -1120 -11", "0 34 0" );
 		patch_ladder( "-4304 -194 88.5", "0 -3 0" );
 	}
 }

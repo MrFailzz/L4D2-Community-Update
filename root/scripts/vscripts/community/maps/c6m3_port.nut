@@ -6,7 +6,7 @@ PrecacheModel( "models/props_downtown/gutter_downspout_straight02.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_solidify_girder",		"Survivors",	1,	"-17 -80 -170",		"2 240 240",		"200 -1280 145" );
+	make_clip( "_solidify_girder", "Survivors", 1, "-17 -80 -170", "2 240 240", "200 -1280 145" );
 	make_clip( "_bridge_stairgap1", "Survivors", 1, "-8 -64 -410", "8 64 410", "328 -1152 614" );
 	make_clip( "_bridge_stairgap2", "Survivors", 1, "-24 -50 -102", "24 50 102", "296 -1166 306" );
 	make_clip( "_bridge_stairgap3", "Survivors", 1, "-6 -36 -76", "6 36 76", "198 -1316 484" );
@@ -18,10 +18,10 @@ function DoRoundFixes()
 	make_clip( "_booster_trimandbox", "Survivors", 1, "-518 -31 0", "11 80 551", "-859 1591 473" );
 	make_clip( "_booster_fencefinish", "Survivors", 1, "-13 -249 0", "11 247 887", "-243 -631 137" );
 	make_clip( "_booster_telepole1", "Survivors", 1, "-17 -66 -79", "25 66 387", "-232 1481 640" );
-	make_clip( "_booster_telepole2", "Survivors", 1, "-40 -58 -231", "40 58 231", "240 1086 793" );
+	make_clip( "_booster_telepole2", "Survivors", 1, "-52 -58 -231", "52 58 231", "252 1086 793" );
 	make_clip( "_booster_telepole3", "Survivors", 1, "-17 -66 -79", "25 66 387", "-1423 1481 640" );
 	make_clip( "_booster_telepole4", "Survivors", 1, "-11 -67 -79", "10 65 387", "-2461 1234 640" );
-	make_clip( "_booster_telepole5", "Survivors", 1, "-104 -45.5 -311", "104 45.5 311", "254 166 713" );
+	make_clip( "_booster_telepole5", "Survivors", 1, "-54 -54 -311", "54 54 311", "254 158 713" );
 	make_clip( "_booster_telepole6", "Survivors", 1, "-17 -66 -79", "25 66 540", "-625 87 480" );
 	make_clip( "_booster_telepole7", "Survivors", 1, "-18 -76 -378", "18 76 378", "1562 160 646" );
 	make_clip( "_booster_badcorner", "Survivors", 1, "-219 -142 -35", "133 50 695", "-2342 -258 329" );
@@ -57,15 +57,15 @@ function DoRoundFixes()
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		make_clip(	"_booster_bridgea", "Survivors", 1,	"-234 -550 -17", "255 0 0", "0 -638 216" );
-		make_clip(	"_booster_bridgeb", "Survivors", 1,	"-234 -17 -17", "210 0 1017", "0 -1200 216" );
+		make_clip( "_booster_bridgea", "Survivors", 1, "-234 -550 -17", "255 0 0", "0 -638 216" );
+		make_clip( "_booster_bridgeb", "Survivors", 1, "-234 -17 -17", "210 0 1017", "0 -1200 216" );
 	}
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_gen1",		"-20 -1 -8",	"20 1 8",	"-476 -577 11" );
-		make_brush( "_losfix_gen2",		"-1 -20 -8",	"1 20 8",	"-1152 920 168" );
-		make_brush( "_losfix_van1",		"-72 -1 -9",	"72 1 9",	"-318 5 5" );
-		make_brush( "_losfix_van2",		"-64 -1 -9",	"64 1 9",	"379 703 168" );
+		make_brush( "_losfix_gen1", "-20 -1 -8", "20 1 8", "-476 -577 11" );
+		make_brush( "_losfix_gen2", "-1 -20 -8", "1 20 8", "-1152 920 168" );
+		make_brush( "_losfix_van1", "-72 -1 -9", "72 1 9", "-318 5 5" );
+		make_brush( "_losfix_van2", "-64 -1 -9", "64 1 9", "379 703 168" );
 		make_clip( "_ladder_c7mirrconcretecar_clipleft", "Everyone", 1, "-2 -6 0", "2 6 138", "251 493 30", "2 -45 -2" );
 		make_clip( "_ladder_c7mirrconcretecar_clipright", "Everyone", 1, "-2 -6 0", "2 6 138", "252 452 30", "2 45 2" );
 		make_clip( "_ladder_c7mirrstonewallcar_clipleft", "Everyone", 1, "6 13 0", "8 16 152", "1214 -143 -105", "0 45 0" );

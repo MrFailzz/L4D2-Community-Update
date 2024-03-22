@@ -10,29 +10,25 @@ PrecacheModel( "models/props/cs_office/vending_machine.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_permstuck_piperoom",		"Everyone",	1,	"-88 -2 -17",		"88 2 10",		"7474 2355 -216" );
-	make_clip(	"_tankwarp_pillar",		"Everyone",	1,	"-17 0 -2",		"10 12 88",		"7565 4164 -95" );
-	make_clip(	"_busstop_fence",		"Survivors",	1,	"-512 -76 -620",	"512 76 620",		"8600 5556 788" );
-	make_clip(	"_dispcrouch_cavea",		"Everyone",	1,	"-42 -120 -80",		"0 145 80",		"4354 3430 -174.7" );
-	make_clip(	"_dispcrouch_caveb",		"Everyone",	1,	"-120 -42 -80",		"470 0 80",		"4497 3316 -174.7" );
-	make_clip(	"_booster_windowandfence",	"Survivors",	1,	"-66 -56 -604",	"66 56 604",	"8458 3880 804" );
-	make_clip(	"_booster_beama",		"Survivors",	1,	"-9 -474 -24",		"9 686 192",		"7176 3138 424" );
-	make_clip(	"_booster_beamb",		"Survivors",	1,	"-9 -474 -24",		"9 686 192",		"7380 3138 424" );
-	make_clip(	"_booster_beamc",		"Survivors",	1,	"-17 -474 -24",		"9 686 192",		"7568 3138 424" );
-	make_clip(	"_booster_beamd",		"Survivors",	1,	"-17 -474 -24",		"10 686 192",		"7754 3138 424" );
-	make_clip(	"_booster_beame",		"Survivors",	1,	"-9 -474 -24",		"10 686 192",		"7943 3138 424" );
-	make_clip(	"_booster_boxrow",		"Survivors",	1,	"-370 -4 0",		"290 4 216",		"7827 3816 381" );
-	make_clip( "_tankwarp_solidify", "SI Players and AI", 1, "-26 -30 0", "98 6 100", "5977 4742 -335", "0 -22 0" );
+	make_clip( "_permstuck_piperoom", "Everyone", 1, "-88 -2 -17", "88 2 10", "7474 2355 -216" );
+	make_clip( "_tankwarp_pillar", "Everyone", 1, "-17 0 -2", "10 12 88", "7565 4164 -95" );
+	make_clip( "_busstop_fence", "Survivors", 1, "-483.5 -80 -448", "483.5 80 448", "8612 5584 960" );
+	make_clip( "_dispcrouch_cavea", "Everyone", 1, "-42 -120 -80", "0 145 80", "4354 3430 -174.7" );
+	make_clip( "_dispcrouch_caveb", "Everyone", 1, "-120 -42 -80", "470 0 80", "4497 3316 -174.7" );
+	make_clip( "_booster_windowandfence", "Survivors", 1, "-66 -56 -604", "66 56 604", "8458 3880 804" );
+	make_clip(  "_tankwarp_solidify", "SI Players and AI", 1, "-26 -30 0", "98 6 100", "5977 4742 -335", "0 -22 0" );
+	make_clip( "_unattackable_tanker", "Survivors", 1, "-16 -416 -700", "16 416 700", "6264 5152 708" );
 	make_clip( "_unattackable_building_top", "Survivors", 1, "-576 -336 -368", "576 336 368", "8896 4272 1040" );
-	make_clip( "_unattackable_backalley1", "Survivors", 1, "-252 -311 0", "260 337 772", "6780 4279 632" );
-	make_clip( "_unattackable_backalley2", "Survivors", 1, "-1191 -320 0", "1153 320 752", "8319 3520 660" );
-	make_clip( "_unattackable_backalley3", "Survivors", 1, "-58 -7 0", "70 7 1402", "10298 3765 16" );
-	make_clip( "_unattackable_backalley4", "Survivors", 1, "-359 -381 0", "393 387 722", "10871 4221 688" );
-	make_clip( "_unattackable_pawnshop1", "Survivors", 1, "-8 -298 0", "8 434 1402", "11272 5336 16" );
-	make_clip( "_unattackable_pawnshop2", "Survivors", 1, "-1024 -16 -105", "1152 16 912", "10112 5744 512" );
-	make_clip( "_clipextend_ledgehang", "Survivors", 1, "-306 -80 0", "334 80 992", "9394 5648 416" );
-	make_clip( "_unattackable_tanker1", "Survivors", 1, "-38 -461 0", "48 532 892", "6750 5141 512", "0 -26 0" );
-	make_clip( "_unattackable_tanker2", "Survivors", 1, "-698 -12 -32", "428 12 872", "7700 5622 536" );
+	make_clip( "_unattackable_backalley", "Survivors", 1, "-58 -7 0", "70 7 1402", "10298 3765 16" );
+	make_clip( "_unattackable_pawnshop", "Survivors", 1, "-16 -96 -696", "16 96 696", "11280 5344 712" );
+	make_clip( "_cliprework_streetroof1", "Survivors", 1, "-536 -636 -416", "536 636 416", "6784 6116 992" );
+	make_clip( "_cliprework_streetroof2", "Survivors", 1, "-415.5 -268 -452", "415.5 268 452", "7712 5876 956" );
+	make_clip( "_cliprework_streetroof3", "Survivors", 1, "-320 -288 -550", "320 288 550", "9408 5856 858" );
+	make_clip( "_cliprework_streetroof3", "Survivors", 1, "-384 -262 -502", "384 262 502", "10912 5666 906" );
+	make_clip( "_cliprework_streetroof4", "Survivors", 1, "-252 -311 0", "260 337 772", "6780 4279 632" );
+	make_clip( "_cliprework_streetroof5", "Survivors", 1, "-1191 -320 0", "1153 320 752", "8319 3520 660" );
+	make_clip( "_cliprework_streetroof6", "Survivors", 1, "-359 -381 0", "393 387 722", "10871 4221 688" );
+	make_clip( "_clipextend_pawnstreet", "Survivors", 1, "-400 -16 -448", "400 16 448", "10128 5744 960" );
 	make_clip( "_ladderqol_orangebags", "SI Players and AI", 1, "-29 -23 27", "24 32 32", "10660 5215 16", "-45 0 0" );
 	make_clip( "_genroomrail_smoother1", "Everyone", 1, "-1 -33 0", "0 34 40", "7285 3633 248" );
 	make_clip( "_genroomrail_smoother2", "Everyone", 1, "-1 -65 0", "0 66 40", "7285 2878 248" );
@@ -51,26 +47,24 @@ function DoRoundFixes()
 
 	unsolidify_model( "models/props/de_nuke/IndustrialLight01.mdl" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip( "_commentary_stuckwarp_undersafe_a", "Everyone", 1, "-4 -250 -60", "24 102 58", "2708 3050 -57.6663" );
-		make_clip( "_commentary_stuckwarp_undersafe_b", "Everyone", 1, "-40 -40 -37", "8 8 75", "2744 2808 -75" );
-		make_clip( "_commentary_stuckwarp_undersafe_c", "Everyone", 1, "-48 -8 -37", "48 22 75", "2784 2776 -75" );
-		make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
-		make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
-		make_clip( "_nav_tankjukepipes", "Survivors", 1, "-37 -168 0", "28 168 95", "8276 3656 140" );
-		make_clip(	"_booster_pipe",		"Survivors",	1,	"-64 -32 0",		"64 32 90",		"7351 3792 144" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
 		// FIXES
 
+		make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
+		make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
+		make_clip( "_commentary_stuckwarp_undersafe_a", "Everyone", 1, "-4 -250 -60", "24 102 58", "2708 3050 -57.6663" );
+		make_clip( "_commentary_stuckwarp_undersafe_b", "Everyone", 1, "-40 -40 -37", "8 8 75", "2744 2808 -75" );
+		make_clip( "_commentary_stuckwarp_undersafe_c", "Everyone", 1, "-48 -8 -37", "48 22 75", "2784 2776 -75" );
 		make_clip( "_nav_backlightleft", "Survivors", 1, "6 -13 -61", "9 15 84", "5249 4124 -265" );
 		make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
+		make_clip( "_commentary_doorblocker01", "Survivors", 1, "-60 -4 -20", "60 4 20", "7992 2821 268" );
+		make_clip( "_commentary_doorblocker02", "Survivors", 1, "-68 -4 -20", "68 4 20", "7643 2821 268" );
+		EntFire( "filter_generator", "AddOutput", "OnPass " + g_UpdateName + "_commentary_doorblocker*:Disable::0:-1" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -78,15 +72,26 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_survival_vendors",		"Survivors",	1,	"-80 -32 0",		"80 55 284",		"7406 3769 381.4" );
+		make_clip( "_survival_vendors", "Survivors", 1, "-80 -32 0", "80 55 284", "7406 3769 381.4" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_nav_tankjukepipes", "Survivors", 1, "-37 -168 0", "28 168 95", "8276 3656 140" );
+		make_clip( "_booster_pipe", "Survivors", 1, "-64 -32 0", "64 32 90", "7351 3792 144" );
+		make_clip( "_booster_beama", "Survivors", 1, "-9 -474 -24", "9 686 192", "7176 3138 424" );
+		make_clip( "_booster_beamb", "Survivors", 1, "-9 -474 -24", "9 686 192", "7380 3138 424" );
+		make_clip( "_booster_beamc", "Survivors", 1, "-17 -474 -24", "9 686 192", "7568 3138 424" );
+		make_clip( "_booster_beamd", "Survivors", 1, "-17 -474 -24", "10 686 192", "7754 3138 424" );
+		make_clip( "_booster_beame", "Survivors", 1, "-9 -474 -24", "10 686 192", "7943 3138 424" );
+		make_clip( "_booster_boxrow", "Survivors", 1, "-370 -4 0", "290 4 216", "7827 3816 381" );
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 648.595 );	// Delete clip above SKYBOX-cornered roof right of end PAWN shop
-		make_brush( "_losfix_copcar",		"-80 -1 -8",	"80 1 8",	"9996 5815 16" );
-		make_brush( "_losfix_semi1",		"-1 -40 -18",	"1 40 18",	"9043 4927 26" );
-		make_brush( "_losfix_semi2",		"-29 -1 -10",	"28 1 10",	"9073 4913 18" );
+		make_brush( "_losfix_copcar", "-80 -1 -8", "80 1 8", "9996 5815 16" );
+		make_brush( "_losfix_semi1", "-1 -40 -18", "1 40 18", "9043 4927 26" );
+		make_brush( "_losfix_semi2", "-29 -1 -10", "28 1 10", "9073 4913 18" );
 		make_clip( "_generator_qolstep1", "SI Players", 1, "0 -96 0", "0.1 96 8", "8021 2880 16" );
 		make_clip( "_generator_qolstep2", "SI Players", 1, "0 -96 0", "0.1 96 8", "8021 3168 16" );
 		make_clip( "_ladder_deadendrubble_clip", "Everyone", 1, "-18 -39 -87", "13 107 -5", "2149 3922 -242", "0 14 0" );

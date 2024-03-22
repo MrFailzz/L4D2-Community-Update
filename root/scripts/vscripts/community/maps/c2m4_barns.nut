@@ -65,7 +65,7 @@ function DoRoundFixes()
 	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		make_clip(	"_outhouse_saferoof",		"Survivors",	1,	"-94 -32 0",		"94 32 1111",		"2608 3920 -88" );
+		make_clip( "_outhouse_saferoof", "Survivors", 1, "-94 -32 0", "94 32 1111", "2608 3920 -88" );
 		make_clip( "_booster_barnbeam1", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -129 32" );
 		make_clip( "_booster_barnbeam2", "Survivors", 1, "-145 -3 0", "158 5 65", "-2022 -321 32" );
 		make_clip( "_booster_barnbeam3", "Survivors", 1, "-145 -3 0", "158 5 65", "-1318 63 32" );
@@ -113,11 +113,11 @@ function DoRoundFixes()
 	{
 		kill_funcinfclip( 736.871 );
 		make_atomizer( "_atomizer_anv_haybail", "-960 -404 -184", "models/props_unique/haybails_single.mdl", 60 );
-		make_brush( "_losfix_barn_gen",		"-1 -28 -8",	"1 28 8",	"-1742 346 -185" );
-		make_brush( "_losfix_drop_trailer",	"-48 -1 -8",	"48 1 8",	"-2423 4 -185" );
-		make_brush( "_losfix_start_trailer1a",	"-102 -1 -8",	"102 1 8",	"2347 3295 -185" );
-		make_brush( "_losfix_start_trailer1b",	"-1 -40 -8",	"1 40 8",	"2244 3333 -185" );
-		make_brush( "_losfix_start_trailer2",	"-102 -1 -8",	"102 1 8",	"2814 2614 -185" );
+		make_brush( "_losfix_barn_gen", "-1 -28 -8", "1 28 8", "-1742 346 -185" );
+		make_brush( "_losfix_drop_trailer", "-48 -1 -8", "48 1 8", "-2423 4 -185" );
+		make_brush( "_losfix_start_trailer1a", "-102 -1 -8", "102 1 8", "2347 3295 -185" );
+		make_brush( "_losfix_start_trailer1b", "-1 -40 -8", "1 40 8", "2244 3333 -185" );
+		make_brush( "_losfix_start_trailer2", "-102 -1 -8", "102 1 8", "2814 2614 -185" );
 		make_clip( "_eventfence_wrongway", "SI Players", 1, "-800 -20 -608", "200 676 672", "-200 2652 352" );
 		make_clip( "_eventrooftop_smoother1", "SI Players", 1, "-343 0 0", "249 140 8", "-3305 1312 195", "0 0 -44" );
 		make_clip( "_eventrooftop_smoother2", "SI Players", 1, "-249 140 0", "343 0 8", "-3305 1312 195", "0 180 -44" );
@@ -165,14 +165,14 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_cosmetic_fenceb", "models/props_urban/fence_cover001_256.mdl", "384 2818.3 -192", "0 90 0", "shadow_no" );
 		make_prop( "dynamic", "_endfence_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "-276 2636 -195", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_endfence_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "-132 2636 -195", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
-		make_prop( "dynamic",		"_propladder_garbagecan",	"models/props_urban/garbage_can002.mdl",	"-2284 1028 -191",		"0 89.5 0",		"shadow_no" );
+		make_prop( "dynamic", "_propladder_garbagecan", "models/props_urban/garbage_can002.mdl", "-2284 1028 -191", "0 89.5 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_startroof_pipe", "models/props_rooftop/Gutter_Pipe_256.mdl", "3362 3216 -4.1", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_ladderpatch_awningfence1", "models/props_fortifications/police_barrier001_128_reference.mdl", "-635 2035 -192", "0 -45 90", "shadow_no" );
 		make_prop( "dynamic", "_ladderpatch_awningfence2", "models/props_fortifications/police_barrier001_128_reference.mdl", "-728 1969 -244", "104 -52 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic", "_startfoodcart_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "2125 3970 -130", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_startfoodcart_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "2325 3970 -130", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_startfoodcart_wrongwayc", "models/props_misc/wrongway_sign01_optimized.mdl", "1966 3938 -130", "0 0 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
-		make_prop( "physics",		"_barn_middleroom_hittable",	"models/props_unique/haybails_single.mdl",	"-1103 191 -147.42",		"0 0 -92", "shadow_no" );
+		make_prop( "physics", "_barn_middleroom_hittable", "models/props_unique/haybails_single.mdl", "-1103 191 -147.42", "0 0 -92", "shadow_no" );
 		make_prop( "physics", "_hittable_bumpera", "models/props_fairgrounds/bumpercar.mdl", "3329 3280 -186", "0 338 0" );
 		make_prop( "physics", "_hittable_bumperb", "models/props_fairgrounds/bumpercar.mdl", "3254 3293 -159", "-1 178 106" );
 		patch_ladder( "-666 2044 -192", "11 -29 0" );

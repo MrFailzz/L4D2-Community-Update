@@ -16,9 +16,9 @@ PrecacheModel( "models/props_junk/dumpster_2.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_ladderqol_event",		"SI Players",	1,	"-2.5 -18 -161.5",	"2.5 18 161.5",		"-8446 -5214 -86" );
-	make_clip(	"_skybox_shieldb",		"SI Players",	1,	"-145 -212 -77",	"145 212 77",		"-2971 -1264 125" );
-	make_clip(	"_skybox_shielda",		"SI Players",	1,	"-240 -60 -20",		"240 60 77",		"-4014 -1296 68.8" );
+	make_clip( "_ladderqol_event", "SI Players", 1, "-2.5 -18 -161.5", "2.5 18 161.5", "-8446 -5214 -86" );
+	make_clip( "_skybox_shieldb", "SI Players", 1, "-145 -212 -77", "145 212 77", "-2971 -1264 125" );
+	make_clip( "_skybox_shielda", "SI Players", 1, "-240 -60 -20", "240 60 77", "-4014 -1296 68.8" );
 	make_clip( "_booster_busdepot_extend", "Survivors", 1, "-425 -57 0", "381 85 1504", "-8078 -6407 160" );
 	make_clip( "_booster_escapegap", "Survivors", 1, "-84 -48 -726", "84 48 726", "-9404 -5200 942" );
 	make_clip( "_booster_watchtower_extend", "Survivors", 1, "-65 -76 0", "62 65 1142", "-8161 -5821 529" );
@@ -33,7 +33,7 @@ function DoRoundFixes()
 	make_clip( "_cliprework_missingno", "Survivors", 1, "-164 -272 0", "172 240 1626", "-10092 -5520 48" );
 	make_clip( "_commentary_fencegenerator", "Survivors", 1, "-8 -44 -8", "56 8 1672", "-8371 -3338 -8" );
 	make_clip( "_commentary_electricalbox", "Survivors", 1, "-4 -8 -8", "6 74 1800", "-7036 -5098 -239" );
-	
+	 
 	make_clip( "_commentary_shortcut_tent", "Survivors", 1, "-65 -65 -20", "65 65 1790", "-6853 -5598 -135.75" );
 
 	if ( g_BaseMode == "survival" )
@@ -42,7 +42,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_nav_eventsign",		"Survivors",	1,	"-4 -10 -908",		"4 10 908",		"-8552 -6310 756" );
+		make_clip( "_nav_eventsign", "Survivors", 1, "-4 -10 -908", "4 10 908", "-8552 -6310 756" );
 	}
 	if ( g_BaseMode == "scavenge" )
 	{
@@ -61,10 +61,10 @@ function DoRoundFixes()
 	if ( HasPlayerControlledZombies() )
 	{
 		make_atomizer( "_atomizer_bsp_dumpster", "-9216 -3264 -248", "models/props_junk/dumpster_2.mdl", 60 );
-		make_brush( "_losfix_bus",		"-1 -60 -12",	"1 60 12",	"-7268 -7479 -244" );
-		make_brush( "_losfix_fence",	"0 -64 -4",	"1 64 5",	"-6583 -5678 -252" );
-		make_brush( "_losfix_gen",		"-1 -28 -8",	"1 28 8",	"-9918 -4878.21 -249" );
-		make_brush( "_losfix_van",		"-1 -108 -10",	"1 108 10",	"-3360 -1422 -371" );
+		make_brush( "_losfix_bus", "-1 -60 -12", "1 60 12", "-7268 -7479 -244" );
+		make_brush( "_losfix_fence", "0 -64 -4", "1 64 5", "-6583 -5678 -252" );
+		make_brush( "_losfix_gen", "-1 -28 -8", "1 28 8", "-9918 -4878.21 -249" );
+		make_brush( "_losfix_van", "-1 -108 -10", "1 108 10", "-3360 -1422 -371" );
 		make_clip( "_ladder_billboard_clip_a", "SI Players", 1, "-255 -3 -4", "255 3 4", "-9160 -6943 160" );
 		make_clip( "_ladder_billboard_clip_b", "SI Players", 1, "-32 -4 -4", "32 4 4", "-9162 -6951 160" );
 		make_clip( "_ladder_deadendbalconies_clip", "SI Players", 1, "0 -1 0", "1 1 128", "-8576 -4001 -208" );
@@ -104,13 +104,13 @@ function DoRoundFixes()
 		make_ladder( "_ladder_startstuckspot_cloned_archleft", "-8110 -2848 -200", "3444.1 1312 64" );
 		make_ladder( "_ladder_telephonepoleB_cloned_restrictedbarricade", "-9544 -5266 -128", "-11800 3720 -16", "0 90 0", "-1 0 0" );
 		make_ladder( "_ladder_telephonepoleT_cloned_restrictedbarricade", "-9544 -5266 -128", "-11800 3720 176", "0 90 0", "-1 0 0" );
-		make_prop( "dynamic",		"_losblocker_fence",		"models/props_urban/fence_cover001_256.mdl",	"-6583 -5743 -247.75",		"0 180 0",		"shadow_no" );
-		make_prop( "dynamic",		"_propladder_planka",		"models/props_highway/plywood_02.mdl",		"-4216 -1082 -130",		"40 90 0" );
-		make_prop( "dynamic",		"_propladder_plankb",		"models/props_swamp/plank001b_192.mdl",		"-3105 -1504 -320",		"0 90 35" );
-		make_prop( "dynamic",		"_propladder_plankc",		"models/props_highway/plywood_01.mdl",		"-6731 -6212 -80",		"0 270 25",		"shadow_no" );
-		make_prop( "dynamic",		"_propladder_venta",		"models/props_rooftop/hotel_rooftop_equip002.mdl",	"-6724 -6753 7.918",		"0 90 0",		"shadow_no" );
-		make_prop( "dynamic",		"_propladder_ventb",		"models/props_rooftop/hotel_rooftop_equip002.mdl",	"-6370 -6752 80",		"0 90 0",		"shadow_no" );
-		make_prop( "dynamic",		"_solidify_awning",		"models/props_street/awning_department_store.mdl",	"-6403.3 -5024 -102.145",	"0 180 0",		"shadow_no" );
+		make_prop( "dynamic", "_losblocker_fence", "models/props_urban/fence_cover001_256.mdl", "-6583 -5743 -247.75", "0 180 0", "shadow_no" );
+		make_prop( "dynamic", "_propladder_planka", "models/props_highway/plywood_02.mdl", "-4216 -1082 -130", "40 90 0" );
+		make_prop( "dynamic", "_propladder_plankb", "models/props_swamp/plank001b_192.mdl", "-3105 -1504 -320", "0 90 35" );
+		make_prop( "dynamic", "_propladder_plankc", "models/props_highway/plywood_01.mdl", "-6731 -6212 -80", "0 270 25", "shadow_no" );
+		make_prop( "dynamic", "_propladder_venta", "models/props_rooftop/hotel_rooftop_equip002.mdl", "-6724 -6753 7.918", "0 90 0", "shadow_no" );
+		make_prop( "dynamic", "_propladder_ventb", "models/props_rooftop/hotel_rooftop_equip002.mdl", "-6370 -6752 80", "0 90 0", "shadow_no" );
+		make_prop( "dynamic", "_solidify_awning", "models/props_street/awning_department_store.mdl", "-6403.3 -5024 -102.145", "0 180 0", "shadow_no" );
 		make_prop( "dynamic", "_guardtower_wrongway", "models/props_misc/wrongway_sign01_optimized.mdl", "-10091 -5792 110", "0 90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_overpass_wrongwaya", "models/props_misc/wrongway_sign01_optimized.mdl", "-10162 -2304 80", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );
 		make_prop( "dynamic", "_overpass_wrongwayb", "models/props_misc/wrongway_sign01_optimized.mdl", "-9900 -2304 225", "0 -90 0", "shadow_no", "solid_no", "255 255 255", "17", "217" );

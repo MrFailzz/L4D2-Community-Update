@@ -12,10 +12,10 @@ PrecacheModel( "models/props_interiors/concretepiller01_dm01_4.mdl" );
 
 function DoRoundFixes()
 {
-	// make_clip(	"_backtrack_dumpster",		"Survivors",	1,	"-32 -40 0",		"32 40 1337",		"-4128 7481 150" );
-	// make_clip(	"_backtrack_flatnose",		"Survivors",	1,	"0 -110 0",		"540 8 1212",		"-4632 7208 272",	"0 -34 0" );
-	make_clip(	"_booster_burgertankpole",	"Survivors",	1,	"-12 -12 -170",		"12 12 1000",		"-5800 7496 603" );
-	make_clip(	"_booster_burgertankspin",	"Survivors",	1,	"-216 -216 -170",	"216 216 640",		"-5800 7496 915" );
+	// make_clip( "_backtrack_dumpster", "Survivors", 1, "-32 -40 0", "32 40 1337", "-4128 7481 150" );
+	// make_clip( "_backtrack_flatnose", "Survivors", 1, "0 -110 0", "540 8 1212", "-4632 7208 272", "0 -34 0" );
+	make_clip( "_booster_burgertankpole", "Survivors", 1, "-12 -12 -170", "12 12 1000", "-5800 7496 603" );
+	make_clip( "_booster_burgertankspin", "Survivors", 1, "-216 -216 -170", "216 216 640", "-5800 7496 915" );
 	make_clip( "_permstuck_highuptree", "Everyone", 1, "-32 -54 0", "24 24 10", "-3312 7326 315" );
 	make_clip( "_booster_ginnytop", "Survivors", 1, "-30 -30 0", "30 30 1150", "-5425 6789 385" );
 	make_clip( "_booster_ginnyjon", "Survivors", 1, "-6 -4 -284", "10 4 0", "-5425 6789 385", "0 45 0" );
@@ -64,10 +64,10 @@ function DoRoundFixes()
 	
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );
-		make_brush( "_losfix_dock_truck",	"-2 -75 -10",	"2 80 16",	"-6538 7550 105" );
-		make_brush( "_losfix_semia",		"-40 -1 -15",	"40 1 15",	"-4771 7156 113" );
-		make_brush( "_losfix_semib",		"-1 -34 -15",	"1 40 15",	"-4790 7180 113" );
+		make_brush( "_losfix_burger_gen", "-24 -1 -8", "24 1 8", "-5448 6765 107" );
+		make_brush( "_losfix_dock_truck", "-2 -75 -10", "2 80 16", "-6538 7550 105" );
+		make_brush( "_losfix_semia", "-40 -1 -15", "40 1 15", "-4771 7156 113" );
+		make_brush( "_losfix_semib", "-1 -34 -15", "1 40 15", "-4790 7180 113" );
 		make_clip( "_burgertank_windowsmoother1", "Everyone", 1, "-5 -120 0", "6 120 4", "-5663 7268 135" );
 		make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
 		make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
@@ -88,5 +88,5 @@ function DoRoundFixes()
 
 function DoMapSpawnFixes()
 {
-	make_decal( "decals/rollermine_crater",	"-5671 6579 225" );
+	make_decal( "decals/rollermine_crater", "-5671 6579 225" );
 }

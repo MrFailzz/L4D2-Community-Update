@@ -4,18 +4,18 @@ devchap( "ALL MODES" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_bunnyhop_boat",		"Survivors",	1,	"-180 -200 0",		"180 200 1180",		"11970 -820 -157" );
-	make_clip(	"_ghostgrief_dockledge",	"Everyone",	1,	"-48 -11 -21",		"42 7 71",		"10228 -340 -107" );
-	make_clip(	"_clipgap_intersection",	"Survivors",	1,	"-64 -32 0",		"64 32 140.85",		"6612 2234 294" );
-	make_clip( "_clipextend_arena_fence2", "Survivors", 1, "-96 -100 -264", "96 100 264", "9304 -38 760" );
-	make_clip( "_clipextend_arena_fence3", "Survivors", 1, "-280 -130 -264", "280 130 264", "8616 -238 760" );
-	make_clip( "_clipextend_arena_fence4", "Survivors", 1, "-280 -66 -264", "280 66 264", "8056 -302 760" );
-	make_clip( "_clipextend_arena_fence5", "Survivors", 1, "-166 -44 -264", "166 44 264", "7358 -468 760" );
+	make_clip( "_bunnyhop_boat", "Survivors", 1, "-180 -200 0", "180 200 1180", "11970 -820 -157" );
+	make_clip( "_ghostgrief_dockledge", "Everyone", 1, "-48 -11 -21", "42 7 71", "10228 -340 -107" );
+	make_clip( "_clipgap_intersection", "Survivors", 1,	"-64 -32 0", "64 32 140.85", "6612 2234 294" );
 	make_clip( "_clipextend_rubblecar", "Survivors", 1, "-418 -326 -223", "382 253 932", "11026 -1196 90" );
 
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip( "_clipextend_arena_fence1", "Survivors", 1, "-16 -391 0", "16 389 528", "9418 371 496" );
+		make_clip( "_clipextend_arena_fence2", "Survivors", 1, "-96 -100 -264", "96 100 264", "9304 -38 760" );
+		make_clip( "_clipextend_arena_fence3", "Survivors", 1, "-280 -130 -264", "280 130 264", "8616 -238 760" );
+		make_clip( "_clipextend_arena_fence4", "Survivors", 1, "-280 -66 -264", "280 66 264", "8056 -302 760" );
+		make_clip( "_clipextend_arena_fence5", "Survivors", 1, "-166 -44 -264", "166 44 264", "7358 -468 760" );
 		make_clip( "_clipextend_arena_tree", "Survivors", 1, "-158 -137 0", "152 165 284", "9054 49 740" );
 		make_clip( "_booster_lonerpipe", "Survivors", 1, "-13 -12 0", "14 10 475", "9236 750 550" );
 	}

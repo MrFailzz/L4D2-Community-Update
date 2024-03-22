@@ -7,10 +7,10 @@ PrecacheModel( "models/props_junk/gnome.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_cliprework_outdoors01",	"Survivors",	1,	"-1171 405 -80",	"1171 422 1575",	"-7720 -8476 616" );
-	make_clip(	"_cliprework_outdoors03",	"Survivors",	1,	"-1171 -422 -312",	"1171 -405 1575",	"-7720 -8476 616" );
-	make_clip(	"_cliprework_outdoors02",	"Survivors",	1,	"1154 -422 -192",	"1171 422 1575",	"-7720 -8476 616" );
-	make_clip(	"_cliprework_outdoors04",	"Survivors",	1,	"-1171 -422 -80",	"-1154 422 1575",	"-7720 -8476 616" );
+	make_clip( "_cliprework_outdoors01", "Survivors", 1, "-1171 405 -80", "1171 422 1575", "-7720 -8476 616" );
+	make_clip( "_cliprework_outdoors03", "Survivors", 1, "-1171 -422 -312", "1171 -405 1575", "-7720 -8476 616" );
+	make_clip( "_cliprework_outdoors02", "Survivors", 1, "1154 -422 -192", "1171 422 1575", "-7720 -8476 616" );
+	make_clip( "_cliprework_outdoors04", "Survivors", 1, "-1171 -422 -80", "-1154 422 1575", "-7720 -8476 616" );
 	make_clip( "_nav_eventlight1", "Survivors", 1, "-5 -10 0", "5 10 129", "-8021 -7500 191" );
 	make_clip( "_nav_eventlight2", "Survivors", 1, "-5 -10 0", "5 10 73", "-6613 -7752 247" );
 	make_clip( "_stuckwarp_rocketdude", "Everyone", 1, "-24 -48 0", "24 48 71", "-5430 -8170 217" );
@@ -33,8 +33,8 @@ function DoRoundFixes()
 		kill_funcinfclip( 741.034 );	// Delete clip above RICHARDSON ATLANTIC building for Hunter-only
 		make_atomizer( "_atomizer_bsp_forkliftinnie", "-8604 -7271 -64", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
 		make_atomizer( "_atomizer_bsp_forkliftoutie", "-8604 -7531 -64", "models/props\\cs_assault\\forklift_brokenlift.mdl", 30 );
-		make_clip( "_charger_smoother_01", "Everyone", 1, "-4 -136 -17",	"4 718 1",	"-8733 -8038 176",	"46 -90 0" );
-		make_clip( "_charger_smoother_02", "Everyone", 1, "-4 -132 -17",	"4 700 1",	"-7500 -8038 176",	"46 -90 0" );
+		make_clip( "_charger_smoother_01", "Everyone", 1, "-4 -136 -17", "4 718 1", "-8733 -8038 176", "46 -90 0" );
+		make_clip( "_charger_smoother_02", "Everyone", 1, "-4 -132 -17", "4 700 1", "-7500 -8038 176", "46 -90 0" );
 		make_clip( "_ladder_indoorventduct_clip", "Everyone", 1, "-22 -32 0", "42 32 223", "-8170 -6300 -64" );
 		make_clip( "_ladder_parkourvent_clip", "SI Players", 1, "-1 -17 0", "0 17 64", "-8723 -7415 163" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-492 -6 -977", "553 6 657", "-7806 -7614 1536", "0 38 0" );

@@ -331,6 +331,13 @@ function make_trighurt ( user_strTargetname,
 			tblKeyvalues.damagetype <- 1;
 			break;
 
+		case "Survivor Fall":
+
+			strClassname = "trigger_hurt";
+			tblKeyvalues.filtername <- "anv_globalfixes_filter_survivor";
+			tblKeyvalues.damagetype <- 32;
+			break;
+
 		case "Infected":
 
 			strClassname = "trigger_hurt";

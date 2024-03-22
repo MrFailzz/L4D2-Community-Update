@@ -8,9 +8,9 @@ PrecacheModel( "models/props_rooftop/Gutter_Pipe_256.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_dispcrouch_traintracka",	"Everyone",	1,	"-420 -355 -16",	"16 64 555",		"10250 -10145 -78" );
-	make_clip(	"_dispcrouch_traintrackb",	"Everyone",	1,	"-420 -255 -16",	"16 99 555",		"10120 -10600 -78" );
-	make_clip(	"_curvejump_bridgeend",		"Survivors",	1,	"-70 -6 -218",		"70 6 218",		"10230 -486 154" );
+	make_clip( "_dispcrouch_traintracka", "Everyone", 1, "-420 -355 -16", "16 64 555",  "10250 -10145 -78" );
+	make_clip( "_dispcrouch_traintrackb", "Everyone", 1, "-420 -255 -16", "16 99 555",  "10120 -10600 -78" );
+	make_clip( "_curvejump_bridgeend",  "Survivors", 1, "-70 -6 -218",  "70 6 218",  "10230 -486 154" );
 	make_clip( "_dispcrouch_trainwall_one", "Everyone", 1, "-64 -640 -32", "8 0 36", "10203 -6505 -58", "0 2.5 0" );
 	make_clip( "_dispcrouch_trainwall_two", "Everyone", 1, "-64 -100 -32", "17 140 36", "10177 -6376 -58", "0 6 0" );
 	make_clip( "_dispcrouch_trainwall_three", "Everyone", 1, "-45 -320 -77", "21 216 64", "9813 -4120 0", "0 -7 0" );
@@ -31,16 +31,6 @@ function DoRoundFixes()
 
 	make_prop( "dynamic", "_solidify_survivorchimney", "models/props/cs_militia/fireplacechimney01.mdl", "10862.2 -6085.53 120.492", "0 135 0", "shadow_no" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		con_comment( "TRIG_UNDO:\tDelete blockers which prevent train car commonhop skip for Coop-only." );
-
-		EntFire( g_UpdateName + "_eventskip_commonhop*", "Kill", null, 4 );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
@@ -50,8 +40,8 @@ function DoRoundFixes()
 		make_clip( "_commonhop_roadsidefence", "Survivors", 1, "-3 -29 0", "5 27 1608", "10647 -7547 84" );
 		make_clip( "_clipextend_traintruss", "Survivors", 1, "-204 -4 0", "208 128 1462", "10444 -7516 232" );
 
-		make_clip(	"_shortcut_warehouse",		"Survivors",	1,	"0 -32 -32",		"8 64 256",		"10272 -7848 152" );
-		make_clip(	"_commonhop_traintruss",	"Survivors",	1,	"-160 -120 -55",	"160 120 1545",		"10879 -7463 116" );
+		make_clip( "_shortcut_warehouse", "Survivors", 1, "0 -32 -32", "8 64 256", "10272 -7848 152" );
+		make_clip( "_commonhop_traintruss", "Survivors", 1, "-160 -120 -55", "160 120 1545", "10879 -7463 116" );
 
 		// FIX: Prevent skipping bridge horde by forcing it even if fence is jumped.
 
@@ -98,8 +88,8 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_semia",		"-1 -30 -15",	"1 30 15",	"11440 -7078 -56" );
-		make_brush( "_losfix_semib",		"-50 -1 -15",	"30 1 15",	"11440 -7048 -56" );
+		make_brush( "_losfix_semia", "-1 -30 -15", "1 30 15", "11440 -7078 -56" );
+		make_brush( "_losfix_semib", "-50 -1 -15", "30 1 15", "11440 -7048 -56" );
 		make_clip( "_ladder_barnhousedoor_clip", "Everyone", 1, "-2 -112 9", "2 112 21", "8994 -9312 471" );
 		make_clip( "_ladder_finalrooftop_permstuck", "Everyone", 1, "-53 -19 0", "21 31 100", "10827 -4563 -62" );
 		make_clip( "_ladder_siloleft_clip1", "SI Players", 1, "-50 -24 0", "50 24 1", "8556 -7849 1035", "0 -52 0" );

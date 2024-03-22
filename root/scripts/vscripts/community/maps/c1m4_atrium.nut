@@ -10,8 +10,8 @@ function DoRoundFixes()
 	// Consistent with failsafe for passing finale.
 	EntFire( "trigger_finale", "AddOutput", "FinaleStart relay_explain_finale:Trigger:0:-1" );
 
-	make_clip(	"_booster_storefrontleft",	"Survivors",	1,	"-900 -16 0",		"900 82 36",		"-4256 -4464 196" );
-	make_clip(	"_booster_storefrontright",	"Survivors",	1,	"-169 -32 0",		"785 16 36",		"-3344 -3280 196" );
+	make_clip( "_booster_storefrontleft", "Survivors", 1, "-900 -16 0", "900 82 36", "-4256 -4464 196" );
+	make_clip( "_booster_storefrontright", "Survivors", 1, "-169 -32 0", "785 16 36", "-3344 -3280 196" );
 	make_clip( "_booster_pillarclip", "Survivors", 1, "-18 -32 0", "38 8 362", "-3434 -3533 472", "0 45 0" );
 	make_clip( "_booster_cedaplastic", "Survivors", 1, "-125 -2 -22", "130 1 186", "-2787 -4193 302" );
 	make_clip( "_booster_thicklongledge", "Survivors", 1, "-3856 0 -72", "0 81 256", "-2368 -4224 1080" );

@@ -4,18 +4,18 @@ devchap( "ALL MODES" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_curvejump_fence",		"Survivors",	1,	"-1024 -51 -90",	"120 51 777",		"-10342 -8897 517" );
+	make_clip( "_curvejump_fence", "Survivors", 1, "-1024 -51 -90", "120 51 777", "-10342 -8897 517" );
 	make_clip( "_permstuck_treeandrock", "Everyone", 1, "-19 -22 0", "26 32 46", "-11270 -9471 447" );
 	make_clip( "_tankpunch_deflector", "Survivors", 1, "-434 -46 0", "288 -19 1481", "-11503 -10981 375" );
 	make_clip( "_factory_rooftop1", "Survivors", 1, "-426 -504 -684", "426 504 684", "-8486 -7768 1172" );
-	make_clip( "_factory_rooftop2", "Survivors", 1, "-272 -232 -528", "272 232 528", "-7808 -8408 1340" );
+	make_clip( "_factory_rooftop2", "Survivors", 1, "-272 -232 -522", "272 232 522", "-7808 -8408 1334" );
 	make_clip( "_factory_rooftop3", "Survivors", 1, "-200 -12 -512", "200 12 512", "-6392 -7268 1340" );
 	make_clip( "_dispcrouch_smoker", "Everyone", 1, "4 -200 -64", "61 70 58", "-10650 -15068 -46", "0 -19 0" );
 
-	make_trighurt( "_instakill_longperimeter1", "Survivor", "-1158 -2015 0", "1158 2015 170", "-11827 -13824 -84" );
-	make_trighurt( "_instakill_longperimeter2", "Survivor", "-868 -1895 0", "508 2145 170", "-12855 -10361 -84" );
-	make_trighurt( "_instakill_fallrevivefence", "Survivor", "-17 -337 0", "17 367 17", "-8883 -8543 87" );
-	make_trighurt( "_instakill_fallrevivenoper", "Survivor", "-744 -527 0", "1304 877 96", "-9496 -7665 -96" );
+	make_trighurt( "_instakill_longperimeter1", "Survivor Fall", "-1158 -2015 0", "1158 2015 170", "-11827 -13824 -84" );
+	make_trighurt( "_instakill_longperimeter2", "Survivor Fall", "-868 -1895 0", "508 2145 170", "-12855 -10361 -84" );
+	make_trighurt( "_instakill_fallrevivefence", "Survivor Fall", "-17 -337 0", "17 367 17", "-8883 -8543 87" );
+	make_trighurt( "_instakill_fallrevivenoper", "Survivor Fall", "-744 -527 0", "1304 877 96", "-9496 -7665 -96" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -32,14 +32,13 @@ function DoRoundFixes()
 		kill_funcinfclip( 1039.64 );	// Deletes clip above end cliff on left side
 		kill_funcinfclip( 1364.13 );	// Desirably deletes clip over the 1st rockcliffs on far-right (same)
 		kill_funcinfclip( 1454.65 );	// Deletes mildly-ladder-blocking fallen-trees chasm-crossing clip
-		kill_funcinfclip( 848.51 );	// Deletes next one in flow order (after above)
-		kill_funcinfclip( 849.49 );	// Deletes far-right largest clip (speaking in order of flow)
+		kill_funcinfclip( 848.51 );		// Deletes next one in flow order (after above)
+		kill_funcinfclip( 849.49 );		// Deletes far-right largest clip (speaking in order of flow)
 		kill_funcinfclip( 986.591 );	// Deletes finally the clip above Valve's broken cliff ladder
 		kill_funcinfclip( 770.171 );	// Delete clip above tall yellow building in end area
 		kill_funcinfclip( 739.388 );	// Delete clip directly above end safe room (for Hunter)
 		kill_funcinfclip( 1081.48 );	// Delete clip for fence right of end safe room (all SI)
 		kill_funcinfclip( 741.805 );	// Delete clip above RICHARDSON ATLANTIC building for Hunter-only
-		EntFire( "worldspawn", "RunScriptCode", "kill_funcinfclip( 1364.13 )", 1 );	// Undesirably deletes clip behind start area (_meticulous repair)
 		make_clip( "_ladder_rockcliffback_clip", "SI Players", 1, "-24 -15 0", "27 56 25", "-10172 -10751 818", "0 49 0" );
 		make_clip( "_ladderqol_rockcliff", "SI Players", 1, "-32 -77 0", "32 100 32", "-10235 -12716 528", "0 30 -30" );
 		make_clip( "_meticulous_funcinfclip00", "SI Players", 1, "-32 -217 -640", "32 177 1935", "-7624 -14554 257" );
