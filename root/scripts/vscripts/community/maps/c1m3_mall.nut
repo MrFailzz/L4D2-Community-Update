@@ -46,7 +46,7 @@ function DoRoundFixes()
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4348.54, -2910.5, 561 ), 1 ) );
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4483.47, -2337.5, 561 ), 1 ) );
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4487.5, -2910.5, 561 ), 1 ) );
-		make_brush( "_losfix_end_gen",		"-28 -1 -8",	"28 1 8",	"-1940 -4434 544" );
+		make_brush( "_losfix_end_gen", "-28 -1 -8", "28 1 8", "-1940 -4434 544" );
 		make_clip( "_ladderqol_lastroom_left", "SI Players", 1, "-564 -3 -31", "564 3 31", "-1280 -4503 509" );
 		make_clip( "_ladderqol_lastroom_right", "SI Players", 1, "-564 -3 -31", "564 3 31", "-1280 -3945 509" );
 		make_clip( "_ladderqol_maproom_left", "SI Players", 1, "-564 -3 -31", "564 3 31", "4224 -2903 509" );
