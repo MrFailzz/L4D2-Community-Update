@@ -11,24 +11,22 @@ PrecacheModel( "models/props_junk/dumpster_2.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_nav_lightingtrussa",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-1275 2261 368" );
-	make_clip(	"_nav_lightingtrussd",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-2060 2261 368" );
-	make_clip(	"_nav_lightingtrussf",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-2549 2261 368" );
-	make_clip(	"_nav_lightingtrussh",		"Survivors",	1,	"-11 -506 0",		"11.5 506 65",		"-3065 2261 368" );
-	make_clip(	"_nav_lightingtrussi",		"Survivors",	1,	"-11 -506 0",		"11.5 506 65",		"-3318 2261 368" );
-	make_clip(	"_nav_lightingtrussg",		"Survivors",	1,	"-11 -506 0",		"11.5 506 65",		"-2822.5 2261 367.7" );
-	make_clip(	"_nav_lightingtrusse",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-2296 2261 368" );
-	make_clip(	"_nav_lightingtrussb",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-1544 2261 368" );
-	make_clip(	"_nav_lightingtrussc",		"Survivors",	1,	"-11 -506 0",		"11 506 65",		"-1800 2261 368" );
+	make_clip( "_permstuck_fence", "Survivors", 1, "-1 -102 0", "4 102 128", "-1110 2274 -112", "0 44 0" );
+	make_clip( "_nav_lightingtrussa", "Survivors", 1, "-11 -506 0", "11 506 65", "-1275 2261 368" );
+	make_clip( "_nav_lightingtrussd", "Survivors", 1, "-11 -506 0", "11 506 65", "-2060 2261 368" );
+	make_clip( "_nav_lightingtrussf", "Survivors", 1, "-11 -506 0", "11 506 65", "-2549 2261 368" );
+	make_clip( "_nav_lightingtrussh", "Survivors", 1, "-11 -506 0", "11.5 506 65", "-3065 2261 368" );
+	make_clip( "_nav_lightingtrussi", "Survivors", 1, "-11 -506 0", "11.5 506 65", "-3318 2261 368" );
+	make_clip( "_nav_lightingtrussg", "Survivors", 1, "-11 -506 0", "11.5 506 65", "-2822.5 2261 367.7" );
+	make_clip( "_nav_lightingtrusse", "Survivors", 1, "-11 -506 0", "11 506 65", "-2296 2261 368" );
+	make_clip( "_nav_lightingtrussb", "Survivors", 1, "-11 -506 0", "11 506 65", "-1544 2261 368" );
+	make_clip( "_nav_lightingtrussc", "Survivors", 1, "-11 -506 0", "11 506 65", "-1800 2261 368" );
 	make_clip( "_cliprework_lastwindow", "Survivors", 1, "-9 -36 -8", "11 35 747", "-3853 2279 280", "0 45 0" );
 	make_clip( "_smoother_windows", "SI Players and AI", 1, "-250 -32 0", "298 32 8", "-609 2387 329", "0 45 30" );
 	make_clip( "_missing_staircase_clip", "Everyone", 1, "-40 -40 -1", "40 40 40", "-922 1933 173", "0 315 0" );
 	make_clip( "_backstairs_left", "Survivors", 1, "-8 -160 0", "8 160 760", "-4086 2688 264" );
 	make_clip( "_backstairs_right", "Survivors", 1, "-8 -158 0", "8 197 760", "-951 2073 264", "0 -45 0" );
 	make_clip( "_commentary_infectedwindows", "Survivors", 1, "-8 -10 -8", "258 10 1064", "-3325 3720 -40" );
-	make_prop( "dynamic", "_vending_oneway", "models/props_equipment/snack_machine2.mdl", "-1132 2336 -256", "0 45 0", "shadow_no" );
-	make_prop( "dynamic", "_case_oneway1", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-1092 2384 -256", "0 171 0", "shadow_no" );
-	make_prop( "dynamic", "_case_oneway2", "models/props_fairgrounds/anvil_case_64.mdl", "-1096 2384 -220", "0 344.5 0", "shadow_no" );
 
 	// FIX: Prevent interior stadium trigger from deleting players by re-creating it.
 
@@ -71,16 +69,6 @@ function DoRoundFixes()
 
 	kill_entity( hndBadTrigger );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip( "_permstuck_fence", "Survivors", 1, "-1 -102 0", "4 102 128", "-1110 2274 -112", "0 44 0" );
-		make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
-		make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
-		make_clip( "_cliprework_concertlights", "Survivors", 1, "-324 -74 0", "318 73 162", "-2305 3277 140" );
-		make_clip( "_cliprework_concertposter", "Survivors", 1, "-338 -16 -200", "338 17 98", "-2304 3687 204" );
-		make_clip( "_cliprework_concertroofio", "Survivors", 1, "-656 -32 -98", "616 515 652", "-2302 3197 352" );
-		make_clip( "_nav_duediligence", "Survivors", 1, "-3 -49 0", "5 48 1152", "-997 3049 -128" );
-	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
@@ -90,6 +78,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
 		
+		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
 		local navConnection = NavMesh.GetNearestNavArea(Vector(-3400.000000, 3400.000000, -165.604355), 16, true, true);
 		local navMain = NavMesh.GetNearestNavArea(Vector(-3396.963867, 3449.818848, -112.538177), 16, true, true);
@@ -103,6 +92,15 @@ function DoRoundFixes()
 
 		make_prop( "dynamic", "_helistuck_caseunique", "models/props_fairgrounds/bass_case.mdl", "-3466 2899 -106", "-15 1 89.73", "shadow_yes" );
 		make_prop( "dynamic", "_helistuck_casecaster", "models/props_fairgrounds/anvil_case_casters_64.mdl", "-3488 2870 -128", "0 180 0", "shadow_yes" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_booster_lightleft", "Survivors", 1, "-8 -104 0", "8 29 725", "-2472 3148 278" );
+		make_clip( "_booster_lightright", "Survivors", 1, "-8 -104 0", "8 29 725", "-2152 3148 278" );
+		make_clip( "_cliprework_concertlights", "Survivors", 1, "-324 -74 0", "318 73 162", "-2305 3277 140" );
+		make_clip( "_cliprework_concertposter", "Survivors", 1, "-338 -16 -200", "338 17 98", "-2304 3687 204" );
+		make_clip( "_cliprework_concertroofio", "Survivors", 1, "-656 -32 -98", "616 515 652", "-2302 3197 352" );
+		make_clip( "_nav_duediligence", "Survivors", 1, "-3 -49 0", "5 48 1152", "-997 3049 -128" );
 	}
 
 	if ( HasPlayerControlledZombies() )
@@ -118,17 +116,17 @@ function DoRoundFixes()
 		make_axiswarp( "_axiswarp_anvilcase", "y+", 64, "-64 0 -128", "64 1 0", "-2304 2455 -96" );
 		make_axiswarp( "_axiswarp_sodapop1", "x+", 34, "0 -56 -184", "1 56 0", "-1400 1920 288" );
 		make_axiswarp( "_axiswarp_sodapop2", "x-", 34, "0 -56 -184", "1 56 0", "-3209 1920 288" );
-		make_brush( "_losfix_lightpanel",	"-100 -15 -2",	"90 15 2",	"-2299 2124 130" );
-		make_brush( "_losfix_plywood1",		"-1 -52 -5",	"1 52 5",	"-2846 2934 -255" );
-		make_brush( "_losfix_plywood2",		"-1 -52 -3",	"1 52 3",	"-1303 3098 -253" );
-		make_brush( "_losfix_scaffolding1a",		"-1 -74 -30",	"1 36 30",	"-1988 2489 -83" );
-		make_brush( "_losfix_scaffolding1b",		"-1 -60 -30",	"1 36 30",	"-1804 2489 -83" );
-		make_brush( "_losfix_scaffolding1c",		"-84 -1 -30",	"98 1 0",	"-1903 2524 -83" );
-		make_brush( "_losfix_scaffolding2a",		"-1 -74 -30",	"1 36 30",	"-2668 2489 -83" );
-		make_brush( "_losfix_scaffolding2b",		"-1 -60 -30",	"1 36 30",	"-2852 2489 -83" );
-		make_brush( "_losfix_scaffolding2c",		"-84 -1 -30",	"98 1 0",	"-2767 2524 -83" );
-		make_brush( "_losfix_start_trailer1",	"-104 -1 -8",	"104 1 8",	"-3740 3292 -248" );
-		make_brush( "_losfix_start_trailer2",	"-104 -1 -8",	"104 1 8",	"-4097 3304 -248" );
+		make_brush( "_losfix_lightpanel", "-100 -15 -2", "90 15 2", "-2299 2124 130" );
+		make_brush( "_losfix_plywood1", "-1 -52 -5", "1 52 5", "-2846 2934 -255" );
+		make_brush( "_losfix_plywood2", "-1 -52 -3", "1 52 3", "-1303 3098 -253" );
+		make_brush( "_losfix_scaffolding1a", "-1 -74 -30", "1 36 30", "-1988 2489 -83" );
+		make_brush( "_losfix_scaffolding1b", "-1 -60 -30", "1 36 30", "-1804 2489 -83" );
+		make_brush( "_losfix_scaffolding1c", "-84 -1 -30", "98 1 0", "-1903 2524 -83" );
+		make_brush( "_losfix_scaffolding2a", "-1 -74 -30", "1 36 30", "-2668 2489 -83" );
+		make_brush( "_losfix_scaffolding2b", "-1 -60 -30", "1 36 30", "-2852 2489 -83" );
+		make_brush( "_losfix_scaffolding2c", "-84 -1 -30", "98 1 0", "-2767 2524 -83" );
+		make_brush( "_losfix_start_trailer1", "-104 -1 -8", "104 1 8", "-3740 3292 -248" );
+		make_brush( "_losfix_start_trailer2", "-104 -1 -8", "104 1 8", "-4097 3304 -248" );
 		make_clip( "_axiswarp_anvilcase_clip", "SI Players", 1, "-64 0 0", "64 1 128", "-2304 2456 -224" );
 		make_clip( "_axiswarp_sodapop1_clip", "SI Players", 1, "0 -56 0", "1 56 184", "-1399 1920 104" );
 		make_clip( "_axiswarp_sodapop2_clip", "SI Players", 1, "0 -56 0", "1 56 184", "-3210 1920 104" );
