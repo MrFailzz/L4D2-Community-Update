@@ -16,11 +16,11 @@ PrecacheModel( "models/props_foliage/trees_cluster02.mdl" );
 PrecacheModel( "models/props_foliage/old_tree01.mdl" );
 PrecacheModel( "models/props_foliage/tree_trunk_fallen.mdl" );
 
-function DoRoundFixes()
+function DoRoundFixes() 
 {
-	make_clip(	"_cliprework_startarea02",	"Survivors",	1,	"-1500 -16 -124",	"1500 16 880",		"2738 3824 412" );
-	make_clip(	"_cliprework_startarea01",	"Survivors",	1,	"-16 -1080 -216",	"16 0 700",		"1311.5 3785 596" );
-	make_clip(	"_cliprework_startarea03",	"Survivors",	1,	"-16 -1710 -450",	"16 0 500",		"4250 3811 792" );
+	make_clip( "_cliprework_startarea02", "Survivors", 1, "-1500 -16 -124", "1500 16 880", "2738 3824 412" );
+	make_clip( "_cliprework_startarea01", "Survivors", 1, "-16 -1080 -216", "16 0 700", "1311.5 3785 596" );
+	make_clip( "_cliprework_startarea03", "Survivors",  1, "-16 -1710 -450", "16 0 500", "4250 3811 792" );
 	make_clip( "_permstuck_cornertree", "SI Players", 1, "-17 -17 -17", "17 17 17", "4414.32 1858 17" );
 	make_clip( "_solidify_railposta", "Everyone", 1, "-6 -2 0", "6 2 33.8", "3924 -4516 -24" );
 	make_clip( "_solidify_railpostb", "Everyone", 1, "-6 -2 0", "6 2 33.8", "4020 -4516 -24" );
@@ -37,13 +37,13 @@ function DoRoundFixes()
 
 	// Not confirmed canon. Drainage fence or ranchhouse padlock are equally open-ended.
 
-	make_prop( "dynamic",		"_laststand_truck",		"models/props_vehicles/pickup_truck_2004.mdl",		"1261.08 1237.97 -207.962",		"3.2 191.071 3.5",			"shadow_yes",	"solid_yes",	"67 108 112" );
-	make_prop( "dynamic",		"_laststand_truckglass",	"models/props_vehicles/pickup_truck_2004_glass.mdl",		"1261.08 1237.97 -207.962",		"3.2 191.071 3.5",			"shadow_no",	"solid_yes",	"67 108 112" );
-	make_prop( "dynamic",		"_laststand_ammocan1",		"models/props/de_prodigy/ammo_can_02.mdl",		"1345.13 1232.73 -158.673",		"-1.487 280.487 1.214" );
-	make_prop( "dynamic",		"_laststand_ammocan2",		"models/props/de_prodigy/ammo_can_02.mdl",		"1337.56 1234.67 -164.912",		"-1.487 280.487 1.214" );
-	make_prop( "dynamic",		"_laststand_oldmanmurray",	"models/props_crates/static_crate_40.mdl",		"1310 1260.02 -166.166",		"1.214 190.519 1.488" );
-	make_prop( "dynamic",		"_laststand_ammocan3",		"models/props/de_prodigy/ammo_can_02.mdl",		"1305.72 1280.81 -142.713",		"1.188 191.518 85.509" );
-	make_prop( "dynamic",		"_laststand_lantern",		"models/props_unique/spawn_apartment/lantern.mdl",		"1340 1251 -163.04",		"1.201 191.019 3.498",			"shadow_no",	"solid_no" );
+	make_prop( "dynamic", "_laststand_truck", "models/props_vehicles/pickup_truck_2004.mdl", "1261.08 1237.97 -207.962", "3.2 191.071 3.5", "shadow_yes", "solid_yes", "67 108 112" );
+	make_prop( "dynamic", "_laststand_truckglass", "models/props_vehicles/pickup_truck_2004_glass.mdl", "1261.08 1237.97 -207.962", "3.2 191.071 3.5", "shadow_no", "solid_yes", "67 108 112" );
+	make_prop( "dynamic", "_laststand_ammocan1", "models/props/de_prodigy/ammo_can_02.mdl", "1345.13 1232.73 -158.673", "-1.487 280.487 1.214" );
+	make_prop( "dynamic", "_laststand_ammocan2", "models/props/de_prodigy/ammo_can_02.mdl", "1337.56 1234.67 -164.912", "-1.487 280.487 1.214" );
+	make_prop( "dynamic", "_laststand_oldmanmurray", "models/props_crates/static_crate_40.mdl", "1310 1260.02 -166.166", "1.214 190.519 1.488" );
+	make_prop( "dynamic", "_laststand_ammocan3", "models/props/de_prodigy/ammo_can_02.mdl", "1305.72 1280.81 -142.713", "1.188 191.518 85.509" );
+	make_prop( "dynamic", "_laststand_lantern", "models/props_unique/spawn_apartment/lantern.mdl", "1340 1251 -163.04", "1.201 191.019 3.498", "shadow_no", "solid_no" );
 
 	// The only finale without a one-way point-of-no-return... until now! (No delay needed for this trigger_finale inject)
 
@@ -78,12 +78,16 @@ function DoRoundFixes()
 
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain = NavMesh.GetNearestNavArea(Vector(1612.500000, -3662.500000, 26.890617), 16, true, true)
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(1750.000000, -3655.000000, -101.112030), 16, true, true)
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(1625.000000, -3527.500000, -62.369400), 16, true, true)
-		local navConnection3 = NavMesh.GetNearestNavArea(Vector(1537.500000, -3650.000000, -93.773209), 16, true, true)
-		local navConnection4 = NavMesh.GetNearestNavArea(Vector(1600.000000, -3735.000000, -123.070557), 16, true, true)
+		// CheckLOS and CheckGround set to false as it did not work otherwise here
+		local navMain = NavMesh.GetNearestNavArea(Vector(1612.500000, -3662.500000, 26.890617), 16, false, false);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(1750.000000, -3655.000000, -101.112030), 16, false, false);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(1625.000000, -3527.500000, -62.369400), 16, false, false);
+		local navConnection3 = NavMesh.GetNearestNavArea(Vector(1537.500000, -3650.000000, -93.773209), 16, false, false);
+		local navConnection4 = NavMesh.GetNearestNavArea(Vector(1600.000000, -3735.000000, -123.070557), 16, false, false);
 		navConnection1.Disconnect(navMain);
 		navConnection2.Disconnect(navMain);
 		navConnection3.Disconnect(navMain);
@@ -95,7 +99,7 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_indoor_roof",			"Survivors",	1,	"-60 -84 -28",		"60 84 28",		"2244 4076 100" );
+		make_clip( "_indoor_roof", "Survivors", 1, "-60 -84 -28", "60 84 28", "2244 4076 100" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -108,7 +112,7 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_van",		"-1 -70 -8",	"1 70 8",	"3736 753 -181" );
+		make_brush( "_losfix_van", "-1 -70 -8", "1 70 8", "3736 753 -181" );
 		make_clip( "_ladder_middlehouse_clip", "Everyone", 1, "-10 -7 0", "10 -4 160", "3488 -3063 -84", "0 -34 0" );
 		make_clip( "_rock_infected_clipqol", "SI Players", 1, "-140 -135 -105", "140 135 105", "3340 -5010 -324" );
 		make_clip( "_rock_survivor_clipright", "Survivors", 1, "-195 -240 -216", "50 183 1700", "3255 -4984 -253" );
@@ -163,7 +167,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_solidify_tree26", "models/props_foliage/trees_cluster02.mdl", "2236.99 768.711 -202.778", "-6.18811 116.848 12.0217", "shadow_no" );
 		make_prop( "dynamic", "_solidify_tree27", "models/props_foliage/old_tree01.mdl", "2157.68 1276.4 -199.196", "-2.87053 121.382 4.69345", "shadow_no" );
 		make_prop( "dynamic", "_solidify_tree28", "models/props_foliage/trees_cluster02.mdl", "5416.34 565.308 209.588", "0.0 268.0 0.0", "shadow_no" );
-		make_prop( "physics",		"_hittable_log",		"models/props_foliage/tree_trunk_fallen.mdl",		"5405 -2480 -103",		"0 0 2", "shadow_no" );
+		make_prop( "physics", "_hittable_log", "models/props_foliage/tree_trunk_fallen.mdl", "5405 -2480 -103", "0 0 2", "shadow_no" );
 		make_prop( "physics_ovr", "_hittable_rock", "models/props/cs_militia/militiarock01.mdl", "1721 -1971 -4", "10.6 49.1 10.9", "shadow_no" );
 	}
 }
