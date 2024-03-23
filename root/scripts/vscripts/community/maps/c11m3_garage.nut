@@ -19,15 +19,17 @@ PrecacheModel( "models/props_junk/wood_crate002a.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_dispcrouch_rubblepipes",	"Everyone",	1,	"-32 -420 0",		"32 420 216",		"-6060 758 -125" );
-	make_clip(	"_clipgap_roof",		"Survivors",	1,	"-17 -54 0",		"18 54 1000",		"-2226 5494 825" );
-	make_clip(	"_permstuck_processortanks",	"Everyone",	1,	"-64 -32 -84",		"64 0 10",		"-3000 2129 103" );
-	make_clip(	"_cliprework_construction01",	"Survivors",	1,	"-440 -376 -440",		"440 376 440",		"-5616 -2672 1416" );
-	make_clip(	"_cliprework_construction02",	"Survivors",	1,	"-540 -376 -636",		"540 376 636",		"-6644 -2856 1220" );
-	make_clip(	"_cliprework_construction03",	"Survivors",	1,	"-488 -372 -660",	"488 372 660",		"-7672 -2516 1196" );
-	make_clip(	"_cliprework_construction04",	"Survivors",	1,	"-386 -32 -176",	"460 8 741",		"-5645 -884 1118" );
-	make_clip(	"_cliprework_startarea02",	"Survivors",	1,	"-8 -360 0",		"8 360 1122",		"-5008 -2351 712" );
-	make_clip(	"_cliprework_startarea01",	"Survivors",	1,	"-8 -469 0",		"8 469 1313",		"-4232 -3186 548" );
+	make_clip( "_dispcrouch_rubblepipes", "Everyone", 1, "-32 -420 0", "32 420 216", "-6060 758 -125" );
+	make_clip( "_clipgap_roof", "Survivors", 1, "-17 -54 0", "18 54 1000", "-2226 5494 825" );
+	make_clip( "_permstuck_processortanks", "Everyone", 1, "-64 -32 -84", "64 0 10", "-3000 2129 103" );
+	make_clip( "_cliprework_construction01", "Survivors", 1, "-444 -412 -440", "444 412 440", "-5616 -2704 1416" );
+	make_clip( "_cliprework_construction02", "Survivors", 1, "-540 -376 -636", "540 376 636", "-6644 -2856 1220" );
+	make_clip( "_cliprework_construction03", "Survivors", 1, "-488 -372 -660", "488 372 660", "-7672 -2516 1196" );
+	make_clip( "_cliprework_construction04", "Survivors", 1, "-428 -644 -456", "428 644 456", "-5608 -272 1400" );
+	make_clip( "_cliprework_bombstreet01", "Survivors", 1, "-266 -416 -604", "266 416 604", "-5390 1540 1252" );
+	make_clip( "_cliprework_bombstreet02", "Survivors", 1, "-504 -248 -618", "504 248 618", "-6256 1360 1238" );
+	make_clip( "_cliprework_startarea01", "Survivors", 1, "-322 -480 -654", "322 480 654", "-3922 -3184 1202" );
+	make_clip( "_cliprework_startarea02", "Survivors", 1, "-662 -370 -572", "662 370 572", "-4358 -2370 1284" );
 	make_clip( "_nav_constructwin", "Survivors", 1, "-64 -8 0", "64 8 128", "-5776 -1304 216" );
 	make_clip( "_permstuck_watertank", "Everyone", 1, "-16 -16 0", "16 16 111", "-4044 2880 16" );
 	make_clip( "_lmpedit18_brushid1738_endhalla", "Survivors", 1, "-516 -1476 -790", "375 1476 790", "-1044 4924 1066" );
@@ -38,14 +40,12 @@ function DoRoundFixes()
 	con_comment( "FIX:\tTanks prevented from being able to punch barricade gascans to delete them." );
 
 	NetProps.SetPropInt( Entities.FindByName( null, "barricade_gas_can" ), "m_Collision.m_usSolidFlags", 2 );
+	make_clip( "_gascan_recollision", "Everyone", 1, "-12 -12 -12", "12 12 12", "-5356 -964 25.5", "0 45 0" ); 		// Add back fake collision
+	EntFire( "barricade_gas_can", "AddOutput", "OnBreak " + g_UpdateName + "_gascan_recollision:Disable::0:-1" ); 	// Remove fake collision when gascan breaks
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
-	{
-		make_clip(	"_cliprework_construction05",	"Survivors",	1,	"-8 -472 0",		"1337 488 888",		"-5384 -1528 1000" );
-	}
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism")
 	{
-		EntFire( "construction_clip", "Kill", "", 1 );
+		EntFire( "construction_clip", "Kill" );
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -53,27 +53,31 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip(	"_booster_windows",		"Survivors",	1,	"-6 -80 0",		"6 80 128",		"-3082 3152 160" );
-		make_clip(	"_bunnyhop_windows",		"Survivors",	1,	"-6 -180 0",		"6 180 128",		"-2954 1393 160" );
+		make_clip( "_booster_windows", "Survivors", 1, "-6 -80 0", "6 80 128", "-3082 3152 160" );
+		make_clip( "_bunnyhop_windows", "Survivors", 1, "-6 -180 0", "6 180 128", "-2954 1393 160" );
+	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_cliprework_construction05", "Survivors", 1, "-8 -472 0", "1337 488 888", "-5384 -1528 1000" );
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		kill_funcinfclip( 1067.45 );	// Delete thin clip blocking access to the new enclosed construction area, fix exploits
-		kill_funcinfclip( 1841.92 );	// Delete clip above/around about 5 distinct rooftops above starting area
-		kill_funcinfclip( 1000.96 );	// Delete clip on rooftop besides new enclosed construction site space
-		kill_funcinfclip( 1110.34 );	// Delete clip on rooftop with watertower near large pothole
-		kill_funcinfclip( 874.48 );	// Delete clip above rooftop near beginning (same as one deleted for end of map 2)
-		kill_funcinfclip( 2083.18 );	// Delete 3-solid clip over 2 long fences and a rooftop ledge
+		kill_funcinfclip( 1067.45 );        // Delete thin clip blocking access to the new enclosed construction area, fix exploits
+		kill_funcinfclip( 1841.92 );        // Delete clip above/around about 5 distinct rooftops above starting area
+		kill_funcinfclip( 1000.96 );        // Delete clip on rooftop besides new enclosed construction site space
+		kill_funcinfclip( 1110.34 );        // Delete clip on rooftop with watertower near large pothole
+		kill_funcinfclip( 874.48 );         // Delete clip above rooftop near beginning (same as one deleted for end of map 2)
+		kill_funcinfclip( 2083.18 );        // Delete 3-solid clip over 2 long fences and a rooftop ledge
 		make_atomizer( "_atomizer_bsp_forkliftdoor", "-3451 2517 32", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
 		make_atomizer( "_atomizer_bsp_forkliftgate", "-3573 2854 32", "models/props\\cs_assault\\forklift_brokenlift.mdl", 60 );
-		make_brush( "_losfix_copcar",		"-1 -80 -8",	"1 80 8",	"-3430 875 15" );
-		make_brush( "_losfix_end_van",		"-1 -70 -8",	"1 70 8",	"-3221 4198 23" );
-		make_brush( "_losfix_van",			"-1 -60 -8",	"1 60 8",	"-4577 664 16" );
-		make_brush( "_losfix_watertank1",	"-132 -1 -6",	"132 1 6",	"-4854 3494 22" );
-		make_brush( "_losfix_watertank2",	"-132 -1 -6",	"132 1 6",	"-3733 2330 38" );
-		make_brush( "_losfix_watertank3",	"-132 -1 -6",	"132 1 6",	"-3947 2566 38" );
-		make_brush( "_losfix_watertank4",	"-22 -32 -12",	"22 32 12",	"-3994 2929 25" );
+		make_brush( "_losfix_copcar", "-1 -80 -8", "1 80 8", "-3430 875 15" );
+		make_brush( "_losfix_end_van", "-1 -70 -8", "1 70 8", "-3221 4198 23" );
+		make_brush( "_losfix_van", "-1 -60 -8", "1 60 8", "-4577 664 16" );
+		make_brush( "_losfix_watertank1", "-132 -1 -6", "132 1 6", "-4854 3494 22" );
+		make_brush( "_losfix_watertank2", "-132 -1 -6", "132 1 6", "-3733 2330 38" );
+		make_brush( "_losfix_watertank3", "-132 -1 -6", "132 1 6", "-3947 2566 38" );
+		make_brush( "_losfix_watertank4", "-22 -32 -12", "22 32 12", "-3994 2929 25" );
 		make_clip( "_constructsite_fireescape_booster", "Survivors", 1, "-45 -88 -133", "42 82 1062", "-5434 -1145 792" );
 		make_clip( "_constructsite_scaffold_clip", "SI Players", 1, "-48 -167 0", "49 161 108", "-7551 -1707 180" );
 		make_clip( "_constructsite_wwblocker", "SI Players", 1, "-397 -19 0", "403 355 1132", "-7203 -723 736" );
@@ -151,7 +155,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_yeswayfence_wrongway6", "models/props_misc/wrongway_sign01_optimized.mdl", "-5072 4593 72", "0 270 0", "shadow_no", "solid_no", "255 255 255", 217, 17 );
 		make_prop( "dynamic", "_yeswayfence_wrongway7", "models/props_misc/wrongway_sign01_optimized.mdl", "-4632 4593 72", "0 270 0", "shadow_no", "solid_no", "255 255 255", 217, 17 );
 		make_prop( "dynamic", "_yeswayfence_wrongway8", "models/props_misc/wrongway_sign01_optimized.mdl", "-4192 4593 72", "0 270 0", "shadow_no", "solid_no", "255 255 255", 217, 17 );
-		make_prop( "physics",		"_losblocker_closetcrate",	"models/props_junk/wood_crate002a.mdl",	"-559 3577 335",		"20 0 90" );
+		make_prop( "physics", "_losblocker_closetcrate", "models/props_junk/wood_crate002a.mdl", "-559 3577 335", "20 0 90" );
 		patch_ladder( "-1539.5 1472 192.315", "-1 0 0" );
 		patch_ladder( "-3352 2426 110", "0 -1 0" );
 	}
