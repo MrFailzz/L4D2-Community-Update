@@ -8,10 +8,10 @@ PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_woodwindow",          "Survivors",	1,	"-48 -1 -39",		"48 1 39",		"4144 -1423 391" );
-	make_clip(	"_permstuck_shruba",		"SI Players",	1,	"-60 -32 -36",		"60 72 60",		"3668 -1664 132" );
-	make_clip(	"_permstuck_shrubb",		"SI Players",	1,	"-64 -64 -48",		"64 64 48",		"3408 -1760 144" );
-	make_clip(	"_commonhop_safehouse",		"Survivors",	1,	"-280 -456 0",		"280 456 1100",		"3984 -1863 464" );
+	make_clip( "_woodwindow", "Survivors", 1, "-48 -1 -39", "48 1 39", "4144 -1423 391" );
+	make_clip( "_permstuck_shruba", "SI Players", 1, "-60 -32 -36", "60 72 60", "3668 -1664 132" );
+	make_clip( "_permstuck_shrubb", "SI Players", 1, "-64 -64 -48", "64 64 48", "3408 -1760 144" );
+	make_clip( "_commonhop_safehouse", "Survivors", 1, "-280 -456 0", "280 456 1100", "3984 -1863 464" );
 	make_clip( "_commentary_edgeshrubs_a", "Survivors", 1, "-50 -52 -80", "50 1200 3000", "-957.801 3798.52 351.499" );
 	make_clip( "_commentary_edgeshrubs_b", "Survivors", 1, "-50 -52 -80", "50 300 2000", "-2852.78 5296.57 290.201" );
 	make_clip( "_commentary_edgeshrubs_c", "Survivors", 1, "-50 -52 -80", "50 1000 2000", "-2948.78 5232.57 290.201" );
@@ -32,13 +32,13 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_ambulance1",	"-90 -1 -8",	"91 1 8",	"711 4748 102" );
-		make_brush( "_losfix_ambulance2",	"-1 -56 -8",	"1 57 8",	"803 4690 102" );
-		make_brush( "_losfix_dumpster",		"-185 -1 -8",	"185 1 8",	"3550 343 128" );
-		make_brush( "_losfix_gen1",		"-28 -1 -10",	"28 1 10",	"241 5987 107" );
-		make_brush( "_losfix_gen2",		"-22 -1 -8",	"22 1 8",	"3448 -1345 113" );
-		make_brush( "_losfix_truck",		"-62 -1 -10",	"62 1 10",	"3217 -1376 114" );
-		make_brush( "_losfix_truck_jump",	"-70 -1 -10",	"70 1 10",	"2949 2885 108" );
+		make_brush( "_losfix_ambulance1", "-90 -1 -8", "91 1 8", "711 4748 102" );
+		make_brush( "_losfix_ambulance2", "-1 -56 -8", "1 57 8", "803 4690 102" );
+		make_brush( "_losfix_dumpster", "-185 -1 -8", "185 1 8", "3550 343 128" );
+		make_brush( "_losfix_gen1", "-28 -1 -10", "28 1 10", "241 5987 107" );
+		make_brush( "_losfix_gen2", "-22 -1 -8", "22 1 8", "3448 -1345 113" );
+		make_brush( "_losfix_truck", "-62 -1 -10", "62 1 10", "3217 -1376 114" );
+		make_brush( "_losfix_truck_jump", "-70 -1 -10", "70 1 10", "2949 2885 108" );
 		make_clip( "_ladder_dumpsterhouse_clip", "Everyone", 1, "-8 -16 0", "26 8 168", "1638 4032 217", "0 45 0" );
 		make_clip( "_ladder_safehousetall_clip", "SI Players", 1, "-20 -2 -2", "8 2 310", "3725 -1537 101", "0 45 0" );
 		make_clip( "_ladder_cornerhome_clip", "SI Players", 1, "-1 -10 -40", "1 14 40", "1130.02 7052 426", "0 -45 0" );

@@ -8,20 +8,20 @@ function DoRoundFixes()
 {
 	EntFire( "worldspawn", "RunScriptFile", "community/c4m2_elevatorfix" );
 
-	make_clip(	"_quad_silosa",	"Survivors",	1,	"-8 -96 -379",	"8 96 379",		"2552 -2976 758" );
-	make_clip(	"_quad_silosb",	"Survivors",	1,	"-128 -128 -454",	"128 128 454",		"2688 -3200 710" );
-	make_clip(	"_quad_silosc",	"Survivors",	1,	"-386 -128 -534",	"386 128 534",		"2754 -3456 630" );
-	make_clip(	"_quad_silosd",	"Survivors",	1,	"-8 -122 -534",	"8 122 534",		"2360 -3706 630" );
-	make_clip(	"_permstuck_silos",		"Everyone",	1,	"-156 -256 -340",	"0 128 0",		"2696 -6088 435" );
-	make_clip(	"_canefield_coneroof",	"Survivors",	1,	"-220 -755 -380",	"320 707 1938",		"72 -11887 573" );
-	make_clip(	"_canefield_conewoof",	"Survivors",	1,	"1 -943 0",		"302 773 2192",		"-45 -10241 319" );
-	make_clip(	"_permstuck_longfencea",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"3996 -4978 506",	"0 36 0" );
-	make_clip(	"_permstuck_longfenceb",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"4072 -5214 506" );
-	make_clip(	"_permstuck_longfencec",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"4042 -5462 506",	"0 -14 0" );
-	make_clip(	"_permstuck_longfenced",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"4010 -5718 506" );
-	make_clip(	"_permstuck_longfencee",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"4010 -5978 506" );
-	make_clip(	"_permstuck_longfencef",	"Survivors",	1,	"-4 -130 -294",		"4 130 294",		"3962 -6216 506",	"0 -22 0" );
-	make_clip(	"_permstuck_quadtank",		"Everyone",	1,	"-290 -32 -200",	"134 32 0",		"1638 -5280 292" );
+	make_clip( "_quad_silosa", "Survivors", 1, "-8 -96 -406", "8 96 406", "2552 -2976 758" );
+	make_clip( "_quad_silosb", "Survivors", 1, "-128 -128 -454", "128 128 454", "2688 -3200 710" );
+	make_clip( "_quad_silosc", "Survivors", 1, "-386 -128 -534", "386 128 534", "2754 -3456 630" );
+	make_clip( "_quad_silosd", "Survivors", 1, "-8 -122 -534", "8 122 534", "2360 -3706 630" );
+	make_clip( "_permstuck_silos", "Everyone", 1, "-156 -256 -340", "0 128 0", "2696 -6088 435" );
+	make_clip( "_canefield_coneroof", "Survivors", 1, "-220 -755 -380", "320 707 1938", "72 -11887 573" );
+	make_clip( "_canefield_conewoof", "Survivors", 1, "1 -943 0", "302 773 2192", "-45 -10241 319" );
+	make_clip( "_permstuck_longfencea", "Survivors", 1, "-4 -130 -294", "4 130 294", "3996 -4978 506", "0 36 0" );
+	make_clip( "_permstuck_longfenceb", "Survivors", 1, "-4 -130 -294", "4 130 294", "4072 -5214 506" );
+	make_clip( "_permstuck_longfencec", "Survivors", 1, "-4 -130 -294", "4 130 294", "4042 -5462 506", "0 -14 0" );
+	make_clip( "_permstuck_longfenced", "Survivors", 1, "-4 -130 -294", "4 130 294", "4010 -5718 506" );
+	make_clip( "_permstuck_longfencee", "Survivors", 1, "-4 -130 -294", "4 130 294", "4010 -5978 506" );
+	make_clip( "_permstuck_longfencef", "Survivors", 1, "-4 -130 -294", "4 130 294", "3962 -6216 506", "0 -22 0" );
+	make_clip( "_permstuck_quadtank", "Everyone", 1, "-290 -32 -200", "134 32 0", "1638 -5280 292" );
 	make_clip( "_nav_cornerledge", "Survivors", 1, "-5 -67 0", "5 69 172", "-357 -8509 624" );
 	make_clip( "_permstuck_cornerbush", "Everyone", 1, "-19 -49 0", "99 18 78", "3117 -1842 110" );
 	make_clip( "_cliprework_clipextenda", "Survivors", 1, "-730 -264 0", "678 312 1792", "1306 -6648 735" );
@@ -38,7 +38,7 @@ function DoRoundFixes()
 	make_clip( "_nav_rubblewalla", "Survivors", 1, "-6 0 -13", "6 96 114", "-1152 -8556 712" );
 	make_clip( "_nav_rubblewallb", "Survivors", 1, "-6 0 -13", "6 96 114", "-1152 -9457 712" );
 	make_clip( "_cliprework_thimbleroof", "Survivors", 1, "0 -480 0", "401 464 2242", "288 -7936 281" );
-	make_clip( "_clipextend_thimblestack", "Survivors", 1, "-67 -52 0", "63 70 2084", "394 -7429 440" );
+	make_clip( "_clipextend_thimblestack", "Survivors", 1, "-66 -62 -1133.5", "66 62 1133.5", "394 -7426 1394" );
 	make_clip( "_clipextend_generator", "Survivors", 1, "-24 -35 0", "26 31 1821", "-769 -7654 687" );
 	make_clip( "_rubble_smoother1", "Everyone", 1, "-1 -93 0", "1 106 4", "2239 -5093 121", "0 -15 0" );
 	make_clip( "_rubble_smoother2", "Everyone", 1, "-66 -6 0", "58 0 6", "2176 -4926 98", "0 -15 0" );
@@ -48,40 +48,22 @@ function DoRoundFixes()
 	make_clip( "_elevator_softlock_sideclip", "Survivors", 1, "-3 -46 -383", "3 46 383", "-1548 -9551 512" );
 	make_clip( "_elevator_softlock_signclip", "Survivors", 1, "-171 -103 -694", "171 103 694", "-1504 -13160 1835" );
 	make_clip( "_commentary_elevatorpipe", "Survivors", 1, "0 0 0", "50 50 500", "-1535 -9144.59 614.604" );
-	make_prop( "dynamic", "_spool_oneway1", "models/props_industrial/wire_spool_01.mdl", "228 -5204 96", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway2", "models/props_industrial/wire_spool_02.mdl", "232 -5276 97", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway3", "models/props_industrial/wire_spool_01.mdl", "228 -5280 150", "0 351 0", "shadow_no");
-	make_prop( "dynamic", "_spool_oneway4", "models/props_industrial/wire_spool_02.mdl", "136 -5272 125", "9 45 90", "shadow_no");
 
 	// All-mode QoL clip for a Valve ladder and move it 2 units so players don't get caught on critpath anymore.
 
 	make_clip( "_ladderqol_millladder", "Everyone", 1, "-48 -1 0", "90 0 128", "1392 -5564 228" );
 	patch_ladder( "1454 -5565.5 292.25", "0 2 0" );
 
-	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
-		make_clip(	"_vent_roofa",          "Survivors",	1,	"-118 -4 -84",		"118 4 0",		"3699 -3727 476" );
-		make_clip(	"_commonhop_ducatelroof",	"Survivors",	1,	"-256 -164 0",		"256 164 4",		"3808 -3324 407" );
-		make_clip(	"_commonhop_dualstacks",	"Survivors",	1,	"-340 -642 -266",	"5 450 2100",		"264 -4866 498" );
-		make_clip( "_clipextend_treecluster", "Survivors", 1, "-43 -42 0", "31 40 1960", "114 -6111 576" );
-		make_clip(	"_shortcut_elevator_m2only",	"Survivors",	1,	"-64 -4 0",		"64 4 777",		"-1477 -9605 114" );
-		make_clip( "_cliprework_gasstation", "Survivors", 1, "-317 -328 0", "323 312 2082", "-899 -13512 432" );
-		make_clip( "_commentary_upperfactory_a", "Survivors", 1, "-117 -97 -192", "117 97 1976", "2349 -5535 552" );
-		make_clip( "_commentary_upperfactory_b", "Survivors", 1, "-8 -12 -192", "8 12 1976", "2223 -5512 552" );
-		make_clip( "_commentary_upperfactory_c", "Survivors", 1, "-41 -55 -192", "41 55 1976", "2272 -5386 552" );
-		make_clip( "_commentary_upperfactory_d", "Survivors", 1, "-576 -33 -192", "576 33 1976", "1656 -5364 552" );
-		make_clip( "_commentary_upperfactory_e", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1927 -5824 552" );
-		make_clip( "_commentary_upperfactory_f", "Survivors", 1, "-616 -38 -192", "616 38 1976", "1696 -6290 552" );
-		make_clip( "_commentary_upperfactory_g", "Survivors", 1, "-254 -118 -192", "254 118 1976", "1537 -6134 552" );
-		make_clip( "_commentary_upperfactory_h", "Survivors", 1, "-193 -85 -192", "193 85 1976", "1536 -5480 552" );
-		make_clip( "_commentary_upperfactory_i", "Survivors", 1, "-48 -100 -192", "48 100 1976", "1354 -5728 552" );
-		make_clip( "_commentary_upperfactory_j", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1112 -5824 552" );
-		make_clip( "_commentary_upperfactory_k", "Survivors", 1, "-336 -90 -192", "336 90 1976", "745 -5421 552" );
-		make_clip( "_commentary_upperfactory_l", "Survivors", 1, "-33 -61 -192", "33 61 1976", "727 -5572 552" );
-		make_clip( "_commentary_upperfactory_m", "Survivors", 1, "-116 -144 -192", "116 144 1976", "2108 -5728 552" );
-		make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
-		make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
-		make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
+		devchap( "BASE COOP" );
+
+		// FIXES
+
+		make_prop( "dynamic", "_spool_oneway1", "models/props_industrial/wire_spool_01.mdl", "228 -5204 96", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway2", "models/props_industrial/wire_spool_02.mdl", "232 -5276 97", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway3", "models/props_industrial/wire_spool_01.mdl", "228 -5280 150", "0 351 0", "shadow_no");
+		make_prop( "dynamic", "_spool_oneway4", "models/props_industrial/wire_spool_02.mdl", "136 -5272 125", "9 45 90", "shadow_no");
 	}
 	if ( g_BaseMode == "versus" )
 	{
@@ -105,15 +87,40 @@ function DoRoundFixes()
 		make_clip( "_nav_semitrailer", "Survivors", 1, "-274 -63 0", "263 53 2262", "70 -8187 261" );
 		make_clip( "_nav_jumptotree", "Survivors", 1, "-78 -66 0", "128 46 2202", "-1250 -7925 331" );
 	}
+	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
+	{
+		make_clip( "_vent_roofa", "Survivors", 1, "-118 -4 -84", "118 4 0", "3699 -3727 476" );
+		make_clip( "_commonhop_ducatelroof", "Survivors", 1, "-256 -164 0", "256 164 4", "3808 -3324 407" );
+		make_clip( "_commonhop_dualstacks", "Survivors", 1, "-340 -642 -266", "5 450 2100", "264 -4866 498" );
+		make_clip( "_clipextend_treecluster", "Survivors", 1, "-43 -42 0", "31 40 1960", "114 -6111 576" );
+		make_clip( "_shortcut_elevator_m2only", "Survivors", 1, "-64 -4 0", "64 4 777", "-1477 -9605 114" );
+		make_clip( "_cliprework_gasstation", "Survivors", 1, "-317 -328 0", "323 312 2082", "-899 -13512 432" );
+		make_clip( "_commentary_upperfactory_a", "Survivors", 1, "-117 -97 -192", "117 97 1976", "2349 -5535 552" );
+		make_clip( "_commentary_upperfactory_b", "Survivors", 1, "-8 -12 -192", "8 12 1976", "2223 -5512 552" );
+		make_clip( "_commentary_upperfactory_c", "Survivors", 1, "-41 -55 -192", "41 55 1976", "2272 -5386 552" );
+		make_clip( "_commentary_upperfactory_d", "Survivors", 1, "-576 -33 -192", "576 33 1976", "1656 -5364 552" );
+		make_clip( "_commentary_upperfactory_e", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1927 -5824 552" );
+		make_clip( "_commentary_upperfactory_f", "Survivors", 1, "-616 -38 -192", "616 38 1976", "1696 -6290 552" );
+		make_clip( "_commentary_upperfactory_g", "Survivors", 1, "-254 -118 -192", "254 118 1976", "1537 -6134 552" );
+		make_clip( "_commentary_upperfactory_h", "Survivors", 1, "-193 -85 -192", "193 85 1976", "1536 -5480 552" );
+		make_clip( "_commentary_upperfactory_i", "Survivors", 1, "-48 -100 -192", "48 100 1976", "1354 -5728 552" );
+		make_clip( "_commentary_upperfactory_j", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1112 -5824 552" );
+		make_clip( "_commentary_upperfactory_k", "Survivors", 1, "-336 -90 -192", "336 90 1976", "745 -5421 552" );
+		make_clip( "_commentary_upperfactory_l", "Survivors", 1, "-33 -61 -192", "33 61 1976", "727 -5572 552" );
+		make_clip( "_commentary_upperfactory_m", "Survivors", 1, "-116 -144 -192", "116 144 1976", "2108 -5728 552" );
+		make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
+		make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
+		make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
+	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_gas_truck",	"-1 -75 -12",	"1 75 12",	"-572 -13262.9 133" );
-		make_brush( "_losfix_gen",		"-1 -20 -8",	"1 20 8",	"-1390 -13156 125" );
-		make_brush( "_losfix_trailer1",		"-1 -81 -20",	"1 80 15",	"1219 -4171 120" );
-		make_brush( "_losfix_trailer2",		"-72 -1 -20",	"72 1 18",	"1149 -4253 116" );
-		make_brush( "_losfix_trailer3",		"-72 -1 -20",	"72 1 20",	"1074 -4342 116" );
-		make_brush( "_losfix_truck",		"-1 -70 -12",	"1 70 12",	"4106 -2935 115" );
+		make_brush( "_losfix_gas_truck", "-1 -75 -12", "1 75 12", "-572 -13262.9 133" );
+		make_brush( "_losfix_gen", "-1 -20 -8", "1 20 8", "-1390 -13156 125" );
+		make_brush( "_losfix_trailer1", "-1 -81 -20", "1 80 15", "1219 -4171 120" );
+		make_brush( "_losfix_trailer2", "-72 -1 -20", "72 1 18", "1149 -4253 116" );
+		make_brush( "_losfix_trailer3", "-72 -1 -20", "72 1 20", "1074 -4342 116" );
+		make_brush( "_losfix_truck", "-1 -70 -12", "1 70 12", "4106 -2935 115" );
 		make_clip( "_ladder_parkourouthouse_clip", "SI Players", 1, "-31 -28 0", "29 29 10", "1017 -4471 200", "0 15 0" );
 		make_ladder( "_ladder_ducatelelecbox_cloned_ducateldumpsters", "-1586.2 -13843.5 218.25", "11911 -15404 0", "0 -90 0", "-1 0 0" );
 		make_ladder( "_ladder_ducatelroofl_cloned_brokenlocker", "2756 -3833.5 392.25", "-5049 -16350 0", "0 90 0", "-1 0 0" );
