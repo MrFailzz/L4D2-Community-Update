@@ -16,7 +16,7 @@
 
 printl( "Logic modified for ferry softlock fix" );
 
-// Define area below ferry entrance level.
+// Define area across the river ferry.
 local c4m2_areaSwamp_vecMin = Vector( -4344, 328, -248 );
 local c4m2_areaSwamp_vecMax = Vector(  -8, 10232, 1016 );
 
