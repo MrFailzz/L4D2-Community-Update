@@ -13,48 +13,74 @@ PrecacheModel( "models/props_interiors/sofa_chair02.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_dispcrouch_spawn_right",	"Everyone",	1,	"-12 -216 -100",	"200 216 128",		"11102 150 -115" );
-	make_clip(	"_dispcrouch_spawn_left",	"Everyone",	1,	"-26 -216 -100",	"26 216 128",		"10210 1423 -29" );
-	make_clip(	"_permstuck_tree_a",		"Everyone",	1,	"-16 -16 -16",		"16 16 16",		"10675 528 -7" );
-	make_clip(	"_permstuck_tree_b",		"Everyone",	1,	"-16 -16 -16",		"16 16 16",		"10794 1843 -27" );
-	make_clip(	"_permstuck_tree_c",		"Everyone",	1,	"-16 -16 -16",		"16 16 16",		"10456 3463 4" );
-	make_clip(	"_permstuck_tree_d",		"Everyone",	1,	"-16 -16 -16",		"16 16 16",		"11064 4373 -10" );
-	make_clip(	"_permstuck_tree_e",		"Everyone",	1,	"-16 -16 -16",		"16 16 1600",		"7710 1651 270" );
-	make_clip(	"_permstuck_tree_f",		"Everyone",	1,	"-16 -16 -16",		"16 16 1600",		"6852 -750 252" );
-	make_clip(	"_permstuck_tree_g",		"Everyone",	1,	"-16 -16 -16",		"16 16 1600",		"6448 3092 260" );
-	make_clip(	"_permstuck_tree_h",		"Everyone",	1,	"-16 -16 -16",		"16 16 1600",		"5624 3236 260" );
+	make_clip( "_dispcrouch_spawn_right", "Everyone", 1, "-12 -216 -100", "200 216 128", "11102 150 -115" );
+	make_clip( "_dispcrouch_spawn_left", "Everyone", 1, "-26 -216 -100", "26 216 128", "10210 1423 -29" );
+	make_clip( "_permstuck_tree_a", "Everyone", 1, "-16 -16 -16", "16 16 16", "10675 528 -7" );
+	make_clip( "_permstuck_tree_b", "Everyone", 1, "-16 -16 -16", "16 16 16", "10794 1843 -27" );
+	make_clip( "_permstuck_tree_c", "Everyone", 1, "-16 -16 -16", "16 16 16", "10456 3463 4" );
+	make_clip( "_permstuck_tree_d", "Everyone", 1, "-16 -16 -16", "16 16 16", "11064 4373 -10" );
+	make_clip( "_permstuck_tree_e", "Everyone", 1, "-16 -16 -16", "16 16 1600", "7710 1651 270" );
+	make_clip( "_permstuck_tree_f", "Everyone", 1, "-16 -16 -16", "16 16 1600", "6852 -750 252" );
+	make_clip( "_permstuck_tree_g", "Everyone", 1, "-16 -16 -16", "16 16 1600", "6448 3092 260" );
+	make_clip( "_permstuck_tree_h", "Everyone", 1, "-16 -16 -16", "16 16 1600", "5624 3236 260" );
 	make_clip( "_wrongway_clipa", "Everyone", 1, "-1600 -61 0", "401 128 1640", "6044 3997 196" );
 	make_clip( "_wrongway_clipb", "Everyone", 1, "-288 -61 0", "600 128 1640", "6706 4072 196", "0 16 0" );
 	make_clip( "_undermap_exploit", "Survivors", 1, "-81 -166 0", "85 76 1385", "4473 3860 451" );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		// CheckLOS and CheckGround set to false as it did not work otherwise here
+		local navMain = NavMesh.GetNearestNavArea(Vector(7187.500000, 3262.500000, 196.687500), 16, false, false);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(7225.000000, 3237.500000, 196.687500), 16, false, false);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(7225.000000, 3275.000000, 196.687500), 16, false, false);
+		local navConnection3 = NavMesh.GetNearestNavArea(Vector(7125.000000, 3287.500000, 196.687500), 16, false, false);
+		navConnection1.Disconnect(navMain);
+		navConnection2.Disconnect(navMain);
+		navConnection3.Disconnect(navMain);
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
+
+		// FIXES
+
+		make_clip( "_point_of_no_return", "Survivors", 1, "-148 -16 0", "148 26 1660", "9017 3511 202" );
+
+		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
+	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
-		make_clip(	"_booster_barnroof",		"Survivors",	1,	"-8 -434 0",		"8 434 360",		"6986 -154 548" );
-		make_clip(	"_booster_haybarn",		"Survivors",	1,	"-364 -293 0",		"352 425 1317",		"8459 424 539.5" );
-		make_clip(	"_booster_estateroof",		"Survivors",	1,	"-575 -261 0",		"325 389 1258",		"6837 1124 598" );
-		make_clip(	"_booster_dualsilos",		"Survivors",	1,	"-360 -234 0",		"360 187 995",		"7362 2650 861" );
+		make_clip( "_booster_barnroof", "Survivors", 1, "-8 -434 0", "8 434 360", "6986 -154 548" );
+		make_clip( "_booster_haybarn", "Survivors", 1, "-364 -293 0", "352 425 1317", "8459 424 539.5" );
+		make_clip( "_booster_estateroof", "Survivors", 1, "-575 -261 0", "325 389 1258", "6837 1124 598" );
+		make_clip( "_booster_dualsilos", "Survivors", 1, "-360 -234 0", "360 187 995", "7362 2650 861" );
 		make_clip( "_cooponly_idle_warp", "Survivors", 1, "-81 -37 0", "55 35 1102", "8849 3493 760" );
 		make_clip( "_nav_and_stuckwarp", "Everyone", 1, "-45 -2 -62", "163 6 58", "6485 1090 308" );
 	}
+	
 	if ( HasPlayerControlledZombies() )
 	{
 		kill_funcinfclip( 3833.37 );		// Delete clip blocking access to vast start perimeter and one-way drop
 		kill_funcinfclip( 4564.93 );		// Delete clip blocking access to vast end perimeter (including barricade)
-		make_brush( "_losfix_gen",		"-24 -1 -6",	"24 1 6",	"7027 793 207" );
-		make_brush( "_losfix_tractor",		"-56 -1 -15",	"56 1 15",	"8713 1804 212" );
-		make_clip(	"_fence_collision",				"SI Players",	1,	"-4 -128 -80",		"4 240 20",		"8520 3627 579", "0 -32 0" );
-		make_clip(	"_fence_stuckspot",				"SI Players",	1,	"-60 -80 -80",		"4 60 20",		"8624 3811 579", "0 -32 0" );
-		make_clip(	"_meticulous_funcinfclip01",	"SI Players",	1,	"-573 120 -295",	"219 282 1205",		"9765 3742 651" );
-		make_clip(	"_meticulous_funcinfclip02",	"SI Players",	1,	"400 -585 -459",	"447 972 1205",		"7745 4147 651" );
-		make_clip(	"_meticulous_funcinfclip03",	"SI Players",	1,	"-744 -54 -459",	"447 972 1205",		"7745 4147 651" );
-		make_clip(	"_meticulous_funcinfclip04",	"SI Players",	1,	"-2464 0 -459",		"447 1470 1205",	"6554 4147 651" );
-		make_clip(	"_meticulous_funcinfclip05",	"SI Players",	1,	"-2464 -5300 -459",	"-2042 1470 1205",	"6554 4147 651" );
-		make_clip(	"_meticulous_funcinfclip06",	"SI Players",	1,	"-2464 -5300 -459",	"-90 -5043 1205",	"6554 4147 651" );
-		make_clip(	"_meticulous_funcinfclip07",	"SI Players",	1,	"-573 130 -295",	"-50 152 -90",		"9329 4402 651" );
-		make_clip(	"_meticulous_funcinfclip08",	"SI Players",	1,	"-50 130 -295",		"219 152 -70",		"9329 4402 651" );
-		make_clip(	"_meticulous_funcinfclip09",	"SI Players",	1,	"-744 -659 -459",	"-482 972 1205",	"8936 4147 651" );
-		make_clip(	"_meticulous_funcinfclip10",	"SI Players",	1,	"-744 722 -459",	"2840 972 1205",	"8936 4147 651" );
-		make_clip(	"_meticulous_funcinfclip11",	"SI Players",	1,	"0 -2687 -882",		"1615 2592 782",	"11776 2527 1074" );
+		make_brush( "_losfix_gen", "-24 -1 -6", "24 1 6", "7027 793 207" );
+		make_brush( "_losfix_tractor", "-56 -1 -15", "56 1 15", "8713 1804 212" );
+		make_clip( "_fence_collision", "SI Players", 1, "-4 -128 -80", "4 240 20", "8520 3627 579", "0 -32 0" );
+		make_clip( "_fence_stuckspot", "SI Players", 1, "-60 -80 -80", "4 60 20", "8624 3811 579", "0 -32 0" );
+		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-573 120 -295", "219 282 1205", "9765 3742 651" );
+		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "400 -585 -459", "447 972 1205", "7745 4147 651" );
+		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-744 -54 -459", "447 972 1205", "7745 4147 651" );
+		make_clip( "_meticulous_funcinfclip04", "SI Players", 1, "-2464 0 -459", "447 1470 1205", "6554 4147 651" );
+		make_clip( "_meticulous_funcinfclip05", "SI Players", 1, "-2464 -5300 -459", "-2042 1470 1205", "6554 4147 651" );
+		make_clip( "_meticulous_funcinfclip06", "SI Players", 1, "-2464 -5300 -459", "-90 -5043 1205", "6554 4147 651" );
+		make_clip( "_meticulous_funcinfclip07", "SI Players", 1, "-573 130 -295", "-50 152 -90", "9329 4402 651" );
+		make_clip( "_meticulous_funcinfclip08", "SI Players", 1, "-50 130 -295", "219 152 -70", "9329 4402 651" );
+		make_clip( "_meticulous_funcinfclip09", "SI Players", 1, "-744 -659 -459", "-482 972 1205", "8936 4147 651" );
+		make_clip( "_meticulous_funcinfclip10", "SI Players", 1, "-744 722 -459", "2840 972 1205", "8936 4147 651" );
+		make_clip( "_meticulous_funcinfclip11", "SI Players", 1, "0 -2687 -882", "1615 2592 782", "11776 2527 1074" );
 		make_clip( "_ladder_barnhouseback_clipleft", "Everyone", 1, "-3 -16 0", "1 11 321", "6963 -574 200", "0 52 0" );
 		make_clip( "_ladder_barnhouseback_clipright", "Everyone", 1, "-3 -19 0", "1 8 355", "7024 -574 200", "0 -52 0" );
 		make_clip( "_ladder_onewaydrop_collision", "SI Players", 1, "-1 -142 0", "1 130 111", "9200 3714 393" );
@@ -93,7 +119,7 @@ function DoRoundFixes()
 		make_prop( "dynamic", "_cosmetic_hillside_tree", "models/props_foliage/cedar_medium01.mdl", "9299 4928 536", "0 264 0", "shadow_no", "solid_no" );
 		make_prop( "dynamic", "_losblocker_barric_cliffside", "models/props_wasteland/rock_moss04.mdl", "4879 2680 460", "120 252 0", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_hillside_rock", "models/props_wasteland/rock_moss04.mdl", "9200 4792 550", "50 30 -130", "shadow_no" );
-		make_prop( "dynamic",		"_losblocker_rockleft",		"models/props_wasteland/rock_moss04.mdl",		"10344 1529.7 -14",		"-12.56 346.66 22.6",	"shadow_no" );
+		make_prop( "dynamic", "_losblocker_rockleft", "models/props_wasteland/rock_moss04.mdl", "10344 1529.7 -14", "-12.56 346.66 22.6", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_freeatlasta", "models/props_wasteland/rock_moss04.mdl", "7026 3507 421", "130 287 -62", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_freeatlastb", "models/props_wasteland/rock_moss04.mdl", "6900 3507 410", "170 107 -142", "shadow_no" );
 		make_prop( "dynamic", "_losblocker_hardlyimpossible", "models/props_wasteland/rock_moss04.mdl", "6344 3782 270", "130 107 -62", "shadow_no" );
