@@ -22,9 +22,32 @@ function DoRoundFixes()
 	make_trigduck( "_duckqol_missingpipe", "-117 -40 -28", "117 40 28", "1824 1528 -164" );
 
 	make_prop( "dynamic", "_permstuck_gasmeter", "models/props_urban/gas_meter.mdl", "2202 1859.8 -70.5", "0 0 0" );
-	make_prop( "dynamic", "_oneway_ladder_prop", "models/props/cs_assault/ladderaluminium128.mdl", "2322 -1340 -67", "10.5 180 0", "shadow_no" );
-	make_ladder( "_ladder_oneway", "1628 4576 -1132", "3753 3235 1306", "9 180 0", "0.98 0 0.15", 0 );
 
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+
+		// FIXES
+
+		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
+
+		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
+
+		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
+		
+		make_prop( "dynamic", "_oneway_ladder_prop", "models/props/cs_assault/ladderaluminium128.mdl", "2322 -1340 -67", "10.5 180 0", "shadow_no" );
+		make_ladder( "_ladder_oneway", "1628 4576 -1132", "3753 3235 1306", "9 180 0", "0.98 0 0.15", 0 );
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
+
+		// FIXES
+
+		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
+
+		// MESS == make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1093 -3406 -40", "1759 2002 382", "581 3150 387" );
+	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{
 		make_clip( "_start_rooftop1", "Survivors", 1, "-164 -164 -240", "164 164 240", "2144 -1200 528" );
@@ -42,37 +65,16 @@ function DoRoundFixes()
 		make_clip( "_booster_acunit", "Survivors", 1, "-64 -32 0", "64 32 721", "743 3135 111" );
 		make_clip( "_booster_awningnlights", "Survivors", 1, "-124 -41 0", "129 56 762", "1264 3705 8" );
 		make_clip( "_booster_bluestripes", "Survivors", 1, "-234 -92 0", "222 105 732", "1574 4577 32" );
-		make_clip(	"_cliphang_rooftop",		"Survivors",	1,	"-192 -490 0",		"208 476 420",		"224 2406 336" );
-	}
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
-
-		con_comment( "LOGIC:\tAnti-skip fence clip will be deleted when the first minifinale button is pressed." );
-
-		EntFire( "button_minifinale", "AddOutput", "OnPressed " + g_UpdateName + "_commentary_minifinale_clip:Kill::0:-1" );
-	}
-	if ( g_BaseMode == "survival" )
-	{
-		devchap( "BASE SURVIVAL" );
-
-		// FIXES
-
-		make_ladder( "_ladder_frontloaderright_cloned_frontloaderleft", "803 1554 -151.5", "1607 3220 0", "0 180 0", "0 1 0", 0 );
-
-		// MESS == make_clip( "_survivalbig_skyboxcap", "Survivors", 1, "-1093 -3406 -40", "1759 2002 382", "581 3150 387" );
+		make_clip( "_cliphang_rooftop", "Survivors", 1, "-192 -490 0", "208 476 420", "224 2406 336" );
+		make_clip( "_permstuck_start", "Survivors", 1, "-232 -62 -371.5", "232 62 371.5", "2232 -1346 380" );
 	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_crates",	"-2 -30 -3",	"2 30 3",	"1820 4757 -115" );
-		make_brush( "_losfix_strangebalcony",	"-400 -2 -8",	"240 2 8",	"1552 1854 344" );
-		make_brush( "_losfix_van1",		"-72 -1 -8",	"72 1 8",	"535 4275 -153" );
-		make_brush( "_losfix_van2",		"-72 -1 -8",	"72 1 8",	"1592 4299 -153" );
+		make_brush( "_losfix_crates", "-2 -30 -3", "2 30 3", "1820 4757 -115" );
+		make_brush( "_losfix_strangebalcony", "-400 -2 -8", "240 2 8", "1552 1854 344" );
+		make_brush( "_losfix_van1", "-72 -1 -8", "72 1 8", "535 4275 -153" );
+		make_brush( "_losfix_van2", "-72 -1 -8", "72 1 8", "1592 4299 -153" );
 		make_clip( "_ladderqol_forkliftvines", "SI Players", 1, "-32 -38 -4", "32 38 4", "1276 2870 -160", "-40 -20 0" );
 		make_ladder( "_ladder_barplankqolB_cloned_barelecbox", "421 1994 136", "2394 2455 -256", "0 90 0", "0 1 0" );
 		make_ladder( "_ladder_barplankqolT_cloned_barelecbox", "421 1994 136", "2394 2455 0", "0 90 0", "0 1 0" );
