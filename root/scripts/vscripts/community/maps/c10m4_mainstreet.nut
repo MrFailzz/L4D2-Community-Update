@@ -19,21 +19,22 @@ PrecacheModel( "models/props_vehicles/cara_95sedan_glass.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_bankwindow",	"Survivors",	1,	"-120 -5 0",		"120 17 1612",		"-672 -4351 176" );
-	make_clip(	"_cliprework_church",		"Survivors",	1,	"-256 -16 -164",	"256 16 1040",		"-3010 30 720.9" );
-	make_clip(	"_cliprework_buses",		"Survivors",	1,	"-160 -6 -164",		"160 6 620",		"-1437 -461 1124" );
-	make_clip(	"_cliprework_houses01",		"Survivors",	1,	"-8 -80 -0",		"8 80 1221",		"744 -324 512" );
-	make_clip(	"_cliprework_houses02",		"Survivors",	1,	"-100 -8 -170",		"100 8 1221",		"854 -272 512" );
-	make_clip(	"_cliprework_houses03",		"Survivors",	1,	"-100 -8 -100",		"100 8 1221",		"1400 -158 512" );
-	make_clip(	"_cliprework_houses04",		"Survivors",	1,	"-32 -8 -70",		"32 8 1221",		"1993 -254 512" );
-	make_clip(	"_cliprework_houses05",		"Survivors",	1,	"-400 -8 -150",		"32 216 1221",		"2883 -465 602" );
+	make_clip( "_church_wall_lmpclip1", "Survivors", 1, "-118.5 -6.5 -57", "118.5 6.5 57", "-2871 -754 1" );
+	make_clip( "_commonhop_bankwindow", "Survivors", 1, "-120 -5 0", "120 17 1612", "-672 -4351 176" );
+	make_clip( "_cliprework_church", "Survivors", 1, "-256 -16 -164", "256 16 1040", "-3010 30 720.9" );
+	make_clip( "_cliprework_buses", "Survivors", 1, "-160 -6 -164", "160 6 620", "-1437 -461 1124" );
+	make_clip( "_cliprework_houses01", "Survivors", 1, "-8 -80 -0", "8 80 1221", "744 -324 512" );
+	make_clip( "_cliprework_houses02", "Survivors", 1, "-100 -8 -170", "100 8 1221", "854 -272 512" );
+	make_clip( "_cliprework_houses03", "Survivors", 1, "-100 -8 -100", "100 8 1221", "1400 -158 512" );
+	make_clip( "_cliprework_houses04", "Survivors", 1, "-32 -8 -70", "32 8 1221", "1993 -254 512" );
+	make_clip( "_cliprework_houses05", "Survivors", 1, "-400 -8 -150", "32 216 1221", "2883 -465 602" );
 	make_clip( "_dispcrouch_spawn", "Everyone", 1, "-140 -32 -64", "100 32 90", "-4294 -1729 -2", "0 -5 0" );
 	make_clip( "_cliprework_unattackable", "Survivors", 1, "-8 -396 -164", "24 216 850", "-1608 -2368 884" );
 	make_clip( "_cliprework_electricalbox", "Survivors", 1, "-6 -33 0", "5 25 406", "2667 -1769 164" );
 	make_clip( "_cliprework_windows", "Survivors", 1, "-16 -304 -20", "0 288 68", "2688 -2136 372" );
 	make_clip( "_cliprework_balcony", "Survivors", 1, "-86 -50 0", "84 46 1392", "2822 -1694 336" );
 	make_clip( "_cliprework_awning", "Survivors", 1, "-68 -103 -68", "43 107 1431", "2885 -1580 297" );
-	make_trighurt( "_instakill_deathcharger", "Survivor", "-256 -453 -17", "256 453 0", "-2449 122 -43" );
+	make_trighurt( "_instakill_deathcharger", "Survivor Fall", "-270 -354 -8", "270 354 8", "-2462 -34 56" );
 	patch_spawninfront( "288 -5284 93", "0 -96 0", "544 96 17" );
 
 	if ( g_BaseMode == "versus" )
@@ -42,12 +43,13 @@ function DoRoundFixes()
 
 		// FIXES
 
-		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-180 -60 -2", "115 60 1624", "693 -1867 105", "0 43 0" );
-
-		make_clip( "_cliprework_eventskip1", "Survivors", 1, "-55 -1 0", "58 1 1588", "852 -2433 140" );
-		make_clip( "_cliprework_eventskip2", "Survivors", 1, "-209 -2 0", "192 2 1588", "661 -2569 140", "0 45 0" );
-		make_clip( "_cliprework_eventskip3", "Survivors", 1, "-156 -1 0", "141 1 1588", "372 -2717 140" );
-		make_clip( "_cliprework_eventskip4", "Survivors", 1, "-26 -59 0", "-24 41 1588", "242 -2757 140" );
+		make_clip( "_church_wall_lmpclip2", "Survivors", 1, "-112 -11.5 -835", "112 11.5 835", "-2872 -759 893" );
+		make_clip( "_church_pillara", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3000 -761 836" );
+		make_clip( "_church_pillarb", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3144 -761 836" );
+		make_clip( "_church_pillarc", "Survivors", 1, "-16 -17 -892", "16 17 892", "-3448 -761 836" );
+		make_clip( "_boxtruck_eventskip", "Survivors", 1, "-103 -125.5 -820.5", "103 125.5 820.5", "114 -3025 908" );
+		make_clip( "_windows_eventskip", "Survivors", 1, "-112 -8 -44", "112 8 44", "720 -2824 200" );
+		make_clip( "_cliprework_trucknuke", "Survivors", 1, "-44 -48 -50", "44 48 70", "580 -1972 2", "0 43 0" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -69,34 +71,33 @@ function DoRoundFixes()
 		kill_funcinfclip( 800.786 );		// 1st house: Sliver of frontal access for Hunter/Jockey
 		// kill_funcinfclip( 805.326 );		// 2nd house: SKYBOX'd and completely irredeemable
 		// kill_funcinfclip( 783.598 );		// 3rd house: SKYBOX'd on right side, far away from action, would only confuse
-		kill_funcinfclip( 801.26 );		// 4th house: Useful but niche Tank perch with rooftop to hide with
+		kill_funcinfclip( 801.26 );			// 4th house: Useful but niche Tank perch with rooftop to hide with
 		kill_funcinfclip( 775.207 );		// 5th house: In the action, maybe a useful Smoker
-		kill_funcinfclip( 781.82 );		// 6th house: In the action, same (most rooftop real estate for SI so far)
+		kill_funcinfclip( 781.82 );			// 6th house: In the action, same (most rooftop real estate for SI so far)
 		kill_funcinfclip( 773.906 );		// 7th house: Best new Tank rocking rooftop, definitely needs a ladder
 		kill_funcinfclip( 769.448 );		// 8th house: Also good, easy jump from 7 but every USEFUL house warrants a ladder
 		kill_funcinfclip( 773.906 );		// 9th house: Out of the action and useless, open by good gesture only
 		//kill_funcinfclip( 748.323 );		// Delete clip above neighboring rooftop to new stained wall ladder
-		kill_funcinfclip( 1156 );		// Delete clip over WELCOME TO HELL barricade
+		kill_funcinfclip( 1156 );			// Delete clip over WELCOME TO HELL barricade
 		kill_funcinfclip( 808.497 );		// Delete clip above FINE ANTIQUES building next to THEATRE
 		make_atomizer( "_atomizer_bsp_carflorist", "-572 -2019 -48", "models/props_vehicles/cara_82hatchback.mdl", 60 );
-		make_brush( "_losfix_bus1",		"-1 -128 -10",	"1 156 10",	"-1264 -4031 -54" );
-		make_brush( "_losfix_bus2",		"-30 -1 -10",	"29 1 10",	"-1292 -3874 -54" );
-		make_brush( "_losfix_truck",		"-1 -40 -11",	"1 40 11",	"-3636 -1019 -53" );
-		make_brush( "_losfix_van1",		"-100 -1 -9",	"100 1 9",	"-3340 -1677 -47" );
-		make_brush( "_losfix_van2",		"-70 -1 -8",	"70 1 8",	"-762 -2268 -48" );
+		make_brush( "_losfix_bus1", "-1 -128 -10", "1 156 10", "-1264 -4031 -54" );
+		make_brush( "_losfix_bus2", "-30 -1 -10", "29 1 10", "-1292 -3874 -54" );
+		make_brush( "_losfix_truck", "-1 -40 -11", "1 40 11", "-3636 -1019 -53" );
+		make_brush( "_losfix_van1", "-100 -1 -9", "100 1 9", "-3340 -1677 -47" );
+		make_brush( "_losfix_van2", "-70 -1 -8", "70 1 8", "-762 -2268 -48" );
 		make_clip( "_fineantique_surf_collision", "SI Players", 1, "-320 -240 -56", "320 240 0", "1968 -4608 320" );
 		make_clip( "_hellcade_clipa", "SI Players", 1, "-240 -8 0", "240 17 1792", "-5360 -504 -64" );
 		make_clip( "_hellcade_clipb", "SI Players", 1, "-17 -840 0", "8 507 1792", "-5605 -1001 -64" );
 		make_clip( "_hellcade_clipc", "SI Players", 1, "-240 -8 0", "275 17 1792", "-5360 -1857 -64" );
-		make_clip( "_hellcade_permstuck", "SI Players", 1, "-8 -216 0", "8 216 17", "-5115 -1028 -49" );
+		make_clip( "_permstuck_hellcade", "SI Players", 1, "-8 -216 0", "8 216 17", "-5115 -1028 -49" );
 		make_clip( "_ladder_eventskybridge_clip", "SI Players", 1, "-11 -23 0", "2 46 8", "-1314 -4766 296" );
 		make_clip( "_ladder_starthilltop_clip", "SI Players", 1, "-16 -8 0", "16 8 2", "-4620 -1900 520", "0 -17.7 0" );
-		make_clip( "_losblocker_deliveryclip", "Survivors", 1, "-57 -113 0", "56 171 1781", "583 -2463 -52", "0 -20 0" );
 		make_clip( "_meticulous_funcinfclip01", "SI Players", 1, "-908 -17 -440", "114 17 1342", "-3906 -3153 384" );
 		make_clip( "_meticulous_funcinfclip02", "SI Players", 1, "-17 -595 -731", "17 737 1051", "-4935 -2560 675", "0 13 0" );
 		make_clip( "_meticulous_funcinfclip03", "SI Players", 1, "-679 -581 -81", "635 120 1169", "2038 -3044 560" );
 		make_clip( "_yesdrawhellcade_collision", "SI Players", 1, "-0.5 -49.5 -30.5", "0.5 49.5 30.5", "-5254.8 -691.5 17", "13.3 14.3 1.5" );
-		make_clip( "_ladderqol_churchleft",	"SI Players", 1, "-11 -2 -4", "11 2 4", "-3297 12.5 342", "0 0 45" );
+		make_clip( "_ladderqol_churchleft", "SI Players", 1, "-11 -2 -4", "11 2 4", "-3297 12.5 342", "0 0 45" );
 		make_ladder( "_ladder_churchleftm3mirr_cloned_churchrearwrong", "-3286.5 58 236", "0 -65.2147 0" );
 		make_ladder( "_ladder_eventfinalalley_cloned_endgraffiti", "319 -5601 38", "-6037 -5519 -24", "0 90 0", "0 -1 0" );
 		make_ladder( "_ladder_eventpipewires_cloned_endchainlink", "287 -5293 21", "319 -10635 -6", "0 180 0", "1 0 0" );
@@ -123,9 +124,9 @@ function DoRoundFixes()
 		make_ladder( "_ladder_yesdrawhellfrontR_cloned_copbarrback", "52.8641 -994.878 -4.1108", "-5110 328 -3" );
 		//make_ladder( "_ladder_yeswayendfront_cloned_yeswayendback", "3380.5 -3825 59.5", "6102 -8207 0", "0 171 0", "-0.99 0.16 0" );
 		make_navblock( "_losblocker_deliverynavblock", "Everyone", "Apply", "-32 -64 -32", "32 64 32", "562 -2425 -48" );
-		make_prop( "dynamic",		"_losblocker_deliveryvan",	"models/props_vehicles/deliveryvan.mdl",		"600 -2429 -47",		"-1 70 -3" );
-		make_prop( "dynamic",		"_losblocker_deliveryvanglass",	"models/props_vehicles/deliveryvan_glass.mdl",	"600 -2429 -47",		"-1 70 -3",		"shadow_no" );
-		make_prop( "dynamic",		"_losblocker_sheetrock",	"models/props_interiors/sheetrock_leaning.mdl",		"-368 -2142 -48",		"0 0 0",		"shadow_no" );
+		make_prop( "dynamic", "_losblocker_deliveryvan", "models/props_vehicles/deliveryvan.mdl", "600 -2429 -47", "-1 70 -3" );
+		make_prop( "dynamic", "_losblocker_deliveryvanglass", "models/props_vehicles/deliveryvan_glass.mdl", "600 -2429 -47", "-1 70 -3", "shadow_no" );
+		make_prop( "dynamic", "_losblocker_sheetrock", "models/props_interiors/sheetrock_leaning.mdl", "-368 -2142 -48", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_fineantique_surf1", "models/props_update/c8m1_rooftop_3.mdl", "2064 -4608 320.3", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_fineantique_surf2", "models/props_update/c8m1_rooftop_3.mdl", "1872 -4608 320.2", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_hellcade_m3mirr01", "models/props_c17/concrete_barrier001a.mdl", "-5136 -1224.06 -77.94", "0 0 0", "shadow_no" );
