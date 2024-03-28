@@ -12,15 +12,15 @@ PrecacheModel( "models/props_interiors/concretepiller01_dm01_4.mdl" );
 
 function DoRoundFixes()
 {
-	// make_clip(	"_backtrack_dumpster",		"Survivors",	1,	"-32 -40 0",		"32 40 1337",		"-4128 7481 150" );
-	// make_clip(	"_backtrack_flatnose",		"Survivors",	1,	"0 -110 0",		"540 8 1212",		"-4632 7208 272",	"0 -34 0" );
-	make_clip(	"_booster_burgertankpole",	"Survivors",	1,	"-12 -12 -170",		"12 12 1000",		"-5800 7496 603" );
-	make_clip(	"_booster_burgertankspin",	"Survivors",	1,	"-216 -216 -170",	"216 216 640",		"-5800 7496 915" );
+	// make_clip( "_backtrack_dumpster", "Survivors", 1, "-32 -40 0", "32 40 1337", "-4128 7481 150" );
+	// make_clip( "_backtrack_flatnose", "Survivors", 1, "0 -110 0", "540 8 1212", "-4632 7208 272", "0 -34 0" );
+	make_clip( "_booster_burgertankpole", "Survivors", 1, "-12 -12 -170", "12 12 1000", "-5800 7496 603" );
+	make_clip( "_booster_burgertankspin", "Survivors", 1, "-216 -216 -170", "216 216 640", "-5800 7496 915" );
 	make_clip( "_permstuck_highuptree", "Everyone", 1, "-32 -54 0", "24 24 10", "-3312 7326 315" );
-	make_clip( "_booster_ginnytop", "Survivors", 1, "-22 -29 0", "17 29 1150", "-5425 6789 385", "0 45 0" );
+	make_clip( "_booster_ginnytop", "Survivors", 1, "-30 -30 0", "30 30 1150", "-5425 6789 385" );
 	make_clip( "_booster_ginnyjon", "Survivors", 1, "-6 -4 -284", "10 4 0", "-5425 6789 385", "0 45 0" );
 	make_clip( "_booster_gasextend", "Survivors", 1, "-41 -196 0", "528 164 1250", "-4624 7952 284" );
-	make_clip( "_booster_blueframe", "Survivors", 1, "-17 -70 0", "17 76 1100", "-4641 7618 479", "0 -7 0" );
+	make_clip( "_booster_blueframe", "Survivors", 1, "-25 -70 0", "25 76 1100", "-4641 7618 479" );
 	make_clip( "_booster_roofwedge", "Survivors", 1, "-17 -24 0", "47 64 1200", "-5711 6528 416" );
 	make_clip( "_booster_wrongwayup", "Survivors", 1, "-14 -454 0", "-2 970 906", "-4082 7142 608" );
 	make_clip( "_booster_powerline", "Survivors", 1, "-47 -8 0", "86 35 1100", "-5297 7349 531" );
@@ -30,9 +30,7 @@ function DoRoundFixes()
 	make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
 	make_clip( "_dockm5only_smoother", "Everyone", 1, "0 -376 0", "8 820 32", "-7039 7701 91", "-45 0 0" );
 	make_clip( "_commentary_clipgap_water", "Everyone", 1, "-500 -528 -80", "400 200 3000", "-7580.84 6948.33 -303" );
-	make_clip( "_commentary_smoother_burgersuv_a", "All and Physics", 1, "0 -5 0", "70 10 10", "-6577 7549 169.753", "0 30 0" );
-	make_clip( "_commentary_smoother_burgersuv_b", "All and Physics", 1, "0 -10 0", "70 8 10", "-6582 7554 161.753", "0 30 0" );
-	make_clip( "_commentary_smoother_burgersuv_c", "All and Physics", 1, "0 -10 0", "70 5 10", "-6586 7562 153.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv", "All and Physics", 1, "-2 -5 0", "70 28 10", "-6578 7549 169.753", "0 30 -40" );
 	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928" );
 	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984" );
 	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932" );
@@ -43,19 +41,33 @@ function DoRoundFixes()
 	make_clip( "_commentary_booster_burgertree_e", "Survivors", 1, "-178 -136 -608", "178 136 608", "-5397 7956 928" );
 	make_clip( "_commentary_booster_burgertree_f", "Survivors", 1, "-178 -134 -628", "178 134 628", "-6806 7205 908" );
 
-	// Non-1st rounds require a delay because this trigger_finale exists after "round_start".
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain = NavMesh.GetNearestNavArea(Vector(-7188.924805, 7411.930664, 85.820847), 16, true, true);
+		local navConnection = NavMesh.GetNearestNavArea(Vector(-7145.000000, 7415.000000, 116.481155), 16, true, true);
+		navConnection.Disconnect(navMain);
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
 
-	con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale is started." );
+		// FIXES
 
-	make_clip( "_point_of_no_return", "Survivors", 0, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
-	EntFire( "trigger_finale", "AddOutput", "FinaleStart " + g_UpdateName + "_point_of_no_return:Enable::0:-1", 1 );
+		make_clip( "_point_of_no_return", "Survivors", 1, "-73 -135 0", "19 135 1361", "-4077 7139 125" );
 
+		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
+	}
+	
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );
-		make_brush( "_losfix_dock_truck",	"-2 -75 -10",	"2 80 16",	"-6538 7550 105" );
-		make_brush( "_losfix_semia",		"-40 -1 -15",	"40 1 15",	"-4771 7156 113" );
-		make_brush( "_losfix_semib",		"-1 -34 -15",	"1 40 15",	"-4790 7180 113" );
+		make_brush( "_losfix_burger_gen", "-24 -1 -8", "24 1 8", "-5448 6765 107" );
+		make_brush( "_losfix_dock_truck", "-2 -75 -10", "2 80 16", "-6538 7550 105" );
+		make_brush( "_losfix_semia", "-40 -1 -15", "40 1 15", "-4771 7156 113" );
+		make_brush( "_losfix_semib", "-1 -34 -15", "1 40 15", "-4790 7180 113" );
 		make_clip( "_burgertank_windowsmoother1", "Everyone", 1, "-5 -120 0", "6 120 4", "-5663 7268 135" );
 		make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
 		make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
@@ -76,5 +88,5 @@ function DoRoundFixes()
 
 function DoMapSpawnFixes()
 {
-	make_decal( "decals/rollermine_crater",	"-5671 6579 225" );
+	make_decal( "decals/rollermine_crater", "-5671 6579 225" );
 }

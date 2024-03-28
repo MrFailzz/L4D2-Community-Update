@@ -15,16 +15,16 @@ PrecacheModel( "models/props_mill/PipeSet08d_512_001a.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_woodwindow","Survivors",	1,	"-48 -1 -39",		"48 1 39",		"4144 -1423 391" );
-	make_clip(	"_permstuck_shruba",		"SI Players",	1,	"-60 -32 -36",		"60 72 60",		"3668 -1664 132" );
-	make_clip(	"_permstuck_shrubb",		"SI Players",	1,	"-64 -64 -48",		"64 64 48",		"3408 -1760 144" );
-	make_clip(	"_commonhop_safehouse",		"Survivors",	1,	"-280 -456 0",		"280 456 1100",		"3984 -1863 464" );
-	make_clip(	"_booster_burgertankpole",	"Survivors",	1,	"-12 -12 -170",		"12 12 1000",		"-5800 7496 603" );
-	make_clip(	"_booster_burgertankspin",	"Survivors",	1,	"-216 -216 -170",	"216 216 640",		"-5800 7496 915" );
-	make_clip( "_booster_ginnytop", "Survivors", 1, "-22 -29 0", "17 29 1150", "-5425 6789 385", "0 45 0" );
+	make_clip( "_woodwindow","Survivors", 1, "-48 -1 -39", "48 1 39", "4144 -1423 391" );
+	make_clip( "_permstuck_shruba", "SI Players", 1, "-60 -32 -36", "60 72 60", "3668 -1664 132" );
+	make_clip( "_permstuck_shrubb", "SI Players", 1, "-64 -64 -48", "64 64 48", "3408 -1760 144" );
+	make_clip( "_commonhop_safehouse", "Survivors", 1, "-280 -456 0", "280 456 1100", "3984 -1863 464" );
+	make_clip( "_booster_burgertankpole", "Survivors", 1, "-12 -12 -170", "12 12 1000", "-5800 7496 603" );
+	make_clip( "_booster_burgertankspin", "Survivors", 1, "-216 -216 -170", "216 216 640", "-5800 7496 915" );
+	make_clip( "_booster_ginnytop", "Survivors", 1, "-30 -30 0", "30 30 1150", "-5425 6789 385" );
 	make_clip( "_booster_ginnyjon", "Survivors", 1, "-6 -4 -284", "10 4 0", "-5425 6789 385", "0 45 0" );
 	make_clip( "_booster_gasextend", "Survivors", 1, "-41 -196 0", "528 164 1250", "-4624 7952 284" );
-	make_clip( "_booster_blueframe", "Survivors", 1, "-17 -70 0", "17 76 1100", "-4641 7618 479", "0 -7 0" );
+	make_clip( "_booster_blueframe", "Survivors", 1, "-25 -70 0", "25 76 1100", "-4641 7618 479" );
 	make_clip( "_booster_roofwedge", "Survivors", 1, "-17 -24 0", "47 64 1200", "-5711 6528 416" );
 	make_clip( "_booster_wrongwayup", "Survivors", 1, "-14 -454 0", "-2 970 906", "-4082 7142 608" );
 	make_clip( "_booster_powerline", "Survivors", 1, "-47 -8 0", "86 35 1100", "-5297 7349 531" );
@@ -33,9 +33,7 @@ function DoRoundFixes()
 	make_clip( "_burgertank_windowsmoother2", "Everyone", 1, "-90 -5 0", "90 6 4", "-5798 7505 135" );
 	make_clip( "_burgertank_windowsmoother3", "Everyone", 1, "-90 -5 0", "90 6 4", "-6022 7777 135" );
 	make_clip( "_commentary_clipgap_water", "Everyone", 1, "-500 -528 -80", "400 200 3000", "-7580.84 6948.33 -303" );
-	make_clip( "_commentary_smoother_burgersuv_a", "All and Physics", 1, "0 -5 0", "70 10 10", "-6577 7549 169.753", "0 30 0" );
-	make_clip( "_commentary_smoother_burgersuv_b", "All and Physics", 1, "0 -10 0", "70 8 10", "-6582 7554 161.753", "0 30 0" );
-	make_clip( "_commentary_smoother_burgersuv_c", "All and Physics", 1, "0 -10 0", "70 5 10", "-6586 7562 153.753", "0 30 0" );
+	make_clip( "_commentary_smoother_burgersuv", "All and Physics", 1, "-2 -5 0", "70 28 10", "-6578 7549 169.753", "0 30 -40" );
 	make_clip( "_commentary_booster_burgertree_a1", "Survivors", 1, "-148 -99 -608", "148 99 608", "-6255 6674 928" );
 	make_clip( "_commentary_booster_burgertree_a2", "Survivors", 1, "-37 -93 -552", "37 93 552", "-6257 6827 984" );
 	make_clip( "_commentary_booster_burgertree_b1", "Survivors", 1, "-100 -81 -604", "100 81 604", "-4726 6761 932" );
@@ -84,19 +82,19 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_ambulance1",	"-90 -1 -8",	"91 1 8",	"711 4748 102" );
-		make_brush( "_losfix_ambulance2",	"-1 -56 -8",	"1 57 8",	"803 4690 102" );
-		make_brush( "_losfix_burger_gen",	"-24 -1 -8",	"24 1 8",	"-5448 6765 107" );
-		make_brush( "_losfix_dumpster",		"-185 -1 -8",	"185 1 8",	"3550 343 128" );
-		make_brush( "_losfix_gen1",		"-28 -1 -10",	"28 1 10",	"241 5987 107" );
-		make_brush( "_losfix_gen2",		"-22 -1 -8",	"22 1 8",	"3448 -1345 113" );
-		make_brush( "_losfix_semia",		"-40 -1 -15",	"40 1 15",	"-4771 7156 113" );
-		make_brush( "_losfix_semib",		"-1 -34 -15",	"1 40 15",	"-4790 7180 113" );
-		make_brush( "_losfix_trailer1",		"-1 -48 -10",	"1 48 10",	"-3370 7548 106" );
-		make_brush( "_losfix_trailer2",		"-56 -1 -10",	"57 1 10",	"-3428 7594 106" );
-		make_brush( "_losfix_trailer3",		"-86 -1 -10",	"86 1 10",	"-3510 7618 106" );
-		make_brush( "_losfix_truck",		"-62 -1 -10",	"62 1 10",	"3217 -1376 114" );
-		make_brush( "_losfix_truck_jump",	"-70 -1 -10",	"70 1 10",	"2949 2885 108" );
+		make_brush( "_losfix_ambulance1", "-90 -1 -8", "91 1 8", "711 4748 102" );
+		make_brush( "_losfix_ambulance2", "-1 -56 -8", "1 57 8", "803 4690 102" );
+		make_brush( "_losfix_burger_gen", "-24 -1 -8", "24 1 8", "-5448 6765 107" );
+		make_brush( "_losfix_dumpster", "-185 -1 -8", "185 1 8", "3550 343 128" );
+		make_brush( "_losfix_gen1", "-28 -1 -10", "28 1 10", "241 5987 107" );
+		make_brush( "_losfix_gen2", "-22 -1 -8", "22 1 8", "3448 -1345 113" );
+		make_brush( "_losfix_semia", "-40 -1 -15", "40 1 15", "-4771 7156 113" );
+		make_brush( "_losfix_semib", "-1 -34 -15", "1 40 15", "-4790 7180 113" );
+		make_brush( "_losfix_trailer1", "-1 -48 -10", "1 48 10", "-3370 7548 106" );
+		make_brush( "_losfix_trailer2", "-56 -1 -10", "57 1 10", "-3428 7594 106" );
+		make_brush( "_losfix_trailer3", "-86 -1 -10", "86 1 10", "-3510 7618 106" );
+		make_brush( "_losfix_truck", "-62 -1 -10", "62 1 10", "3217 -1376 114" );
+		make_brush( "_losfix_truck_jump", "-70 -1 -10", "70 1 10", "2949 2885 108" );
 		make_clip( "_ladder_dumpsterhouse_clip", "Everyone", 1, "-8 -16 0", "26 8 168", "1638 4032 217", "0 45 0" );
 		make_clip( "_ladder_safehousetall_clip", "SI Players", 1, "-20 -2 -2", "8 2 310", "3725 -1537 101", "0 45 0" );
 		make_clip( "_ladder_sweetrelief_clip", "Everyone", 1, "-8 -16 0", "8 9 212", "-5746 6595 96", "0 53 0" );
