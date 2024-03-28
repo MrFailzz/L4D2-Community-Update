@@ -9,15 +9,20 @@ PrecacheModel( "models/props_vents/vent_cluster006.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_maproom",		"Survivors",	1,	"-24 -17 0",		"100 17 112",		"3673 -2517 424" );
 	make_clip( "_cliprework_skylighta", "Survivors", 1, "-192 -193 -23", "192 191 57", "6464 -2591 559" );
 	make_clip( "_cliprework_skylightb", "Survivors", 1, "-541 -189 -1", "547 195 32", "4173 -2627 793" );
 	make_clip( "_cliprework_skylightc", "Survivors", 1, "-194 -544 -1", "190 544 32", "2274 -672 793" );
 	make_clip( "_cliprework_skylightd", "Survivors", 1, "-1017 -167 0", "1018 149 32", "1465 -3418 794", "0 45 0" );
 	make_clip( "_permstuck_colddrinks", "Everyone", 1, "-1 -1 -1", "1 1 1", "736 -548 363" );
+	make_clip( "_duckqol_shopliftscanners_clipleft", "Everyone", 1, "-17 -4 -34", "18 5 33", "5264 -2748 314" );
+	make_clip( "_duckqol_shopliftscanners_clipright", "Everyone", 1, "-17 -4 -34", "18 5 33", "5264 -2620 314" );
 	make_clip( "_commentary_shortcut_storeceiling", "Survivors", 1, "0 0 0", "196 196 32", "1159.05 -2466.62 442" );
 	make_clip( "_commentary_shortcut_storevent", "Survivors", 1, "0 0 0", "48 48 64", "1680 -2526.44 384" );
-	make_trigduck( "_duckqol_shopliftscanners", "-2 -88 0", "2 64 77", "5247 -2685 280" );
+	make_trigduck( "_duckqol_shopliftscanners", "-2 -67 0", "2 64 77", "5247 -2685 280" );
+
+	// Remove "_permstuck_colddrinks" when the stairwell path is open.
+
+	EntFire( "relay_hallway_close", "AddOutput", "OnTrigger anv_mapfixes_permstuck_colddrinks:Kill::0:-1" );
 
 	con_comment( "FIX:\tMoved an exposed stairwell hurt trigger down inside a vending machine." );
 
@@ -41,7 +46,7 @@ function DoRoundFixes()
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4348.54, -2910.5, 561 ), 1 ) );
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4483.47, -2337.5, 561 ), 1 ) );
 		kill_entity( Entities.FindByClassnameNearest( "func_breakable", Vector( 4487.5, -2910.5, 561 ), 1 ) );
-		make_brush( "_losfix_end_gen",		"-28 -1 -8",	"28 1 8",	"-1940 -4434 544" );
+		make_brush( "_losfix_end_gen", "-28 -1 -8", "28 1 8", "-1940 -4434 544" );
 		make_clip( "_ladderqol_lastroom_left", "SI Players", 1, "-564 -3 -31", "564 3 31", "-1280 -4503 509" );
 		make_clip( "_ladderqol_lastroom_right", "SI Players", 1, "-564 -3 -31", "564 3 31", "-1280 -3945 509" );
 		make_clip( "_ladderqol_maproom_left", "SI Players", 1, "-564 -3 -31", "564 3 31", "4224 -2903 509" );
