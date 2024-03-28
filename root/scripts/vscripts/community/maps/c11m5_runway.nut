@@ -9,21 +9,46 @@ PrecacheModel( "models/props_vehicles/airport_baggage_cart2.mdl" );
 function DoRoundFixes()
 {
 	make_clip( "_lowthinwing_collision", "Everyone", 1, "-8 -116 -30", "8 111 32", "-6057 9725 -12" );
-	make_clip( "_nav_skybridge", "Survivors", 1, "-643 -102 0", "878 106 1427", "-6035 8761 32", "0 45 0" );
-	make_clip( "_nav_firering_cheese", "Survivors", 1, "-24 -86 0", "17 126 1632", "-3408 9155 -192" );
 	make_clip( "_planecrash_concreteramp", "SI Players", 1, "-290 -10 0", "345 10 185", "-4127 11223 -128", "0 -56 45" );
 
 	make_prop( "dynamic", "_terry", "models/deadbodies/dead_male_civilian_body.mdl", "-4154 9350 -140", "0 -111 0", "shadow_no", "solid_no" );
 	EntFire( "relay_outro_start", "AddOutput", "OnTrigger " + g_UpdateName + "_terry:Kill::2:-1" );
 
+	// Kill plane blocker that causes godspot in all modes and is seemingly redundant
+	EntFire( "plane_nav_blocker", "Kill", null, 0 );
+
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain1 = NavMesh.GetNearestNavArea(Vector(-4200.000000, 9475.000000, -191.968750), 16, true, true);
+		local navMain2 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9462.500000, -191.968750), 16, true, true);
+		local navConnection1 = NavMesh.GetNearestNavArea(Vector(-4225.000000, 9525.000000, -191.650177), 16, true, true);
+		local navConnection2 = NavMesh.GetNearestNavArea(Vector(-4187.500000, 9512.500000, -191.968750), 16, true, true);
+		local navConnection3 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9487.500000, -191.633362), 16, true, true);
+		local navConnection4 = NavMesh.GetNearestNavArea(Vector(-4300.000000, 9537.500000, -191.734192), 16, true, true);
+		navConnection1.Disconnect(navMain1);
+		navConnection2.Disconnect(navMain1);
+		navConnection3.Disconnect(navMain1);
+		navConnection3.Disconnect(navMain2);
+		navConnection4.Disconnect(navMain2);
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		make_clip( "_nav_skybridge", "Survivors", 1, "-643 -102 0", "878 106 1427", "-6035 8761 32", "0 45 0" );
+		make_clip( "_nav_firering_cheese", "Survivors", 1, "-24 -86 0", "17 126 1632", "-3408 9155 -192" );
+	}
+
 	if ( HasPlayerControlledZombies() )
 	{
 		EntFire( "worldspawn", "RunScriptFile", "community/c11m5_versus_planecrash" );
 
-		make_brush( "_losfix_lowthinwing",	"-8 -116 -30",	"8 111 32",	"-6057 9725 -12" );
-		make_brush( "_losfix_truck1",		"-56 -1 -12",	"71 1 28",	"-5039 8665 -180" );
-		make_brush( "_losfix_truck2",		"-1 -29 -12",	"1 60 14",	"-4968 8695 -181" );
-		make_brush( "_losfix_truck3",		"-1 -28 -12",	"1 29 28",	"-5093 8635 -180" );
+		make_brush( "_losfix_lowthinwing", "-8 -116 -30", "8 111 32", "-6057 9725 -12" );
+		make_brush( "_losfix_truck1", "-56 -1 -12", "71 1 28", "-5039 8665 -180" );
+		make_brush( "_losfix_truck2", "-1 -29 -12", "1 60 14", "-4968 8695 -181" );
+		make_brush( "_losfix_truck3", "-1 -28 -12", "1 29 28", "-5093 8635 -180" );
 		make_clip( "_boardingramp_wallclip", "SI Players", 1, "-200 -4 -1", "333 3 1", "-5824 10391.5 220", "4 0 0" );
 		make_clip( "_collapsedbuilding_clip1", "SI Players", 1, "-330 -190 -125", "330 185 220", "-6506 7723 -123", "-1 8 60" );
 		make_clip( "_collapsedbuilding_clip2", "SI Players", 1, "-330 -240 -600", "325 200 1036", "-6495 7469 403" );
@@ -41,7 +66,7 @@ function DoRoundFixes()
 		make_ladder( "_ladder_wreckedengine_cloned_escapeplaneleft", "-4354 9230 -96", "-3707 -1526 -1127", "15 -14.5 0", "-0.935 0.242 0.259" );
 		make_ladder( "_ladder_wreckedfuselage_cloned_cargoslanted", "-4332 8255.36 -114.329", "-5065 1422 51", "0 -21.5 0", "0.317 0.807 0.5" );
 		make_ladder( "_ladder_wreckedrear_cloned_escapeplaneleft", "-4354 9230 -96", "-2679 285 -11", "0 -5 0", "-0.996 0.087 0" );
-		make_prop( "dynamic",		"_losblocker_fireline_tractor",	"models/props_vehicles/airport_baggage_tractor.mdl",	"-2980.23 10393 -141",		"70 180 -10",		"shadow_no" );
+		make_prop( "dynamic", "_losblocker_fireline_tractor", "models/props_vehicles/airport_baggage_tractor.mdl", "-2980.23 10393 -141", "70 180 -10", "shadow_no" );
 
 		DoEntFire( "!self", "AddOutput", "OnBreak " + g_UpdateName + "_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5913.99, 10371.6, 162.64 ), 1 ) );
 		DoEntFire( "!self", "AddOutput", "OnBreak " + g_UpdateName + "_boardingramp_wallclip:Kill::0:-1", 0.0, null, Entities.FindByClassnameNearest( "func_breakable", Vector( -5727.82, 10368.7, 143.43 ), 1 ) );
