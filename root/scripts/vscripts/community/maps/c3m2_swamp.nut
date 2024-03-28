@@ -13,85 +13,15 @@ function DoRoundFixes()
 
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
 	make_clip( "_permstuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
+	make_clip( "_permstuck_cypressknees", "Everyone", 1, "-1 -1 -25", "1 1 25", "-4399 3202 9" );
 
-	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
-	{
-		devchap( "BASE COOP" );
-
-		// FIXES
-
-		// FIX: Prevent skipping the plane horde by forcing it even if the plane door is skipped.
-
-		con_comment( "TRIG:\tNew triggers will enforce panic event even if plane door is skipped." );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_a",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1798, 3860, 80 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "mins -82 -68 -104" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "maxs 82 68 104" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_a", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_b",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1798, 3752, 412 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "mins -82 -176 -228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "maxs 82 176 228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_b", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_c",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1762, 3136, 412 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "mins -46 -440 -228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "maxs 46 440 228" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_c", "AddOutput", "solid 2" );
-
-		SpawnEntityFromTable( "trigger_once",
-		{
-			targetname	= g_UpdateName + "_eventskip_plane_trigonce_d",
-			StartDisabled	= 0,
-			spawnflags	= 1,
-			filtername	= "anv_globalfixes_filter_survivor",
-			origin		= Vector( -1497, 2283, 316 ),
-			angles		= Vector( 0, 30, 0 )
-		} );
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "mins -46 -480 -324" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "maxs 46 480 324" );
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce_d", "AddOutput", "solid 2" );
-
-		// Fire the door relay when triggered.
-
-		EntFire( g_UpdateName + "_eventskip_plane_trigonce*", "AddOutput", "OnTrigger Blow_door:Trigger::0:-1" );
-
-		// Kill the trigger if the door is opened normally.
-
-		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_eventskip_plane_trigonce*:Kill::0:-1" );
-	}
 	if ( g_BaseMode == "versus" )
 	{
 		devchap( "BASE VERSUS" );
 
 		// FIXES
 
-		make_clip( "_brokenhouse_hedgegap", "Survivors", 1, "-68 -468 0", "98 257 502", "3915 2029 145", "0 -11 0" );
+		make_clip( "_brokenhouse_hedgegap", "Survivors", 1, "-42 -330 -315.5", "42 330 315.5", "3962 1906 324" );
 
 		con_comment( "LOGIC:\tAnti-skip plane clips will be deleted when door is blown." );
 
@@ -105,8 +35,8 @@ function DoRoundFixes()
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_end_gen1",		"-20 -1 -8",	"20 1 8",	"8011 2779 128" );
-		make_brush( "_losfix_end_gen2",		"-1 -13 -8",	"1 12 8",	"8007 2793 128" );
+		make_brush( "_losfix_end_gen1", "-20 -1 -8", "20 1 8", "8011 2779 128" );
+		make_brush( "_losfix_end_gen2", "-1 -13 -8", "1 12 8", "8007 2793 128" );
 		make_clip( "_propladder_crate_qol", "SI Players", 1, "-36 -2 -8", "44 4 8", "8055 100 166", "0 27 0" );
 		make_clip( "_commentary_clipgap_postcrash", "Everyone", 1, "0 0 0", "280 96 660", "31.0388 1957.69 -14.6749" );
 		make_ladder( "_ladder_brokenhomeleft_cloned_airplanewingmini", "-1690.5 2951.13 38.3488", "-2031 6319 98", "0 93.74 0", "1 0 0" );
@@ -119,10 +49,10 @@ function DoRoundFixes()
 		make_ladder( "_ladder_endbarricaderight2_cloned_airplaneleft", "-2060 3278 96", "4757 -1161 88", "0 -100 0", "0.17 0.98 0" );
 		make_ladder( "_ladder_endfence_cloned_airplaneleft", "-2060 3278 96", "9772 -3705 32" );
 		make_ladder( "_ladder_finalhome_cloned_airplaneleft", "-2060 3278 96", "4610 4959 -25", "0 180 0", "1 0 0" );
-		make_prop( "dynamic",		"_propladder_endcratea",	"models/props_crates/static_crate_40.mdl",	"8045 79 118.63",		"0 221.5 0",		"shadow_no" );
-		make_prop( "dynamic",		"_propladder_endcrateb",	"models/props_crates/static_crate_40.mdl",	"8083 102 118.63",		"0 297 0",		"shadow_no" );
+		make_prop( "dynamic", "_propladder_endcratea", "models/props_crates/static_crate_40.mdl", "8045 79 118.63", "0 221.5 0", "shadow_no" );
+		make_prop( "dynamic", "_propladder_endcrateb", "models/props_crates/static_crate_40.mdl", "8083 102 118.63", "0 297 0", "shadow_no" );
 		make_prop( "dynamic", "_ladder_corrugatedhome_panel", "models/props_highway/corrugated_panel_damaged_01.mdl", "1855 3334 82", "80 180 2", "shadow_no" );
-		make_prop( "physics",	"_hittable_fallentree",	"models/props_foliage/swamp_fallentree01_bare.mdl",	"3225 1879 1",		"0 -34 0" );
+		make_prop( "physics", "_hittable_fallentree", "models/props_foliage/swamp_fallentree01_bare.mdl", "3225 1879 1", "0 -34 0" );
 		make_prop( "dynamic", "_propladder_endsaferoof1", "models/props_crates/static_crate_40.mdl", "7777 -603 126", "0 0 0", "shadow_no" );
 		make_prop( "dynamic", "_propladder_endsaferoof2", "models/props_crates/static_crate_40.mdl", "7775 -646 126", "0 -83 0", "shadow_no" );
 		make_prop( "dynamic", "_propladder_endsaferoof3", "models/props_crates/static_crate_40.mdl", "7775 -646 166", "0 -187 0", "shadow_no" );
