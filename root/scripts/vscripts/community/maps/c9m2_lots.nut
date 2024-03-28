@@ -6,28 +6,26 @@ PrecacheModel( "models/props_rooftop/acvent01.mdl" );
 
 function DoRoundFixes()
 {
-	make_clip(	"_commonhop_windowsa",		"Survivors",	1,	"-2 -128 -44",		"2 128 44",		"6850 7040 268" );
-	make_clip(	"_commonhop_windowsb",		"Survivors",	1,	"-96 -2 -44",		"96 2 44",		"7328 6850 268" );
-	make_clip(	"_permstuck_treea",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"973 -1632 -231" );
-	make_clip(	"_permstuck_treeb",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"5050.6 2458.2 -106.6" );
-	make_clip(	"_permstuck_treec",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"3516 616 -198.6" );
-	make_clip(	"_permstuck_treed",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"3845 1192 -141" );
-	make_clip(	"_permstuck_treee",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"2257 2997 -70.4" );
-	make_clip(	"_permstuck_treef",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"2054 4320 25.8" );
-	make_clip(	"_permstuck_treeg",		"Everyone",	1,	"-17 -17 0",		"17 17 128",		"6724 7421 62.2" );
-	make_clip(	"_cliprework_rooftop",		"Survivors",	1,	"-164 -710 0",		"216 600 865",		"4118 886 288" );
-	make_clip(	"_cliprework_unattackable",	"Survivors",	1,	"-17 -64 0",		"26 64 8",		"6246 1852 29" );
-	make_clip(	"_cliprework_tracka",		"Survivors",	1,	"-216 -64 0",		"216 3000 950",		"5437 -52 206.3" );
-	make_clip(	"_cliprework_trackb",		"Survivors",	1,	"-216 -64 0",		"222 3000 777",		"5437.3 5128 385" );
-	make_clip(	"_clipgap_fence",		"Survivors",	1,	"-32 -4 0",		"32 4 1111",		"5791 8132 65.8" );
-	make_clip(	"_booster_rollupdoors",		"Survivors",	1,	"-777 -460 0",		"11 299 999",		"6541 5853 250" );
-	make_clip(	"_booster_rollupdoor",		"Survivors",	1,	"-70 -11 0",		"70 11 888",		"7040 6836 280" );
-	make_clip(	"_booster_liftframes",		"Survivors",	1,	"-11 -420 0",		"11 90 128",		"7844 6657 371.3" );
-	make_clip(	"_booster_boxtop",		"Survivors",	1,	"-35 -409 0",		"31 35 169",		"8479 5823 304.9" );
+	make_clip( "_commonhop_windowsa", "Survivors", 1, "-2 -128 -44", "2 128 44", "6850 7040 268" );
+	make_clip( "_commonhop_windowsb", "Survivors", 1, "-96 -2 -44", "96 2 44", "7328 6850 268" );
+	make_clip( "_permstuck_treea", "Everyone", 1, "-17 -17 0", "17 17 128", "973 -1632 -231" );
+	make_clip( "_permstuck_treeb", "Everyone", 1, "-17 -17 0", "17 17 128", "5050.6 2458.2 -106.6" );
+	make_clip( "_permstuck_treec", "Everyone", 1, "-17 -17 0", "17 17 128", "3516 616 -198.6" );
+	make_clip( "_permstuck_treed", "Everyone", 1, "-17 -17 0", "17 17 128", "3845 1192 -141" );
+	make_clip( "_permstuck_treee", "Everyone", 1, "-17 -17 0", "17 17 128", "2257 2997 -70.4" );
+	make_clip( "_permstuck_treef", "Everyone", 1, "-17 -17 0", "17 17 128", "2054 4320 25.8" );
+	make_clip( "_permstuck_treeg", "Everyone", 1, "-17 -17 0", "17 17 128", "6724 7421 62.2" );
+	make_clip( "_cliprework_rooftop", "Survivors", 1, "-164 -710 0", "216 600 865", "4118 886 288" );
+	make_clip( "_cliprework_unattackable", "Survivors", 1, "-17 -64 0", "26 64 8", "6246 1852 29" );
+	make_clip( "_cliprework_tracka", "Survivors", 1, "-216 -64 0", "216 3000 950", "5437 -52 206.3" );
+	make_clip( "_cliprework_trackb", "Survivors", 1, "-216 -64 0", "222 3000 777", "5437.3 5128 385" );
+	make_clip( "_clipgap_fence", "Survivors", 1, "-32 -4 0", "32 4 1111", "5791 8132 65.8" );
+	make_clip( "_booster_rollupdoors", "Survivors", 1, "-777 -460 0", "11 299 999", "6541 5853 250" );
+	make_clip( "_booster_rollupdoor", "Survivors", 1, "-70 -11 0", "70 11 888", "7040 6836 280" );
+	make_clip( "_booster_liftframes", "Survivors", 1, "-11 -420 0", "11 90 128", "7844 6657 371.3" );
+	make_clip( "_booster_boxtop", "Survivors", 1, "-35 -409 0", "31 35 169", "8479 5823 304.9" );
 	make_clip( "_booster_elecbox", "Survivors", 1, "-4 -20 -80", "4 25 718", "7548 5412 434" );
 	make_clip( "_booster_ventpipe", "Survivors", 1, "-13 -14 -80", "17 14 657", "7535 6160 495" );
-	make_clip( "_nav_jump_semitrailer", "Survivors", 1, "-4 -94 0", "4 188 288", "5756 1062 -32" );
-	make_clip( "_nav_jump_cargowindow", "Survivors", 1, "-5 -85 0", "4 89 86", "2044 3030 49" );
 	make_clip( "_booster_armoredtop", "Survivors", 1, "-158 -65 0", "172 59 63", "7838 6366 449" );
 	make_clip( "_collisionqol_finalebuses", "All and Physics", 1, "-236 -32 0", "236 32 108", "6675 6470 65" );
 	make_trigmove( "_duckqol_finalevent", "Duck", "0 -32 0", "8 32 1", "7568 7392 447" );
@@ -36,20 +34,36 @@ function DoRoundFixes()
 
 	EntFire( "finale_button_unlocker", "AddOutput", "OnEntireTeamEndTouch finaleswitch_initial:Lock::0:-1" );
 
-	con_comment( "LOGIC:\tPoint-of-no-return clip will be Enabled when finale switch is full." );
+	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
+	{
+		devchap( "BASE COOP" );
+		
+		con_comment( "LOGIC:\tGodspot enabled." );
+		// Get nav tiles by position because IDS can change if edited later on
+		local navMain = NavMesh.GetNearestNavArea(Vector(4766.412109, 7269.738281, 96.031250), 16, true, true);
+		local navConnection = NavMesh.GetNearestNavArea(Vector(4803.833984, 7260.107422, 128.313324), 16, true, true);
+		navConnection.Disconnect(navMain);
+	}
+	if ( g_BaseMode == "survival" )
+	{
+		devchap( "BASE SURVIVAL" );
 
-	make_clip( "_point_of_no_return", "Survivors", 0, "-16 -169 -168", "58 169 784", "5750 7177 368" );
-	EntFire( "finaleswitch_initial", "AddOutput", "OnTimeUp " + g_UpdateName + "_point_of_no_return:Enable::0:-1" );
+		// FIXES
+
+		make_clip( "_point_of_no_return", "Survivors", 1, "-16 -169 -168", "58 169 784", "5750 7177 368" );
+
+		con_comment( "FIX:\tPoint-of-no-return clip Enabled instantly to block Survivalists from boosting out." );
+	}
 
 	if ( HasPlayerControlledZombies() )
 	{
-		make_brush( "_losfix_gen1a",		"-1 -24 -8",	"1 24 8",	"6853 5881 50" );
-		make_brush( "_losfix_gen1b",		"-14 -1 -8",	"15 1 8",	"6837 5885 50" );
-		make_brush( "_losfix_gen2a",		"-1 -28 -8",	"1 28 8",	"7498 6786 55" );
-		make_brush( "_losfix_gen2b",		"-12 -1 -8",	"13 1 8",	"7484 6779 55" );
-		make_brush( "_losfix_semi1a",		"-1 -32 -13",	"1 32 13",	"4519 -91 -206" );
-		make_brush( "_losfix_semi1b",		"-40 -1 -13",	"41 1 13",	"4477 -121 -206" );
-		make_brush( "_losfix_semi2",		"-1 -50 -15",	"1 50 15",	"3560 4539 10" );
+		make_brush( "_losfix_gen1a", "-1 -24 -8", "1 24 8", "6853 5881 50" );
+		make_brush( "_losfix_gen1b", "-14 -1 -8", "15 1 8", "6837 5885 50" );
+		make_brush( "_losfix_gen2a", "-1 -28 -8", "1 28 8", "7498 6786 55" );
+		make_brush( "_losfix_gen2b", "-12 -1 -8", "13 1 8", "7484 6779 55" );
+		make_brush( "_losfix_semi1a", "-1 -32 -13", "1 32 13", "4519 -91 -206" );
+		make_brush( "_losfix_semi1b", "-40 -1 -13", "41 1 13", "4477 -121 -206" );
+		make_brush( "_losfix_semi2", "-1 -50 -15", "1 50 15", "3560 4539 10" );
 		make_ladder( "_ladder_armybusfront_cloned_finalebus", "6547.86 6579 107.421", "588 -9368 -262", "0 34.5 0", "-0.566 0.824 0" );
 		make_ladder( "_ladder_backfenceright_cloned_backfenceleft", "4631 4016 76", "18 579 0" );
 		make_ladder( "_ladder_bluecontainerplus_cloned_bluecontainer", "3952 2421 -55.5", "1464 6691 11", "0 -90 0", "-1 0 0" );
@@ -71,7 +85,7 @@ function DoRoundFixes()
 		EntFire( "versus_doorblockers", "Kill" );
 
 		kill_funcinfclip( 149.409 );		// Delete clip in 1st closet
-		kill_funcinfclip( 150.29 );		// Delete clip in 2nd closet
+		kill_funcinfclip( 150.29 );			// Delete clip in 2nd closet
 		kill_funcinfclip( 142.109 );		// Delete clip in 3rd closet
 		kill_funcinfclip( 137.706 );		// Delete clip in 4th closet
 		kill_funcinfclip( 149.676 );		// Delete clip in 5th closet
