@@ -91,6 +91,14 @@ SpawnEntityFromTable( "trigger_multiple",
 	filtername	= "anv_globalfixes_filter_survivor",
 	origin		= Vector( 13541, 15357, 6274 )
 } );
+SpawnEntityFromTable( "trigger_multiple",
+{
+	targetname	= g_UpdateName + "_doorwarp_trigmult",
+	StartDisabled	= 0,
+	spawnflags	= 1,
+	filtername	= "anv_globalfixes_filter_survivor",
+	origin		= Vector( 13432, 15116, 354 )
+} );
 
 EntFire( g_UpdateName + "_elevator_trigmult",	"AddOutput", "mins -222 -222 -76" );
 EntFire( g_UpdateName + "_elevator_trigmult",	"AddOutput", "maxs 0 0 70" );
@@ -101,6 +109,9 @@ EntFire( g_UpdateName + "_faller_trigmult",	"AddOutput", "solid 2" );
 EntFire( g_UpdateName + "_skybox_trigmult",	"AddOutput", "mins -222 -222 -580" );
 EntFire( g_UpdateName + "_skybox_trigmult",	"AddOutput", "maxs 0 0 5200" );
 EntFire( g_UpdateName + "_skybox_trigmult",	"AddOutput", "solid 2" );
+EntFire( g_UpdateName + "_doorwarp_trigmult",	"AddOutput", "mins -48 -16 -750" );
+EntFire( g_UpdateName + "_doorwarp_trigmult",	"AddOutput", "maxs 48 16 0" );
+EntFire( g_UpdateName + "_doorwarp_trigmult",	"AddOutput", "solid 2" );
 
 // Alter gravity when all Survivors are inside elevator and revert it if not. When
 // any Survivor touches either trigger, warp them to the elevator's Z. Note that
@@ -118,6 +129,8 @@ EntFire( g_UpdateName + "_elevator_infectdump",	"SetParent", "elevator" );
 EntFire( g_UpdateName + "_elevator_trigmult",	"SetParent", "elevator" );
 EntFire( g_UpdateName + "_faller_trigmult",	"SetParent", "elevator" );
 EntFire( g_UpdateName + "_skybox_trigmult",	"SetParent", "elevator" );
+
+EntFire( g_UpdateName + "_doorwarp_trigmult",	"AddOutput", "OnStartTouch worldspawn:RunScriptCode:c8m4_TriggerDoorWarp(activator):0:-1" );
 
 // Function to loop through alive Survivors only to give slight low gravity.
 
@@ -147,4 +160,13 @@ function c8m4_TriggerWarp( activator )
 	local zedElevator	= Entities.FindByName( null, "elevator" ).GetOrigin().z;
 
 	activator.SetOrigin( Vector( vecSurvivor.x, vecSurvivor.y, zedElevator + 10 ) );
+}
+
+function c8m4_TriggerDoorWarp( activator )
+{
+	if ( developer() > 0 ) { printl( "Ran c8m4_TriggerDoorWarp" ); }
+
+	local vecSurvivor	= activator.GetOrigin();
+
+	activator.SetOrigin( Vector( vecSurvivor.x, vecSurvivor.y, 424 ) );
 }
