@@ -30,17 +30,11 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
-		
-		con_comment( "LOGIC:\tGodspot enabled." );
+
 		// Get nav tiles by position because IDS can change if edited later on
-		// CheckLOS and CheckGround set to false as it did not work otherwise here
-		local navMain = NavMesh.GetNearestNavArea(Vector(7187.500000, 3262.500000, 196.687500), 16, false, false);
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(7225.000000, 3237.500000, 196.687500), 16, false, false);
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(7225.000000, 3275.000000, 196.687500), 16, false, false);
-		local navConnection3 = NavMesh.GetNearestNavArea(Vector(7125.000000, 3287.500000, 196.687500), 16, false, false);
-		navConnection1.Disconnect(navMain);
-		navConnection2.Disconnect(navMain);
-		navConnection3.Disconnect(navMain);
+		make_trig_godspot( Vector(7150, 3250, 196), [
+			Vector(7187, 3262, 196)
+		]);
 	}
 	if ( g_BaseMode == "survival" )
 	{

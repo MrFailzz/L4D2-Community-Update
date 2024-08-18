@@ -20,20 +20,14 @@ function DoRoundFixes()
 	if ( g_BaseMode == "coop" || g_BaseMode == "realism" )
 	{
 		devchap( "BASE COOP" );
-		
-		con_comment( "LOGIC:\tGodspot enabled." );
+
 		// Get nav tiles by position because IDS can change if edited later on
-		local navMain1 = NavMesh.GetNearestNavArea(Vector(-4200.000000, 9475.000000, -191.968750), 16, true, true);
-		local navMain2 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9462.500000, -191.968750), 16, true, true);
-		local navConnection1 = NavMesh.GetNearestNavArea(Vector(-4225.000000, 9525.000000, -191.650177), 16, true, true);
-		local navConnection2 = NavMesh.GetNearestNavArea(Vector(-4187.500000, 9512.500000, -191.968750), 16, true, true);
-		local navConnection3 = NavMesh.GetNearestNavArea(Vector(-4237.500000, 9487.500000, -191.633362), 16, true, true);
-		local navConnection4 = NavMesh.GetNearestNavArea(Vector(-4300.000000, 9537.500000, -191.734192), 16, true, true);
-		navConnection1.Disconnect(navMain1);
-		navConnection2.Disconnect(navMain1);
-		navConnection3.Disconnect(navMain1);
-		navConnection3.Disconnect(navMain2);
-		navConnection4.Disconnect(navMain2);
+		make_trig_godspot( Vector(-4200, 9475, -191), [
+			Vector(-4225, 9525, -191),
+			Vector(-4187, 9512, -191),
+			Vector(-4237, 9487, -191),
+			Vector(-4237, 9462, -191)
+		], 25, 25);
 	}
 	if ( g_BaseMode == "survival" )
 	{
