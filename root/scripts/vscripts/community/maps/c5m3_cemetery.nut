@@ -32,6 +32,14 @@ function DoRoundFixes()
 	make_clip( "_nav_cornertree", "Survivors", 1, "-83 -116 0", "97 180 935", "10459 -4981 409" );
 	make_clip( "_commentary_oob_bridgeexplosion", "Everyone", 1, "-1338 -1128 -8", "8 8 857", "6489 -5161 103" );
 	make_clip( "_commentary_clipgap_bridge", "Survivors", 1, "-512 -8 -8", "8 8 735", "6969 -3864 225" );
+	make_clip( "_commentary_shortcut_barricade_a", "Survivors", 1, "-12 -144 -232", "12 144 232", "3821 1937 408" );
+	make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
+	make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
+	make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
+	make_clip( "_commentary_nav_parkingtruck_a1", "Survivors", 1, "-8 -82 -8", "94 8 112", "5383 -1373 8" );
+	make_clip( "_commentary_nav_parkingtruck_b1", "Survivors", 1, "-8 -82 -8", "94 8 112", "5495 -1028 4" );
+	make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
+	make_clip( "_commentary_commonhop_rooftop", "Survivors", 1, "-48 -7 -208", "48 7 208", "3055.5 1410 432" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -43,12 +51,6 @@ function DoRoundFixes()
 
 		make_clip( "_nav_brokenhome_shortcuta", "Survivors", 1, "-5 -51 0", "5 66 130", "2301 958 31", "-10 0 0" );
 		make_clip( "_nav_brokenhome_shortcutb", "Survivors", 1, "-5 -51 0", "5 66 130", "2302 1290 31", "-10 0 0" );
-		make_clip( "_commentary_shortcut_barricade_a", "Survivors", 1, "-12 -144 -232", "12 144 232", "3821 1937 408" );
-		make_clip( "_commentary_shortcut_barricade_b", "Survivors", 1, "-21 -52 -232", "21 52 232", "3830 1741 408" );
-		make_clip( "_commentary_shortcut_barricade_c", "Survivors", 1, "-21 -52 -232", "21 52 232", "3809 1637 408" );
-		make_clip( "_commentary_shortcut_barricade_d", "Survivors", 1, "-9 -100 -232", "9 100 232", "3794 1492 408" );
-		make_clip( "_commentary_nav_parkingtruck_a1", "Survivors", 1, "-8 -82 -8", "94 8 112", "5383 -1373 8" );
-		make_clip( "_commentary_nav_parkingtruck_b1", "Survivors", 1, "-8 -82 -8", "94 8 112", "5495 -1028 4" );
 	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism")
 	{
@@ -57,8 +59,6 @@ function DoRoundFixes()
 		make_clip( "_cliprework_perchroof", "Survivors", 1, "-136 -192 0", "136 192 487", "4856 3040 164" );
 		make_clip( "_stuckwarp_staircase", "Everyone", 1, "-32 -4 -64", "64 4 12", "3504 2668 182" );
 		make_clip( "_nav_brokenhome_highcorner", "Survivors", 1, "-4 -83 0", "16 378 469", "2052 2534 160" );
-		make_clip( "_commonhop_rooftop", "Survivors", 1, "-48 -7 -208", "48 7 208", "3055.5 1410 432" );
-		make_clip( "_commentary_shortcut_sewerroof", "Survivors", 1, "-164 -800 -170", "180 700 256", "3601.35 752.831 384" );
 	}
 
 	if ( HasPlayerControlledZombies() )

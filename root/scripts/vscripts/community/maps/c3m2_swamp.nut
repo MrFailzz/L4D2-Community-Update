@@ -14,6 +14,8 @@ function DoRoundFixes()
 	make_clip( "_boat_smoother", "Everyone", 1, "-16 -24 0", "16 24 30", "-7863 5391 -8", "-10 -30 0" );
 	make_clip( "_permstuck_behindrocks", "Everyone", 1, "-14 -40 -24", "14 40 24", "-5326 5524 16" );
 	make_clip( "_permstuck_cypressknees", "Everyone", 1, "-1 -1 -25", "1 1 25", "-4399 3202 9" );
+	make_clip( "_commentary_planeclimb_a", "Survivors", 1, "-29 -3 -44", "29 3 44", "-1931 2612 124" );
+	make_clip( "_commentary_planeclimb_b", "Survivors", 1, "-36 -14 -44", "36 14 44", "-1908 2578 124", "0 300 0" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -28,8 +30,6 @@ function DoRoundFixes()
 		make_clip( "_cabin_door_button_a", "Survivors", 1, "-138 -176 -13", "138 372 444", "-1932 3700 196", "0 28 0" );
 		make_clip( "_cabin_door_button_b", "Survivors", 1, "-147 -434 -70", "138 404 444", "-1888 3079 226" );
 		make_clip( "_cabin_door_button_c", "Survivors", 1, "-112 -516 -30", "108 431 521", "-1622 2298 162", "0 28 0" );
-		make_clip( "_commentary_planeclimb_a", "Survivors", 1, "-29 -3 -44", "29 3 44", "-1931 2612 124" );
-		make_clip( "_commentary_planeclimb_b", "Survivors", 1, "-36 -14 -44", "36 14 44", "-1908 2578 124", "0 300 0" );
 		EntFire( "Blow_door", "AddOutput", "OnTrigger " + g_UpdateName + "_cabin_door_button*:Kill::0:-1" );
 	}
 

@@ -48,6 +48,24 @@ function DoRoundFixes()
 	make_clip( "_elevator_softlock_sideclip", "Survivors", 1, "-3 -46 -383", "3 46 383", "-1548 -9551 512" );
 	make_clip( "_elevator_softlock_signclip", "Survivors", 1, "-171 -103 -694", "171 103 694", "-1504 -13160 1835" );
 	make_clip( "_commentary_elevatorpipe", "Survivors", 1, "0 0 0", "50 50 500", "-1535 -9144.59 614.604" );
+	make_clip( "_commentary_factoryhopup_a", "Survivors", 1, "-70 -11 -8", "38 11 28", "1214 -4856 168" );
+	make_clip( "_commentary_factoryhopup_b", "Survivors", 1, "-48 -11 -8", "8 11 88", "1136 -4856 108" );
+	make_clip( "_commentary_upperfactory_a", "Survivors", 1, "-117 -97 -192", "117 97 1976", "2349 -5535 552" );
+	make_clip( "_commentary_upperfactory_b", "Survivors", 1, "-8 -12 -192", "8 12 1976", "2223 -5512 552" );
+	make_clip( "_commentary_upperfactory_c", "Survivors", 1, "-41 -55 -192", "41 55 1976", "2272 -5386 552" );
+	make_clip( "_commentary_upperfactory_d", "Survivors", 1, "-576 -33 -192", "576 33 1976", "1656 -5364 552" );
+	make_clip( "_commentary_upperfactory_e", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1927 -5824 552" );
+	make_clip( "_commentary_upperfactory_f", "Survivors", 1, "-616 -38 -192", "616 38 1976", "1696 -6290 552" );
+	make_clip( "_commentary_upperfactory_g", "Survivors", 1, "-254 -118 -192", "254 118 1976", "1537 -6134 552" );
+	make_clip( "_commentary_upperfactory_h", "Survivors", 1, "-193 -85 -192", "193 85 1976", "1536 -5480 552" );
+	make_clip( "_commentary_upperfactory_i", "Survivors", 1, "-48 -100 -192", "48 100 1976", "1354 -5728 552" );
+	make_clip( "_commentary_upperfactory_j", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1112 -5824 552" );
+	make_clip( "_commentary_upperfactory_k", "Survivors", 1, "-336 -90 -192", "336 90 1976", "745 -5421 552" );
+	make_clip( "_commentary_upperfactory_l", "Survivors", 1, "-33 -61 -192", "33 61 1976", "727 -5572 552" );
+	make_clip( "_commentary_upperfactory_m", "Survivors", 1, "-116 -144 -192", "116 144 1976", "2108 -5728 552" );
+	make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
+	make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
+	make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
 
 	// All-mode QoL clip for a Valve ladder and move it 2 units so players don't get caught on critpath anymore.
 
@@ -73,8 +91,6 @@ function DoRoundFixes()
 
 		make_clip( "_truck_fence1", "Survivors", 1, "-3 -128 -1546", "3 128 1546", "4292 -2990 1641.5" );
 		make_clip( "_truck_fence2", "Survivors", 1, "-92 -3 -1546", "92 3 1546", "4388 -2865 1642" );
-		make_clip( "_commentary_factoryhopup_a", "Survivors", 1, "-70 -11 -8", "38 11 28", "1214 -4856 168" );
-		make_clip( "_commentary_factoryhopup_b", "Survivors", 1, "-48 -11 -8", "8 11 88", "1136 -4856 108" );
 	}
 	if ( g_BaseMode == "survival" )
 	{
@@ -95,22 +111,6 @@ function DoRoundFixes()
 		make_clip( "_clipextend_treecluster", "Survivors", 1, "-43 -42 0", "31 40 1960", "114 -6111 576" );
 		make_clip( "_shortcut_elevator_m2only", "Survivors", 1, "-64 -4 0", "64 4 777", "-1477 -9605 114" );
 		make_clip( "_cliprework_gasstation", "Survivors", 1, "-317 -328 0", "323 312 2082", "-899 -13512 432" );
-		make_clip( "_commentary_upperfactory_a", "Survivors", 1, "-117 -97 -192", "117 97 1976", "2349 -5535 552" );
-		make_clip( "_commentary_upperfactory_b", "Survivors", 1, "-8 -12 -192", "8 12 1976", "2223 -5512 552" );
-		make_clip( "_commentary_upperfactory_c", "Survivors", 1, "-41 -55 -192", "41 55 1976", "2272 -5386 552" );
-		make_clip( "_commentary_upperfactory_d", "Survivors", 1, "-576 -33 -192", "576 33 1976", "1656 -5364 552" );
-		make_clip( "_commentary_upperfactory_e", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1927 -5824 552" );
-		make_clip( "_commentary_upperfactory_f", "Survivors", 1, "-616 -38 -192", "616 38 1976", "1696 -6290 552" );
-		make_clip( "_commentary_upperfactory_g", "Survivors", 1, "-254 -118 -192", "254 118 1976", "1537 -6134 552" );
-		make_clip( "_commentary_upperfactory_h", "Survivors", 1, "-193 -85 -192", "193 85 1976", "1536 -5480 552" );
-		make_clip( "_commentary_upperfactory_i", "Survivors", 1, "-48 -100 -192", "48 100 1976", "1354 -5728 552" );
-		make_clip( "_commentary_upperfactory_j", "Survivors", 1, "-32 -428 -192", "32 428 1976", "1112 -5824 552" );
-		make_clip( "_commentary_upperfactory_k", "Survivors", 1, "-336 -90 -192", "336 90 1976", "745 -5421 552" );
-		make_clip( "_commentary_upperfactory_l", "Survivors", 1, "-33 -61 -192", "33 61 1976", "727 -5572 552" );
-		make_clip( "_commentary_upperfactory_m", "Survivors", 1, "-116 -144 -192", "116 144 1976", "2108 -5728 552" );
-		make_clip( "_commentary_upperfactory_n", "Survivors", 1, "-38 -57 -192", "38 57 1976", "2263 -5694 552" );
-		make_clip( "_commentary_upperfactory_o", "Survivors", 1, "-255 -10 -192", "255 10 1976", "514 -5322 552" );
-		make_clip( "_commentary_upperfactory_p", "Survivors", 1, "-10 -388 -192", "10 388 1976", "249 -5700 552" );
 	}
 
 	if ( HasPlayerControlledZombies() )

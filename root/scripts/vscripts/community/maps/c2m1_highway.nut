@@ -42,6 +42,7 @@ function DoRoundFixes()
 	make_clip( "_longbush_undermapb", "SI Players", 1, "-174 -5 0", "475 5 822", "4142 2981 -983" );
 	make_clip( "_permstuck_endfence", "Everyone", 1, "-93 -28 0", "53 38 143", "547 -635 -1087", "0 -33 0" );
 	make_clip( "_commentary_motelroof_survivors", "Survivors", 1, "-1095 -296 -196", "1095 296 196", "1879 3428 -451" );
+	make_clip( "_commentary_slopetruck", "Survivors", 1, "-44 -48 -50", "44 48 50", "-1212 -772 -1038" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -56,7 +57,6 @@ function DoRoundFixes()
 		make_clip( "_tank_busleft", "Survivors", 1, "-258 -56 0", "271 52 430", "1731 6723 -574", "0 -28 0" );
 		make_clip( "_tank_busright", "Survivors", 1, "-284 -48 -200", "284 48 200", "1688 7008 -344", "0 22 0" );
 		make_clip( "_tank_fence", "Survivors", 1, "-780 -14 -130", "780 14 156", "2588 7168 -412" );
-		make_clip( "_commentary_slopetruck", "Survivors", 1, "-44 -48 -50", "44 48 50", "-1212 -772 -1038" );
 	}
 	if ( g_BaseMode == "survival" )
 	{

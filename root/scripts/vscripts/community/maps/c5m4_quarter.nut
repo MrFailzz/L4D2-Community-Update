@@ -26,6 +26,12 @@ function DoRoundFixes()
 	make_clip( "_void_cliprework", "Survivors", 1, "-288 -223 0", "288 401 697", "-224 -1425 456" );
 	make_clip( "_void_filler", "SI Players", 1, "-64 17 -90", "65 301 -3", "-224 -1425 677" );
 	make_clip( "_commentary_poolwindow", "Everyone", 1, "-4 -2 -80", "70 4 224", "-1249 2460 152" );
+	make_clip( "_commentary_clipgap_rightfence", "Survivors", 1, "-32 -4 -104", "32 4 104", "-3424 3452 288" );
+	make_clip( "_commentary_sneakyhunter_endsaferoom", "SI Players", 1, "-8 -8 -8", "66 0 210", "1357 -3528 230" );
+
+	// Replacement for temporary clip at the float event from commentary files
+	make_clip( "_commentary_eventskip", "Survivors", 1, "-94 -8 -8", "4 384 880", "-1698 194 244" );
+	EntFire( "tractor_start_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_commentary_eventskip:Kill::0:-1" );
 
 	con_comment( "FIX:\tTotal of 13 out of 13 traffic cones need to be made non-solid -- finally we can!" );
 
@@ -48,13 +54,6 @@ function DoRoundFixes()
 		make_clip( "_vuln_balconyf", "Survivors", 1, "-261 -50 -409", "261 50 409", "-1839 2896 632" );
 		make_clip( "_vuln_balconyg", "Survivors", 1, "-512 -60 -368", "512 60 368", "-2432 -1040 784" );
 		make_clip( "_clipgap_leftfence", "Survivors", 1, "-32 -4 0", "32 4 208", "-2976 3452 184" );
-		make_clip( "_commentary_clipgap_rightfence", "Survivors", 1, "-32 -4 -104", "32 4 104", "-3424 3452 288" );
-		make_clip( "_commentary_sneakyhunter_endsaferoom", "SI Players", 1, "-8 -8 -8", "66 0 210", "1357 -3528 230" );
-
-		// Replacement for temporary clip at the float event from commentary files
-
-		make_clip( "_commentary_eventskip", "Survivors", 1, "-94 -8 -8", "4 384 880", "-1698 194 244" );
-		EntFire( "tractor_start_relay", "AddOutput", "OnTrigger " + g_UpdateName + "_commentary_eventskip:Kill::0:-1" );
 
 		// Piggyback on Survivor-filtered trigger that queries Director for car alarm.
 

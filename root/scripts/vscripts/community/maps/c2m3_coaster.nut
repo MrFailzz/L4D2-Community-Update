@@ -34,6 +34,10 @@ function DoRoundFixes()
 	make_clip( "_commentary_electricalbox_c", "Survivors", 1, "-56 -8 -34", "8 4 196", "-1124 1032 36" );
 	make_clip( "_commentary_coasterskip_a", "Survivors", 1, "0 0 0", "200 4 128", "-2887 2609.01 121.607" );
 	make_clip( "_commentary_coasterskip_b", "Survivors", 1, "0 0 0", "8 292 256", "-2854.76 2456.73 444" );
+	make_clip( "_commentary_downramp_railing", "Survivors", 1, "0 0 -64", "8 188 1280", "-3350.76 2608.73 444" );
+	make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
+	make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
+	make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
 	make_brush( "_permstuck_swanroom_dead", "-54 -20 0", "58 29 108", "510 4084 -7" );
 	make_trigduck( "_duckqol_swanhole", "-5 -32 -32", "5 32 32", "1348 4096 32" );
 
@@ -82,10 +86,6 @@ function DoRoundFixes()
 		make_clip( "_shortcut_finally_done", "Survivors", 1, "-8 -146 0", "0 146 255", "-2894 2609 253", "9 0 0" );
 		make_clip( "_booster_eventskip1", "Survivors", 1, "-253 -16 -459", "332 23 32", "-3106 3081 960" );
 		make_clip( "_booster_eventskip2", "Survivors", 1, "-253 -72 -459", "-246 23 32", "-3106 3081 960" );
-		make_clip( "_commentary_downramp_railing", "Survivors", 1, "0 0 -64", "8 188 1280", "-3350.76 2608.73 444" );
-		make_clip( "_commentary_pretunnel_supports", "Survivors", 1, "0 0 0", "8 350 1600", "-3540.08 2368 128" );
-		make_clip( "_commentary_shortcut_bush_a", "Survivors", 1, "-16 -64 -772", "16 64 772", "-4097 2048 956" );
-		make_clip( "_commentary_shortcut_bush_b", "Survivors", 1, "-16 -78 -772", "16 78 772", "-4133 2174 956", "0 31 0" );
 	}
 	if ( g_BaseMode != "coop" && g_BaseMode != "realism" )
 	{

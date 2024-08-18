@@ -32,6 +32,8 @@ function DoRoundFixes()
 	make_clip( "_commentary_boostertree_a", "Survivors", 1, "-117 -122 -80", "184 200 930", "-704 864 88.25" );
 	make_clip( "_commentary_boostertree_b", "Survivors", 1, "-117 -122 -80", "230 122 930", "128 832 88.25" );
 	make_clip( "_commentary_boostertree_c", "Survivors", 1, "-119 -122 -80", "50 186 910", "-1648 784 104.25" );
+	make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
+	make_clip( "_commentary_shortcut_generator_b", "Survivors", 1, "-28 -20 -504", "28 20 504", "-1718.5 376 520" );
 	patch_spawninfront( "-482 2195 -256", "-51 -8 0", "51 8 160" );
 	patch_spawninfront( "-386 2416 -256", "-8 -51 0", "8 51 160" );
 
@@ -42,9 +44,6 @@ function DoRoundFixes()
 		// FIXES
 
 		make_clip( "_commonhop_generator2", "Everyone", 1, "8 0 0", "58 8 164", "-1660 275 -192", "0 -19 0" );
-
-		make_clip( "_commentary_shortcut_generator_a", "Survivors", 1, "-5 -5 -98", "5 5 98", "-1721 373 -94" );
-		make_clip( "_commentary_shortcut_generator_b", "Survivors", 1, "-28 -20 -504", "28 20 504", "-1718.5 376 520" );
 	}
 	if ( g_BaseMode == "survival" )
 	{

@@ -42,6 +42,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_roofjump_ac_a", "Survivors", 1, "-30 -60 -200", "30 60 200", "2527 1085 440" );
 	make_clip( "_commentary_roofjump_ac_b", "Survivors", 1, "-29 -60 -408", "29 60 408", "2655 1667 680" );
 	make_clip( "_commentary_roofjump_ac_c", "Survivors", 1, "-68 -30 -203", "68 30 203", "2192 1762 437" );
+	make_clip( "_commentary_busstop", "Survivors", 1, "-36 -108 -164", "36 108 164", "1499 2786 332" );
 	make_prop( "dynamic", "_commentary_l4d1_acunit", "models/props_rooftop/acunit01.mdl", "2526.61 1085.15 161.346", "0 180 0", "shadow_no", "solid_yes", "255 255 255", "1536", "2048" );
 	make_trighurt( "_instakill_griefroom", "Survivor", "-512 -1080 0", "384 1080 17", "1152 936 202" );
 
@@ -82,7 +83,6 @@ function DoRoundFixes()
 		make_clip( "_yesdraw_start_clipa", "SI Players", 1, "-300 -447 0", "0 449 1120", "3052 959 800" );
 		make_clip( "_yesdraw_start_clipb", "SI Players", 1, "-158 -10 -580", "42 312 549", "2710 508 1370" );
 		make_clip( "_ladder_crushedescape_clip", "Survivors", 1, "-20 -3 0", "20 3 1745", "2478 769 173" );
-		make_clip( "_commentary_busstop", "Survivors", 1, "-36 -108 -164", "36 108 164", "1499 2786 332" );
 		make_clip( "_start_shortcutfix", "Survivors", 1, "-6 -40 -171.5", "6 40 171.5", "2302 1388 312" );
 		make_clip( "_cliprework_subwayupper", "Survivors", 1, "-201 -94 0", "215 90 4322", "2921 4194 156" );
 		make_clip( "_cliprework_subwayledge", "Survivors", 1, "-218 -18 132", "233 3 4322", "3014 4017 156" );

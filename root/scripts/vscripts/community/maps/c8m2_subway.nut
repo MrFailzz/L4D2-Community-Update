@@ -42,6 +42,14 @@ function DoRoundFixes()
 	EntFire( g_UpdateName + rail_name, "AddOutput", "mincpulevel 1" );
 	EntFire( g_UpdateName + rail_name, "AddOutput", "maxcpulevel 1" );
 	make_clip( "_commentary_electricalbox", "Survivors", 1, "-30 -5 -80", "30 5 148", "9638 5563 97" );
+	make_clip( "_commentary_stuckwarp_undersafe_a", "Everyone", 1, "-4 -250 -60", "24 102 58", "2708 3050 -57.6663" );
+	make_clip( "_commentary_stuckwarp_undersafe_b", "Everyone", 1, "-40 -40 -37", "8 8 75", "2744 2808 -75" );
+	make_clip( "_commentary_stuckwarp_undersafe_c", "Everyone", 1, "-48 -8 -37", "48 22 75", "2784 2776 -75" );
+
+	// Replacement for temporary clip at the float event from commentary files
+	make_clip( "_commentary_doorblocker01", "Survivors", 1, "-60 -4 -20", "60 4 20", "7992 2821 268" );
+	make_clip( "_commentary_doorblocker02", "Survivors", 1, "-68 -4 -20", "68 4 20", "7643 2821 268" );
+	EntFire( "filter_generator", "AddOutput", "OnPass " + g_UpdateName + "_commentary_doorblocker*:Disable::0:-1" );
 
 	con_comment( "FIX:\tGenerator Room has 13 hanging lights and 9 need to be made non-solid." );
 
@@ -55,16 +63,10 @@ function DoRoundFixes()
 
 		make_clip( "_stuckwarp_underspawn", "Everyone", 1, "-11 -7 0", "-3 10 70", "3111 2775 -70" );
 		make_clip( "_stuckwarp_tunnelend", "Everyone", 1, "-12 -24 -14", "137 73 70", "4182 2831 -70", "0 -1 0" );
-		make_clip( "_commentary_stuckwarp_undersafe_a", "Everyone", 1, "-4 -250 -60", "24 102 58", "2708 3050 -57.6663" );
-		make_clip( "_commentary_stuckwarp_undersafe_b", "Everyone", 1, "-40 -40 -37", "8 8 75", "2744 2808 -75" );
-		make_clip( "_commentary_stuckwarp_undersafe_c", "Everyone", 1, "-48 -8 -37", "48 22 75", "2784 2776 -75" );
 		make_clip( "_nav_backlightleft", "Survivors", 1, "6 -13 -61", "9 15 84", "5249 4124 -265" );
 		make_clip( "_nav_backlightright", "Survivors", 1, "6 -13 -61", "9 15 84", "5243 4210 -265" );
 		make_clip( "_subwaymount_in", "Survivors", 1, "-49 -248 0", "63 247 58", "6337 3137 -154", "0 41 0" );
 		make_clip( "_subwaymount_out", "Survivors", 1, "-49 -248 0", "63 247 58", "6769 2895 -154", "0 79 0" );
-		make_clip( "_commentary_doorblocker01", "Survivors", 1, "-60 -4 -20", "60 4 20", "7992 2821 268" );
-		make_clip( "_commentary_doorblocker02", "Survivors", 1, "-68 -4 -20", "68 4 20", "7643 2821 268" );
-		EntFire( "filter_generator", "AddOutput", "OnPass " + g_UpdateName + "_commentary_doorblocker*:Disable::0:-1" );
 	}
 	if ( g_BaseMode == "survival" )
 	{

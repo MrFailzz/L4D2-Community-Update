@@ -29,6 +29,7 @@ function DoRoundFixes()
 	make_clip( "_commentary_clipgap_endsaferoom_a", "Survivors", 1, "-360 -48 -72", "360 48 72", "-3316 -1280 64" );
 	make_clip( "_commentary_clipgap_endsaferoom_b", "Survivors", 1, "-290 -144 -72", "290 144 72", "-3966 -1296 64" );
 	make_clip( "_commentary_clipgap_endfence", "Survivors", 1, "-176 -32 -256", "176 32 256", "-4079 -1120 -120" );
+	make_clip( "_commentary_shortcut_forsale_a", "Survivors", 1, "-4 -128 -209", "4 128 209", "-1700 -128 -35" );
 	make_prop( "dynamic", "_propladder_plankb", "models/props_swamp/plank001b_192.mdl", "-2176 -2538 -320", "0 0 35" );
 
 	if ( g_BaseMode == "versus" )
@@ -44,7 +45,6 @@ function DoRoundFixes()
 		make_clip( "_cliprework_unattackable", "Survivors", 1, "-802 -203 0", "558 213 832", "-2446 299 -376" );
 		make_clip( "_ledgehang_startfenceleft", "Survivors", 1, "-32 -48 -186", "32 48 186", "584 -144 -26" );
 		make_clip( "_ledgehang_startfenceright", "Survivors", 1, "-16 -29.5 -186", "16 29.5 186", "600 42 -26" );
-		make_clip( "_commentary_shortcut_forsale_a", "Survivors", 1, "-4 -128 -209", "4 128 209", "-1700 -128 -35" );
 		make_clip( "_cliprework_roofa", "Survivors", 1, "-360 -394 -206", "360 394 206", "-1480 -638 314" );
 		make_clip( "_cliprework_roofb", "Survivors", 1, "-96 -224 -193", "96 224 193", "-1936 -800 31" );
 		make_clip( "_cliprework_roofc", "Survivors", 1, "-332 -32 -206.5", "332 32 206.5", "-2348 -544 18.5" );

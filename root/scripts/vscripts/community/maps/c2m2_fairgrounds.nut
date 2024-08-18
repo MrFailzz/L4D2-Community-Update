@@ -38,6 +38,9 @@ function DoRoundFixes()
 	make_clip( "_dispcollision_fairgrounds", "All and Physics", 1, "-1400 -1700 -2", "1400 1700 0", "-1903 -142 -128" );
 	make_clip( "_commentary_carouselgate_stuck", "All and Physics", 1, "-4 -24 -80", "4 24 80", "-2764 -5452 -48" );
 	make_clip( "_commentary_blockergap", "Survivors", 1, "-4 -324 -192", "4 324 192", "-4352 -4284 576" );
+	make_clip( "_commentary_traintunnel_entrance", "Survivors", 1, "-192 -16 -64", "192 16 64", "-704 -528 192" );
+	make_clip( "_commentary_traintunnel_track", "Survivors", 1, "-64 -256 -64", "64 256 64", "-704 -256 192" );
+	make_clip( "_commentary_electricalbox", "Survivors", 1, "-8 -132 -8", "40 8 786", "-4336 -4209 -18" );
 
 	if ( g_BaseMode == "versus" )
 	{
@@ -46,11 +49,8 @@ function DoRoundFixes()
 		// FIXES
 		make_clip( "_nav_exitsign", "Survivors", 1, "-8 -11 0", "11 12 120", "1048 -1269 128" );
 		make_clip( "_cliprework_beanbinninga", "Survivors", 1, "-8 -961 0", "8 959 128", "-888 -1535 128" );
-		make_clip( "_commentary_traintunnel_entrance", "Survivors", 1, "-192 -16 -64", "192 16 64", "-704 -528 192" );
-		make_clip( "_commentary_traintunnel_track", "Survivors", 1, "-64 -256 -64", "64 256 64", "-704 -256 192" );
 		make_clip( "_booster_uppertrackb", "Survivors", 1, "-64 -448 -320", "64 448 320", "-1536 -2368 448" );
 		make_clip( "_booster_uppertracka", "Survivors", 1, "-57 -313 -208.5", "57 313 208.5", "-2721 -825 337" );
-		make_clip( "_commentary_electricalbox", "Survivors", 1, "-8 -132 -8", "40 8 786", "-4336 -4209 -18" );
 		make_clip( "_clipextend_carouselboost", "Survivors", 1, "-234 -4 0", "234 4 666", "-1446 -5248 192" );
 
 		// Piggyback on Survivor-filtered trigger just beyond the carousel off switch.

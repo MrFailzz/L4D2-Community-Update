@@ -26,6 +26,8 @@ function DoRoundFixes()
 	make_clip( "_permstuck_cypressknees_a", "Everyone", 1, "-1 -3 -29", "1 3 29", "-702 -2870 14" );
 	make_clip( "_permstuck_cypressknees_b", "Everyone", 1, "-8 -12 -32", "8 12 32", "-1176 -4650 12" );
 	make_clip( "_skyboxshield_endsafehouse", "SI Players", 1, "-185 -50 -40", "183 50 82", "5067 -3777 552" );
+	make_clip( "_commentary_shortcut_firebarrel_a", "Survivors", 1, "0 0 0", "64 64 256", "-3880 -1674 110.628" );
+	make_clip( "_commentary_shortcut_firebarrel_b", "Survivors", 1, "0 0 0", "96 12 16", "-3968.53 -1692.92 92.6282" );
 
 	make_prop( "dynamic", "_permstuck_cratebot", "models/props_crates/static_crate_40.mdl", "-3749.85 -183.67 -3.164", "0 0 0" );
 	make_prop( "dynamic", "_permstuck_cratetop", "models/props_crates/static_crate_40.mdl", "-3749.85 -182.67 36.837", "0 -30 0" );
@@ -46,8 +48,6 @@ function DoRoundFixes()
 
 		make_clip( "_shortcut_window", "Survivors", 1, "-6 -66 -64", "6 66 110", "-4120 -2232 38" );
 		make_clip( "_shortcut_barricadetarp", "Survivors", 1, "-107 -114 -1", "103 82 742", "-4786 1014 298" );
-		make_clip( "_commentary_shortcut_firebarrel_a", "Survivors", 1, "0 0 0", "64 64 256", "-3880 -1674 110.628" );
-		make_clip( "_commentary_shortcut_firebarrel_b", "Survivors", 1, "0 0 0", "96 12 16", "-3968.53 -1692.92 92.6282" );
 	}
 
 	if ( HasPlayerControlledZombies() )
